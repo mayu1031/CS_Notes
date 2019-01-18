@@ -408,3 +408,113 @@ SELECT name FROM movie JOIN casting ON movie.id = casting.movieid  JOIN actor ON
  WHERE casting.movieid in (
 SELECT movieid FROM movie JOIN casting ON movie.id = casting.movieid  JOIN actor ON casting.actorid = actor.id
 WHERE actor.name ='Art Garfunkel') AND name <>'Art Garfunkel'
+
+
+-- Using Null
+-- 1. List the teachers who have NULL for their department.
+select name from teacher
+where dept is null
+
+-- 2. Note the INNER JOIN misses the teachers with no department and the departments with no teacher.
+SELECT teacher.name, dept.name
+ FROM teacher INNER JOIN dept
+           ON (teacher.dept=dept.id)
+
+-- 3. Use a different JOIN so that all teachers are listed.
+SELECT teacher.name, dept.name
+FROM teacher left JOIN dept ON (teacher.dept = dept.id)
+
+-- 4. SELECT teacher.name, dept.name
+FROM teacher right JOIN dept ON (teacher.dept = dept.id)
+
+-- 5. Use COALESCE to print the mobile number. Use the number '07986 444 2266' if there is no number given. Show teacher name and mobile number or '07986 444 2266'
+SELECT name, COALESCE(mobile,'07986 444 2266') AS mobile FROM teacher
+
+-- 6. Use the COALESCE function and a LEFT JOIN to print the teacher name and department name. Use the string 'None' where there is no department.
+SELECT teacher.name, COALESCE(dept.name,'None') FROM teacher left JOIN dept ON teacher.dept = dept.id
+
+-- 7. Use COUNT to show the number of teachers and the number of mobile phones.
+SELECT COUNT(name), COUNT(mobile) FROM teacher
+
+-- 8. Use COUNT and GROUP BY dept.name to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
+SELECT dept.name, COUNT(teacher.name) FROM teacher right JOIN dept ON teacher.dept = dept.id
+GROUP BY dept.name
+
+-- 9. Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2 and 'Art' otherwise.
+SELECT teacher.name 
+   ,CASE WHEN dept.id =1 then 'Sci'
+        WHEN dept.id =2 then 'Sci'
+        ELSE 'Art'
+        END
+FROM teacher left JOIN dept ON teacher.dept = dept.id
+
+-- 10. Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2, show 'Art' if the teacher's dept is 3 and 'None' otherwise.
+SELECT teacher.name 
+   ,CASE WHEN dept.id =1 then 'Sci'
+        WHEN dept.id =2 then 'Sci'
+        WHEN dept.id =3 then 'Art'
+        ELSE  'None'
+        END
+FROM teacher left JOIN dept ON teacher.dept = dept.id
+
+
+-- Self join
+-- 1. How many stops are in the database.
+SELECT COUNT(name) FROM stops
+
+-- 2. Find the id value for the stop 'Craiglockhart'
+SELECT id FROM stops
+WHERE name = 'Craiglockhart'
+
+-- 3. Give the id and the name for the stops on the '4' 'LRT' service.
+SELECT id, name FROM stops JOIN route ON stops.id = route.stop
+  WHERE num = '4' AND company = 'LRT';
+  
+-- 4. The query shown gives the number of routes that visit either London Road (149) or Craiglockhart (53). Run the query and notice the two services that link these stops have a count of 2. Add a HAVING clause to restrict the output to these two routes.
+SELECT company, num, COUNT(*)
+FROM route WHERE stop=149 OR stop=53
+GROUP BY company, num
+HAVING COUNT(*) =2
+
+-- 5. Execute the self join shown and observe that b.stop gives all the places you can get to from Craiglockhart, without changing routes. Change the query so that it shows the services from Craiglockhart to London Road.
+SELECT a.company, a.num, a.stop, b.stop FROM route a JOIN route b ON (a.company = b.company AND a.num = b.num)
+  WHERE
+  a.stop = (SELECT id FROM stops WHERE name = 'Craiglockhart ')
+  AND b.stop = (SELECT id FROM stops WHERE name = 'London Road')
+  
+-- 6. The query shown is similar to the previous one, however by joining two copies of the stops table we can refer to stops by name rather than by number. Change the query so that the services between 'Craiglockhart' and 'London Road' are shown. If you are tired of these places try 'Fairmilehead' against 'Tollcross'
+SELECT a.company, a.num, stopsa.name, stopsb.name 
+FROM    route a JOIN route b ON (a.company = b.company AND a.num = b.num) 
+        JOIN stops stopsa ON (a.stop = stopsa.id)  
+        JOIN stops stopsb ON (b.stop = stopsb.id)
+WHERE stopsa.name = 'Craiglockhart' AND stopsb.name = 'London Road' ;
+
+-- 7. Give a list of all the services which connect stops 115 and 137 ('Haymarket' and 'Leith')
+SELECT DISTINCT a.company, a.num FROM
+  route a JOIN route b ON (a.company = b.company AND a.num = b.num)
+  WHERE a.stop = '115' AND b.stop = '137';
+
+-- 8. Give a list of the services which connect the stops 'Craiglockhart' and 'Tollcross'
+SELECT a.company, a.num FROM 
+    route a JOIN route b ON (a.num = b.num AND a.company = b.company)
+    JOIN stops stopsa ON (a.stop = stopsa.id)
+    JOIN stops stopsb ON (b.stop = stopsb.id)
+WHERE stopsa.name = 'Craiglockhart' AND stopsb.name = 'Tollcross';
+
+-- 9. Give a distinct list of the stops which may be reached from 'Craiglockhart' by taking one bus, including 'Craiglockhart' itself, offered by the LRT company. Include the company and bus no. of the relevant services.
+SELECT distinct stopsa.name, a.company, a.num FROM 
+    route a JOIN route b ON (a.num = b.num AND a.company = b.company)
+    JOIN stops stopsa ON (a.stop = stopsa.id)
+    JOIN stops stopsb ON (b.stop = stopsb.id)
+WHERE stopsa.name = 'Craiglockhart' OR stopsb.name = 'Craiglockhart';
+
+-- 10. Find the routes involving two buses that can go from Craiglockhart to Lochend.
+-- Show the bus no. and company for the first bus, the name of the stop for the transfer, and the bus no. and company for the second bus.
+SELECT a.num, a.company, stopsb.name, c.num, c.company FROM 
+   route a JOIN route b ON (a.num = b.num AND a.company = b.company)
+  JOIN route c JOIN route d ON (c.num = d.num AND c.company = d.company)
+  JOIN stops stopsa ON (a.stop = stopsa.id)
+  JOIN stops stopsb ON (b.stop = stopsb.id)
+  JOIN stops stopsc ON (c.stop = stopsc.id)
+  JOIN stops stopsd ON (d.stop = stopsd.id)
+WHERE stopsa.name = 'Craiglockhart' AND stopsd.name = 'Lochend' AND stopsb.name = stopsc.name;
