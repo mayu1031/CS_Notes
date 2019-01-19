@@ -286,16 +286,16 @@
 - change 源字段名 新字段名 类型（宽度）约束条件；
 #### **删除指定字段**
 - drop 字段名；
-
-    alter table stu add score int(3) not null
-    alter table stu add phone varchar(15) not null after age;
-    alter table stu add qq varchar(10) not null after age
-    describe stu;
-    desc stu; (描述表具体什么样)
-    alter table stu modify qq int(15);
-    alter table stu change qq wechat varchar(20) not null;
-    alter table stu drop wechat
-    
+```
+alter table stu add score int(3) not null
+alter table stu add phone varchar(15) not null after age;
+alter table stu add qq varchar(10) not null after age
+describe stu;
+desc stu; (描述表具体什么样)
+alter table stu modify qq int(15);
+alter table stu change qq wechat varchar(20) not null;
+alter table stu drop wechat
+```    
 
 >* alter table stu add score int(3) not null
 >* alter table stu add phone varchar(15) not null after age;
