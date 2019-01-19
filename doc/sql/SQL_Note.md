@@ -459,6 +459,48 @@ desc stu; (course key MUL 但是不能显示是外键)
 ## **7.MySQL查询**
 
 ### **插入数据**
-- 
+- 标准格式
+    - insert into 表名 （字段名1，字段名2，...）values (值1，值2，...)
+    - insert into 表名 values(值1，值2，...）
+    - 如果没有为某个字段赋值，则使用默认值，NULL NONE
+    - 如果添加非空约束NOT NULL，没有default约束，则会报错
+### **准备数据**
+- 创建数据库和表
+    - 创建数据库
+```
+create database world CHARSET = UTF8;
+```
+  - 使用数据库
 
+```
+use world;
+create table students(
+    stu_id int unsigned primary key auto_increment not null,
+    name varchar(10) default "name",
+    age tinyint unsigned default 18,
+    height decimal(5,2),
+    gender enum("male","female","none") defualt "none",
+    cls_id int unsigned default 0,
+    is_delete bit default 0
+);
+
+desc student;
+
+create table classes(
+cs_id int unsigned auto_increment primary key not null,
+name varchar(20) not null
+);
+
+insert into students values (0, 'john',18, 180.00, 1, 1, 0)；
+##插进入一行数据
+
+insert into students values (0, 'john',18, 180.00, 1, 1, 0),(),(),(),()；
+
+insert into students(stu_id, name, age, height, gender, cls_id, is_delete) values (0, 'john',18, 180.00, 1, 1, 0)；
+
+insert into classes vaules (0, 'math'),(0, 'english');
+select * from classes;
+
+```
+    
 
