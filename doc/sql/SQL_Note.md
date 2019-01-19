@@ -1,16 +1,101 @@
 ﻿# 数据库
 <!-- GFM-TOC -->
-* [一、数据库概述](#一数据库概述)
-* [二、数据库mysql](#二数据库mysql)
-* [三、数据库mysql基本使用](#三数据库mysql基本使用)
-* [四、数据类型](#四数据类型)
-* [五、表基本操作](#五表基本操作)
-* [六、索引](#六索引)
-* [七、查询](#七查询)
+# 目录
+* [1. 数据库概述](#一数据库概)
+* [2. 数据库mysql](#二数据库mysql)
+* [3. 数据库mysql基本使用](#三数据库mysql基本使用)
+* [4. 数据类型](#四数据类型)
+* [5. 表基本操作](#五表基本操作)
+* [6. 索引](#六索引)
+* [7. 查询](#七查询)
+* [8. 运维](#八运维)
 
+
+* [1. 数据库概述](#一数据库概)
+- DB应用领域
+- 数据库定义
+- 数据库分类
+- 数据库产品
+* [2. 数据库mysql](#二数据库mysql)
+- MySQL快捷键
+* [3. 数据库mysql基本使用](#三数据库mysql基本使用)
+- 数据库指令
+- 登录
+- 查看数据库
+- 使用/切换到指定的库：
+- 列出当前的库
+- 查看指定表的字段结构
+- 数据库命名规则
+- 创建数据库
+- 查看当前所在的库
+- 删除指定的库
+* [4. 数据类型](#四数据类型)
+- 数值的说明
+- 数值类型
+- 字符类型
+- 日期时间类型
+- 关于日期的说明
+- 日期和时间函数
+- 枚举类型
+- 约束
+* [5. 表基本操作](#五表基本操作)
+- 修改表的结构
+- 基本用法
+- 添加新字段
+- 修改字段类型
+- 修改字段名
+- 删除指定字段
+* [6. 索引](#六索引)
+- 索引概括
+- 索引类型
+- index普通索引
+    - 什么是index
+    - 创建索引
+    - 删除索引
+    - 显示表里的索引
+* unique唯一索引
+    - 什么是unique
+    - 创建索引
+    - 删除索引
+* primary key主键
+    - 什么是primary key
+    - 创建索引
+    - 删除primary key
+* foreign key 外键
+    - 什么是foreign key
+    - 创建外键
+    - 删除foreign key
+* [7. 查询](#七查询)
+* 查询
+* 插入数据
+* 准备数据
+* 查询语法
+* 条件查询
+    - 基本语法
+    - 比较运算符
+    - 逻辑运算符
+    - 模糊查询
+    - 范围查询
+* 排序
+* 聚合函数
+* 总数
+* 最大值
+* 最小值
+* 平均值
+* 总和
+* 分组
+* 分页获取内容
+* 连接查询
+* 自关联
+* 子查询
+    - 标量子查询
+    - 列级子查询
+    - 行级子查询
+* [8. 运维](#八运维)
 <!-- GFM-TOC -->
 
-# 一、数据库概述
+
+# 一、数据库概
 
 ## **DB应用领域**
  - 后台程序员
@@ -64,15 +149,15 @@
 # 二、数据库mysql
 
 ## **MySQL快捷键**
-- 1.ctrl+q           打开查询窗口
-- 2.ctrl+/           注释sql语句
-- 3.ctrl+shift +/    解除注释
-- 4.ctrl+r           运行查询窗口的sql语句
-- 5.ctrl+shift+r     只运行选中的sql语句
-- 6.F6               打开一个mysql命令行窗口
-- 7.ctrl+l           删除一行
-- 8.ctrl+n           打开一个新的查询窗口
-- 9.ctrl+w           关闭一个查询窗口
+ 1.ctrl+q           打开查询窗口
+ 2.ctrl+/           注释sql语句
+ 3.ctrl+shift +/    解除注释
+ 4.ctrl+r           运行查询窗口的sql语句
+ 5.ctrl+shift+r     只运行选中的sql语句
+ 6.F6               打开一个mysql命令行窗口
+ 7.ctrl+l           删除一行
+ 8.ctrl+n           打开一个新的查询窗口
+ 9.ctrl+w           关闭一个查询窗口
 
 # 三、数据库mysql基本使用
 
@@ -82,44 +167,44 @@
 - 不支持tab自动补齐
 - **\c可废弃当前边写错的操作指令**
     
-### **登录**
+## **登录**
 - mysql -u root -p （-h 服务器 -u 用户名 -p 密码）
-### **查看数据库**
+## **查看数据库**
 - 列出当前MySQL服务器上哪有库
 - show databases；
-### **使用/切换到指定的库**：
+## **使用/切换到指定的库**：
 - use 数据库名；
-### **列出当前的库**
+## **列出当前的库**
 - （库里所有表的名字列出来）
 - show tables；
-### **查看指定表的字段结构**
+## **查看指定表的字段结构**
 - （某一表的结构，field（ID,NAME...）,type(类型)等等）
 - describe 表名；
 - des world；
 - \G：表示以列形式查看
 - des world\G；
-### **数据库命名规则**
+## **数据库命名规则**
 - 不能纯数字
 - 区分大小写，具有唯一性
 - 不可以使用关键字，特殊字符
-### **创建数据库**
+## **创建数据库**
 - **CREATE DATABASE 表名；**
 - create database abc;
 - show databases;
 - use ab;
 - select database();(在abc这个数据库下面)
 -显示结果：
->* database()
->* ab
+database()
+ab
 
 - drop database abc;
-- show databases; (确定被删)
+- show databases; (确认被删)
  
-### **查看当前所在的库**
+## **查看当前所在的库**
 - (看目前在哪个库里）
 - **SELECT DATABASE();**
 
-### **删除指定的库**
+## **删除指定的库**
 - **DROP DATABASE 数据库名**
 
 - 新建指定名称的表
@@ -284,17 +369,17 @@ weight float(5,2)
     - revoke：取消用户操作权限
 
 ## **修改表的结构**
-### **基本用法**
+## **基本用法**
 - alter table 表名 执行动作；
-### **添加新字段**
+## **添加新字段**
 - add 字段名 类型（宽度）约束条件；
 - 可加 after 字段名 
 - 或者 first
-### **修改字段类型**
+## **修改字段类型**
 - modify 字段名 类型（宽度） 约束条件；
-### **修改字段名**
+## **修改字段名**
 - change 源字段名 新字段名 类型（宽度）约束条件；
-### **删除指定字段**
+## **删除指定字段**
 - drop 字段名；
 ```sql
 alter table stu add score int(3) not null
@@ -425,7 +510,7 @@ primary key(id)
 - **删除primary key 用alter，drop**
     - alter table 表名 drop primary key；
 
-## **foreign key**
+## **foreign key 外键**
 ### **什么是foreign key**
 - 当A表的某个字段xx同时也是B表的主键，A表的数据应该参照B表进行联动
 - 则A表中的字段xx可设为外键
@@ -514,4 +599,336 @@ select * from classes;
 
 ```
 
+## **查询语法**
+
+```sql
+select select_exper [,select_exper,...][
+    from tb_name
+    where 条件判断
+    [group by ｛col_name| postion｝[ASC|DESC],..]
+    [having where 条件判断]
+    [order by ｛col_name| postion｝[ASC|DESC],..]
+    [limit {}]
+       
+```
+- **查询所有字段**
+```sql
+select * from 表名;   *通配符
+```
+- **查询指定字段**
+```sql
+select 列1，列2... from 表名;
+```
+- **用as别名给列表起名**
+```sql
+select id as 序列，name as 名字，gender as 性别... from 表名;
+```
+- **表字段名**
+```sql
+select students.id, student.name from students;
+```
+- **用as给表起别名**
+```sql
+select s.id, s.name, s.gender from studnets as s;
+```
+- **消除重复行**
+```sql
+select distinct name from students；
+select distinct age from students；
+```
+## **条件查询**
+### **基本语法**
+```sql
+select * from 表名
+where 条件;
+```
+- where 后面多种运算符
+### **比较运算符**
+- 等于 =
+- 大于 >
+- 大于等于 >=
+- 小于 <
+- 小于等于 <=
+- 不等于 !=/ <>
+
+
+```sql
+select * from students
+where id <=4;
+
+select * from students
+where name != 'john';
+```
+
+### **逻辑运算符**
+- and
+- or
+- not
+
+```sql
+select * from student
+where id>3 and gender =1;
+```
+### **模糊查询**
+- like
+- %表示任意多个任意字符
+- _表示任意一个字符
+
+```sql
+select * from students
+where name like '黄%'
+
+select * from students
+where name like '黄_' #黄后面是一个字的学生
+
+select * from students
+where name like '黄__' #黄后面是两个字的学生
+
+select * from students
+where name like '黄%' or name like '梅%'
+```
+
+### **范围查询**
+- in表示在一个非连续的范围内
+
+```sql
+select * from students
+where id in (1,3,8);
+```
+- between
+
+```sql
+select * from students
+where id between 3 and 8;
+```
+- 空判断
+    - null与""是不同的，""表示空的字符串，而null表示什么都没有，连字符串都没有
+    - 判断 is null
+    
+```sql
+select * from students
+where height is not null;
+```
+
+## **排序**
+- 语法
+- 默认 asc 从小到大，升序
+```sql
+select * from 表名
+order by 列1 asc|desc, 列2 asc|desc;
+
+select * from students
+where is_delete = 0 
+order by name;
+
+select * from students
+ordery by age desc, height desc;
+```
+## **聚合函数**
+### **总数**
+- count(*)
+```sql
+select count(*) from students;
+```
+### **最大值**
+- max(列)
+```sql
+select max(id) from students;
+```
+### **最小值**
+- min(列)
+```sql
+select min(id) from students
+where is_delete=0;
+```
+### **平均值**
+- avg(列)
+```sql
+select sum(age)/count(*) from students;
+select avg(age) from students;
+```
+### **总和**
+- sum(列)
+```sql
+select sum(age) from students
+where gender = '男';
+```
+## **分组**
+- group by
+- **group by + group_concat 函数：
+    - 分组之后，根据分组结果，使用group_concat()来放置某一组的某字段的值的集合**
+```sql
+select gender, group_concat(id) from students
+group by gender;
+
+select gender, group_concat(name) from students
+group by gender;
+```
+- group by +集合函数：
+```sql
+select gender, group_concat(age) from students
+group by gender;
+
+select gender, avg(age) from students
+group by gender;
+```
+- group + having
+    - 用来分组查询后指定一些条件来输出查询结果
+    - having: 跟where一样，但只能和group by组合
+```sql
+select gender, group_concat(name) from students
+group by gender
+having count(*)>7; ##按性别分组，把组成员个数大于7的那一列名字列出来
+```
+- group + with rollup
+    - 在最后新增一行，来记录当前列里所有记录的总和
+    
+```sql
+select gender, count(*) from students
+group by gender
+with rollup;
+
+-gender count(*)
+-男      8
+-女      5
+-NULL    13
+
+select gender, group_concat(age) from students
+group by gender
+with rollup;
+
+```
+## **分页获取内容**
+- 数据量过大时，分批显示内容
+```sql
+select *from 表名 
+limit start,count;
+
+select * from students limit 5,5
+## id从6开始，显示5个
+```
+
+    
+## **连接查询**
+- 内连接：查询的结果为两个表匹配到的数据
+- 左连接：查询的结果为两个表匹配到的数据，左表特有的数据，对于右表中不存在的数据使用null填充
+- �右连：查询的结果为两个表匹配到的数据，右表特有的数据，对于左表中不存在的数据使用null填充
+
+```sql
+select * from 表1
+inner join/ left join/ right join 表2 on 表1.列 = 表2.列
+```
+
+## **自关联**
+- 地址表/商品类别表设计问题
+- 解决办法：自关联表，加上父类别id
+
+```sql
+create table areas(
+    aid int primary key, #area
+    atitle varchar(20) #name
+    pid int
+)
+```
+- 查询一共多少省
+- id  pid name
+- 100 0   河北
+- 101 199 石家庄
+- 102 101 某某县
+
+```sql
+##一共多少个省
+select count(*) from areas
+where pid is 0; #顶级单位，上面没有了
+
+##省为山西省的所有城市
+select city.* from areas as city inner join areas as province
+on city.pid = province.aid
+where province.atitle = '山西省'；
+
+##市的名称为广州市的所有区县
+select dis.* from areas as dis inner join areas as city on dis.pid = city.aid
+where city.atitle = '广州市'
+```
+
+## **子查询**
+- 查询语句可以嵌套
+- 主查询：第一条select语句
+- 主查询和子查询的关系
+    - 子查询嵌套在主查询中
+    - 子查询辅助主查询，充当条件或者数据源
+    - 子查询可以独立存在，是一条完整的select语句
+    
+- 子查询分类
+    - 标量子查询：子查询返回的结果是一个数据
+    - 列级子查询: 返回的结果是一列
+    - 行级子查询：返回的结果是一行
+     
+### **标量子查询**
+```sql
+select * from students
+where age > 
+(select avg(age) from students);
+```
+### **列级子查询**
+```sql
+select name from classes
+where id in (select cls_id from students);
+#先查班级id，在查在这个id里面的学生
+```
+### **行级子查询**
+```sql
+select * from students 
+where (height,age) = (select max(height),max(age) from students)
+```
+
+# 八、运维
+- **用户权限管理**
+    - 用户密码管理
+    - 用户权限创建，撤销 grant revoke
+
+- **备份**
+    - 物理备份 明确创建一个文件
+        - 冷备份 #系统关机
+            - copy #linux
+            - tar #linux
+        - 热备份 #系统还是运行，边运行边备份
+            - mysqlhotcopy 
+    - 逻辑备份
+        - mysqldump
+        - mysql
+    - 备份策略
+        - 全量备份（全部都备份）
+        - 增量备份（增加的给备份）
+        - 差异备份（对比之后，把差异的备份了）
+        
+- **binlog日志**
+    - 二进制日志
+    - 记录所有数据的更改操作 
+    - 必要时可以用于数据的恢复
+    
+- **xtrabackup：备份工具**
+    - 备份时不锁数据库表
+    - 适用于生产环境
+
+- **主从同步**
+    - 一般如果只是单向复制，从库设置成只读 （一个库读一个库写）
+    - 结构划分 
+        - 单向简单复制 
+        - 链式
+        - 双向
+        - 放射式
+        
+- **读写分离**
+    - 给客户提供统一的数据库接口
+    - 使用mysql代理
+    - 分别提供读写服务均衡流量
+    
+- **性能调优**
+    - mysql执行过程
+    - 解决系统瓶颈
+        - 分表，加宽带
+        - 替换硬件
+        - 系统运行参数调整
+        - 优化查询语句
 
