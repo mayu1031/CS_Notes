@@ -96,9 +96,9 @@
 - show databases;
 - use ab;
 - select database();(在abc这个数据库下面)
-
-> database()
-> ab
+-显示结果：
+>* database()
+>* ab
 
 - drop database abc;
 - show databases; (确定被删)
@@ -111,25 +111,25 @@
 - **DROP DATABASE 数据库名**
 
 - 新建指定名称的表
-
-    >*  create table 表名（
-    >*  字段名1 字段类型（宽度） 约束条件，
-    >*  字段名1 字段类型（宽度） 约束条件，
-    >*  字段名1 字段类型（宽度） 约束条件，     
-    >*  字段名1 字段类型（宽度） 约束条件，     
-    >*  PRIMARY KEY(主键名)   );
+```
+create table 表名（
+字段名1 字段类型（宽度） 约束条件，
+字段名1 字段类型（宽度） 约束条件，
+字段名1 字段类型（宽度） 约束条件，     
+字段名1 字段类型（宽度） 约束条件，     
+PRIMARY KEY(主键名)   );
        
-    >*   create table student(
-    >*   name char(5),
-    >*   age int(2),
-    >*   address char(20)
-    >*  )
+create table student(
+name char(5),
+age int(2),
+address char(20)
+)
       
-    - desc table student;
-    - show tables;
+- desc table student;
+- show tables;
       
-    >* Empty set
-
+Empty set
+```
 
 ## **4. SQL数据类型**
 
@@ -155,14 +155,14 @@
     - M:有效位数
     - D:小数位数
     - 占用M+2字节
-        
-    >*  create table stu( 
-    >*  age tinyint unsigned,
-    >*  weight float(5,2) unsigned,
-    >*  height float(5,2) unsigned,
-    >*    );
-    >*  (约束条件要放在后面)
-    
+```        
+create table stu( 
+age tinyint unsigned,
+weight float(5,2) unsigned,
+height float(5,2) unsigned,
+);
+(约束条件要放在后面)
+```    
 
 ### **字符类型**
 - char: 固定长度字符
@@ -218,41 +218,40 @@
 - month（）：获取指定时间中月份
 - date(): 获取指定时间中日期
 - time（）：获取指定时间中时刻
-    
->* select now();
->* select current_time();
->* select now(), sleep(5), now(); #now一次性执行
->* select sysdate(), sleep(5), sysdate(); 
-
+```    
+select now();
+select current_time();
+select now(), sleep(5), now(); #now一次性执行
+select sysdate(), sleep(5), sysdate(); 
+```
 ### **枚举类型**
 - 给定值集合中选择单个值, ENUM
 - enum（值1，值2，值3，值N）
 - 给定值集合中选择一个或多个值，SET
 - set (值1，值2，值3，值N)
-    
->* set(值1，值2，值3，值N)
->* create table stu(
->* name char(4),
->* age int(2) unsigned,
->* gender enum("boy","girl"),
->* hobbies set("a","b","c"),
->* weight float(5,2)
->* );
-
+```
+create table stu(
+name char(4),
+age int(2) unsigned,
+gender enum("boy","girl"),
+hobbies set("a","b","c"),
+weight float(5,2)
+);
+```
 ### **约束**
 - null
 - not null
 - key 索引（是否为主键）
 - default 设置默认值，缺省为null
-    
->* create table stu(
->* name varchar(4) not null,
->* age int(2) not null default 18,
->* gender enum("boy","girl") default "boy",
->* hobbies set("a","b","c"),
->* weight float(5,2)
->* );
-
+```   
+create table stu(
+name varchar(4) not null,
+age int(2) not null default 18,
+gender enum("boy","girl") default "boy",
+hobbies set("a","b","c"),
+weight float(5,2)
+);
+```
 ## **5. 表基本操作**
 
 -基本操作
@@ -297,17 +296,6 @@ alter table stu change qq wechat varchar(20) not null;
 alter table stu drop wechat
 ```    
 
->* alter table stu add score int(3) not null
->* alter table stu add phone varchar(15) not null after age;
->* alter table stu add qq varchar(10) not null after age;
->* describe stu;
->* desc stu; (描述表具体什么样)
-
->* alter table stu modify qq int(15);
->* alter table stu change qq wechat varchar(20) not null;
-
->* alter table stu drop wechat
-    
 ## **6. 索引**
 
 ### **索引概括**
@@ -331,16 +319,17 @@ alter table stu drop wechat
 - 对应的字段值可以重复 (比如名字重复一样)
 - 把经常做查询条件的字段设置为index字段
 - index字段的key标志是**mul**
-
->* create table stu（
->*   name varchar（4） not null，
->*   age int（3），
->*   id char（6）not null，
->*   course char(10) not null,
->*   hobby char(10) not null,
->*   index（id），index（name）
->*   );
->*   desc stu;
+```
+create table stu（
+name varchar（4） not null，
+age int（3），
+id char（6）not null，
+course char(10) not null,
+hobby char(10) not null,
+index（id），index（name）
+);
+desc stu;
+```
 
 #### **创建索引**
 - 在表里添加索引
@@ -350,12 +339,12 @@ alter table stu drop wechat
 - drop index xxx on 表名
 #### **显示表里的索引**
 - show index from 表名
-        
->* drop index course on stu; #把course的索引删除了
->* create index hobby course on stu（hobby); #给hobby创建了一条索引
->* create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
->* show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
-
+```        
+drop index course on stu; #把course的索引删除了
+create index hobby course on stu（hobby); #给hobby创建了一条索引
+create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
+show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
+```
 ### **unique唯一索引**
 #### **什么是unique**
 - 一个表里面可以有好几个unique的索引
@@ -368,36 +357,36 @@ alter table stu drop wechat
 - 直接创建，unique（字段1），unique（字段2）
 - 创建索引，在表里添加索引，某一个字段添加索引
     - create unique index xxx on 表名（字段名）
-
->* create table stu（
->*   name varchar（4） not null，
->*   age int（3），
->*   id char（6）not null，
->*   course char(10) not null,
->*   hobby char(10) not null,
->*   unique（id），unique（name）
->*   );
->*   desc stu;
-
+```
+create table stu（
+name varchar（4） not null，
+age int（3），
+id char（6）not null，
+course char(10) not null,
+hobby char(10) not null,
+unique（id），unique（name）
+);
+desc stu;
+```
 #### **删除索引**
-
->* drop index index_hobby from stu; #s删除index
->* drop index hobby from stu; #删除index
->* create unique index myCourse on stu(course); #创建一个unique index
->* desc stu;
-
+```
+drop index index_hobby from stu; #s删除index
+drop index hobby from stu; #删除index
+create unique index myCourse on stu(course); #创建一个unique index
+desc stu;
+```
 - unique字段的值可以为null，当其修改为not null时，则此字段限制和主键相同，为PRI字样
-
->* create table teacher(
->* name char(3) not nulll
->* age int(2)
->* course varchar(20),
->* address varchar(20),
->* unique(name)
->*)
->* desc teacher;
+```
+create table teacher(
+name char(3) not nulll
+age int(2)
+course varchar(20),
+address varchar(20),
+unique(name)
+)
+desc teacher;
 - key 为PRI
-
+```
 ### **primary key主键**
 #### **什么是primary key**
 - 一个表中只能有一个primary字段
@@ -409,13 +398,13 @@ alter table stu drop wechat
 - 在表里添加索引**
 - 创建表的时候一起创建
     - primary key（字段名）
-        
-> * create table stu(
-> * id char(6) auto increment,
-> *...
-> * primary key(id)
-> *)    
-
+```       
+create table stu(
+id char(6) auto increment,
+...
+primary key(id)
+)    
+```
 - **创建primary key 用alter，add**
     - **注意，这里没有create key这种东西，我们用add**
     - 在已经有都表中设置primary key字段名
@@ -436,32 +425,32 @@ alter table stu drop wechat
     
 #### **创建外键**
 - 外键基本用法
-
->* foreign key (表A的字段名)
->*   references （表B的字段名）
->*   on update cascade
->*   on delete cascade
->* 表A的字段名参照表B的字段名
-
+```
+foreign key (表A的字段名)
+references （表B的字段名）
+on update cascade
+on delete cascade
+表A的字段名参照表B的字段名
+```
 - 创建AB表
+```
+create table mycourse(
+course varchar(20),
+course_id int(20),
+primary key(course)
+);
 
->* create table mycourse(
->* course varchar(20),
->* course_id int(20),
->* primary key(course)
->* );
->*
->* create table stu(
->* name char(4),
->* age int(2),
->* course varchar(2),
->* foreien key(course)
->* references mycourse(course)
->* on update cascade
->* on delete cascade
->*);
->desc stu; (course key MUL 但是不能显示是外键)
-
+create table stu(
+name char(4),
+age int(2),
+course varchar(2),
+foreien key(course)
+references mycourse(course)
+on update cascade
+on delete cascade
+);
+desc stu; (course key MUL 但是不能显示是外键)
+```
 
 #### **删除foreign key**
 - alter table 表名 drop foreign key 约束名；
