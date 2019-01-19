@@ -237,7 +237,7 @@
 >* gender enum("boy","girl"),
 >* hobbies set("a","b","c"),
 >* weight float(5,2)
->*        );
+>* );
 
 ### **约束**
 - null
@@ -251,7 +251,7 @@
 >* gender enum("boy","girl") default "boy",
 >* hobbies set("a","b","c"),
 >* weight float(5,2)
->*   );
+>* );
 
 ## **5. 表基本操作**
 
@@ -287,16 +287,16 @@
 #### **删除指定字段**
 - drop 字段名；
 
->*alter table stu add score int(3) not null
->*alter table stu add phone varchar(15) not null after age;
->*alter table stu add qq varchar(10) not null after age;
->*describe stu;
->*desc stu; (描述表具体什么样)
+> *alter table stu add score int(3) not null
+> *alter table stu add phone varchar(15) not null after age;
+> *alter table stu add qq varchar(10) not null after age;
+> *describe stu;
+> *desc stu; (描述表具体什么样)
 
->*alter table stu modify qq int(15);
->*alter table stu change qq wechat varchar(20) not null;
+> *alter table stu modify qq int(15);
+> *alter table stu change qq wechat varchar(20) not null;
 
->*alter table stu drop wechat
+> *alter table stu drop wechat
     
 ## **6. 索引**
 
@@ -341,10 +341,10 @@
 #### **显示表里的索引**
 - show index from 表名
         
->* drop index course on stu; #把course的索引删除了
->* create index hobby course on stu（hobby); #给hobby创建了一条索引
->*create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
->* show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
+> *drop index course on stu; #把course的索引删除了
+> *create index hobby course on stu（hobby); #给hobby创建了一条索引
+> *create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
+> * show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 
 ### **unique唯一索引**
 #### **什么是unique**
@@ -400,11 +400,11 @@
 - 创建表的时候一起创建
     - primary key（字段名）
         
->* create table stu(
->* id char(6) auto increment,
->*...
->* primary key(id)
->*)    
+> * create table stu(
+> * id char(6) auto increment,
+> *...
+> * primary key(id)
+> *)    
 
 - **创建primary key 用alter，add**
     - **注意，这里没有create key这种东西，我们用add**
@@ -454,7 +454,7 @@
 
 
 #### **删除foreign key**
-    - alter table 表名 drop foreign key 约束名；
+- alter table 表名 drop foreign key 约束名；
 
 
 ## **7.MySQL查询**
