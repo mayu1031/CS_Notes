@@ -287,16 +287,26 @@
 #### **删除指定字段**
 - drop 字段名；
 
-> *alter table stu add score int(3) not null
-> *alter table stu add phone varchar(15) not null after age;
-> *alter table stu add qq varchar(10) not null after age;
-> *describe stu;
-> *desc stu; (描述表具体什么样)
+    alter table stu add score int(3) not null
+    alter table stu add phone varchar(15) not null after age;
+    alter table stu add qq varchar(10) not null after age
+    describe stu;
+    desc stu; (描述表具体什么样)
+    alter table stu modify qq int(15);
+    alter table stu change qq wechat varchar(20) not null;
+    alter table stu drop wechat
+    
 
-> *alter table stu modify qq int(15);
-> *alter table stu change qq wechat varchar(20) not null;
+>* alter table stu add score int(3) not null
+>* alter table stu add phone varchar(15) not null after age;
+>* alter table stu add qq varchar(10) not null after age;
+>* describe stu;
+>* desc stu; (描述表具体什么样)
 
-> *alter table stu drop wechat
+>* alter table stu modify qq int(15);
+>* alter table stu change qq wechat varchar(20) not null;
+
+>* alter table stu drop wechat
     
 ## **6. 索引**
 
@@ -341,10 +351,10 @@
 #### **显示表里的索引**
 - show index from 表名
         
-> *drop index course on stu; #把course的索引删除了
-> *create index hobby course on stu（hobby); #给hobby创建了一条索引
-> *create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
-> * show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
+>* drop index course on stu; #把course的索引删除了
+>* create index hobby course on stu（hobby); #给hobby创建了一条索引
+>* create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
+>* show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 
 ### **unique唯一索引**
 #### **什么是unique**
