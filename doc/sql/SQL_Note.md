@@ -155,15 +155,15 @@
 # 二、数据库mysql
 
 ## **MySQL快捷键**
- 1.ctrl+q           打开查询窗口
- 2.ctrl+/           注释sql语句
- 3.ctrl+shift +/    解除注释
- 4.ctrl+r           运行查询窗口的sql语句
- 5.ctrl+shift+r     只运行选中的sql语句
- 6.F6               打开一个mysql命令行窗口
- 7.ctrl+l           删除一行
- 8.ctrl+n           打开一个新的查询窗口
- 9.ctrl+w           关闭一个查询窗口
+- ctrl+q           打开查询窗口
+- ctrl+/           注释sql语句
+- ctrl+shift +/    解除注释
+- ctrl+r           运行查询窗口的sql语句
+- ctrl+shift+r     只运行选中的sql语句
+- F6               打开一个mysql命令行窗口
+- ctrl+l           删除一行
+- ctrl+n           打开一个新的查询窗口
+- ctrl+w           关闭一个查询窗口
 
 # 三、数据库mysql基本使用
 
@@ -193,19 +193,21 @@
 - 不能纯数字
 - 区分大小写，具有唯一性
 - 不可以使用关键字，特殊字符
+
 ## **创建数据库**
-- **CREATE DATABASE 表名；**
-- create database abc;
-- show databases;
-- use ab;
-- select database();(在abc这个数据库下面)
--显示结果：
+```sql
+CREATE DATABASE 表名；
+create database abc;
+show databases;
+use ab;
+select database();(在abc这个数据库下面)
+显示结果：
 database()
 ab
 
-- drop database abc;
-- show databases; (确认被删)
- 
+drop database abc;
+show databases; (确认被删)
+```
 ## **查看当前所在的库**
 - (看目前在哪个库里）
 - **SELECT DATABASE();**
@@ -357,7 +359,8 @@ weight float(5,2)
 ```
 # 五、表基本操作
 
--基本操作
+## **修改表的结构**
+
 - DDL
     - create：创建数据库和表等对象
     - drop：删除数据库和表等对象
@@ -374,7 +377,6 @@ weight float(5,2)
     - grant：赋予用户操作权限
     - revoke：取消用户操作权限
 
-## **修改表的结构**
 ## **基本用法**
 - alter table 表名 执行动作；
 ## **添加新字段**
