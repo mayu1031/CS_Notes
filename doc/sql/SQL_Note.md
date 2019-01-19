@@ -112,24 +112,25 @@
 
 - 新建指定名称的表
 
-     >  create table 表名（
-        字段名1 字段类型（宽度） 约束条件，
-        字段名1 字段类型（宽度） 约束条件，
-        字段名1 字段类型（宽度） 约束条件，              
-        字段名1 字段类型（宽度） 约束条件，        
-    >   PRIMARY KEY(主键名)   );
+    >  create table 表名（
+    >  字段名1 字段类型（宽度） 约束条件，
+    >  字段名1 字段类型（宽度） 约束条件，
+    >  字段名1 字段类型（宽度） 约束条件，     
+    >  字段名1 字段类型（宽度） 约束条件，     
+    >  PRIMARY KEY(主键名)   );
        
     >   create table student(
-        name char(5),
-        age int(2),
-        address char(20)
+    >   name char(5),
+    >   age int(2),
+    >   address char(20)
     >  )
       
-      - des table student;
-      - show tables;
+    - desc table student;
+    - show tables;
       
     > Empty set
-     
+
+
 ## **4. SQL数据类型**
 
 ### **数值的说明**
@@ -156,11 +157,11 @@
     - 占用M+2字节
         
     >create table stu( 
-        age tinyint unsigned,
-        weight float(5,2) unsigned,
-        height float(5,2) unsigned,
-          );
-        (约束条件要放在后面)
+    >   age tinyint unsigned,
+    >   weight float(5,2) unsigned,
+    >   height float(5,2) unsigned,
+    >     );
+    >   (约束条件要放在后面)
     >
 
 ### **字符类型**
@@ -218,10 +219,10 @@
 - date(): 获取指定时间中日期
 - time（）：获取指定时间中时刻
     
-> select now();
-> select current_time();
-> select now(), sleep(5), now(); #now一次性执行
-> select sysdate(), sleep(5), sysdate(); 
+>* select now();
+>* select current_time();
+>* select now(), sleep(5), now(); #now一次性执行
+>* select sysdate(), sleep(5), sysdate(); 
 
 ### **枚举类型**
 - 给定值集合中选择单个值, ENUM
@@ -342,7 +343,7 @@
         
 > drop index course on stu; #把course的索引删除了
 > create index hobby course on stu（hobby); #给hobby创建了一条索引
-create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
+>create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
 > show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 
 ### **unique唯一索引**
@@ -435,10 +436,10 @@ create index index_hobby course on stu（hobby); #可以给hobby再创建一条�
 - 创建AB表
 
 > create table mycourse(
->course varchar(20),
->course_id int(20),
->primary key(course)
->);
+> course varchar(20),
+> course_id int(20),
+> primary key(course)
+> );
 >
 > create table stu(
 > name char(4),
