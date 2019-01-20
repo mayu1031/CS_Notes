@@ -3,7 +3,6 @@
  
  [1]:https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E8%80%B3%E7%BD%A95.png
 <!-- GFM-TOC -->
-# 目录
 ## [1. 数据库概述](#一数据库概)
 - [DB应用领域](#应用领域)
 - [数据库定义](#数据库定义)
