@@ -29,6 +29,7 @@
 - [枚举类型](#枚举类型)
 - [约束](#约束)
 ## [5. 表基本操作](#五表基本操作)
+- [新建指定名称的表](#新建指定名称的表)
 - [修改表的结构](#修改表的结构)
 - [基本用法](#基本用法)
 - [添加新字段](#添加新字段)
@@ -206,26 +207,7 @@ show databases; (确认被删)
 ## **删除指定的库**
 - **DROP DATABASE 数据库名**
 
-- 新建指定名称的表
-```sql
-create table 表名（
-字段名1 字段类型（宽度） 约束条件，
-字段名1 字段类型（宽度） 约束条件，
-字段名1 字段类型（宽度） 约束条件，     
-字段名1 字段类型（宽度） 约束条件，     
-PRIMARY KEY(主键名)   );
-       
-create table student(
-name char(5),
-age int(2),
-address char(20)
-)
-      
-- desc table student;
-- show tables;
-      
-Empty set
-```
+
 
 # 四、数据类型
 
@@ -350,6 +332,7 @@ weight float(5,2)
 ```
 # 五、表基本操作
 
+
 ## **修改表的结构**
 
 - DDL
@@ -367,6 +350,27 @@ weight float(5,2)
     - rollback：取消对数据库中数据进行的变更
     - grant：赋予用户操作权限
     - revoke：取消用户操作权限
+
+## **新建指定名称的表**
+```sql
+create table 表名（
+字段名1 字段类型（宽度） 约束条件，
+字段名1 字段类型（宽度） 约束条件，
+字段名1 字段类型（宽度） 约束条件，     
+字段名1 字段类型（宽度） 约束条件，     
+PRIMARY KEY(主键名)   );
+       
+create table student(
+name char(5),
+age int(2),
+address char(20)
+)
+      
+- desc table student;
+- show tables;
+      
+Empty set
+```
 
 ## **基本用法**
 - alter table 表名 执行动作；
