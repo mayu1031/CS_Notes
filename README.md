@@ -11,7 +11,7 @@
 
 
 
-![书包][2] Database
+![书包][2]  Database
 ========
 
 - [SQL](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL_Note.md)
@@ -22,7 +22,7 @@
 - [sql练习题一]()
 - [sql练习题二]()
 
-![雨伞][3] python
+![雨伞][3]  Python
 ======
 
 - [python notes](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/python_note)
