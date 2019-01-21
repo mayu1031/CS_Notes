@@ -78,7 +78,10 @@ For example, given the above Employee table, the nth highest salary where n = 2 
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN
   RETURN (
-      SELECT(IF((SELECT COUNT(*) FROM (SELECT DISTINCT e.Salary from Employee e) e) >= N, (SELECT min(e.Salary) FROM (SELECT DISTINCT e.Salary FROM Employee e group by e.Salary ORDER BY e.Salary DESC LIMIT N) e), NULL ))
+      SELECT(IF((SELECT COUNT(*) FROM (SELECT DISTINCT e.Salary from Employee e) e) >= N, 
+      (SELECT min(e.Salary) FROM 
+      (SELECT DISTINCT e.Salary FROM Employee e group by e.Salary ORDER BY e.Salary DESC LIMIT N) e), 
+      NULL ))
   );
 END
 ```
