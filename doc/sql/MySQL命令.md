@@ -431,3 +431,10 @@ where id in (select cls_id from students);
 select * from students 
 where (height,age) = (select max(height),max(age) from students)
 ```
+
+### ** IFNULL**
+- IFNULL函数，它接受两个参数，如果不是NULL，则返回第一个参数。 否则，IFNULL函数返回第二个参数。
+- 如果expression_1不为NULL，则IFNULL函数返回expression_1; 否则返回expression_2的结果。
+```sql
+IFNULL(expression_1,expression_2);
+```
