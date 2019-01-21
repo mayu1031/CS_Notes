@@ -382,12 +382,22 @@ group by gender
 with rollup;
 ```
 ### **分页获取内容**
+- limit 和 offset的区别
+- limit x，y
+    - 跳过x个数据，取y个数据
 ```sql
 select *from 表名 
 limit start,count;
 
 select * from students limit 5,5
 ## id从6开始，显示5个
+```
+
+- limit x offset y
+    - 取x个数据，跳过x个数据，取y个数据
+```sql
+select *from 表名 
+limit count offset count;
 ```
 ### **连接查询**
 ```sql
