@@ -16,7 +16,9 @@
 
 - [SQL](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL_Note.md)
 - [MySQL命令](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E5%91%BD%E4%BB%A4.md)
-- [zoosql](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.sql)
+- [sqlzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.sql)  [sqlzoo小结](https://zhuanlan.zhihu.com/p/54558741)
+
+
 
 - [Leetcode-Database 题解]()
 - [sql练习题一]()
