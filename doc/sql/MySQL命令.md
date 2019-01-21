@@ -432,9 +432,55 @@ select * from students
 where (height,age) = (select max(height),max(age) from students)
 ```
 
-### **IFNULL**
-- IFNULL函数，它接受两个参数，如果不是NULL，则返回第一个参数。 否则，IFNULL函数返回第二个参数。
-- 如果expression_1不为NULL，则IFNULL函数返回expression_1; 否则返回expression_2的结果。
+### **IF**
+- IF语句
+    - 如果 expr1 是TRUE (expr1 <> 0 and expr1 <> NULL)，则 IF()的返回值为expr2; 否则返回值则为 expr3。IF() 的返回值为数字值或字符串值，具体情况视其所在语境而定。
+
+```sql
+IF(expr1,expr2,expr3)
+```
+
+- IFNULL
+    - IFNULL函数，它接受两个参数，如果不是NULL，则返回第一个参数。 否则，IFNULL函数返回第二个参数。
+    - 如果expression_1不为NULL，则IFNULL函数返回expression_1; 否则返回expression_2的结果。
 ```sql
 IFNULL(expression_1,expression_2);
 ```
+- IF语句也可以用 case when实现
+
+```sql
+SELECT CASE 1 
+WHEN 1 THEN 'one'
+WHEN 2 THEN 'two' 
+   ELSE 'more' 
+END AS test
+```
+
+```sql
+SELECT teacher.name 
+   ,CASE WHEN dept.id =1 then 'Sci'
+        WHEN dept.id =2 then 'Sci'
+        ELSE 'Art'
+        END
+FROM teacher left JOIN dept ON teacher.dept = dept.id
+```
+
+```sql
+SELECT mdate,team1,
+ SUM(CASE WHEN teamid=team1 THEN 1 ELSE 0 END) score1,team2, 
+ SUM(CASE WHEN teamid=team2 THEN 1 ELSE 0 END) score2
+ FROM game left JOIN goal ON id = matchid 
+  group by mdate,  matchid, team1,team2;
+```
+- IF ELSE 做为流程控制语句使用
+
+```sql
+IF search_condition 
+THEN statement_list  
+ELSEIF search_condition THEN 
+    statement_list ...  
+ELSE statement_list 
+END IF 
+```
+
+

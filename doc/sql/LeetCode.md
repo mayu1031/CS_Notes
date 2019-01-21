@@ -28,7 +28,8 @@ Table: Address
 AddressId is the primary key column for this table.
 
 ```sql
-select FirstName, LastName, City, State from Person left join Address on Person.PersonId = Address.PersonId
+select FirstName, LastName, City, State 
+from Person left join Address on Person.PersonId = Address.PersonId
 ```
 
 ## 176. Second Highest Salary
