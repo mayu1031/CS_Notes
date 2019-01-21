@@ -382,12 +382,22 @@ group by gender
 with rollup;
 ```
 ### **分页获取内容**
+- limit 和 offset的区别
+- limit x，y
+    - 跳过x个数据，取y个数据
 ```sql
 select *from 表名 
 limit start,count;
 
 select * from students limit 5,5
 ## id从6开始，显示5个
+```
+
+- limit x offset y
+    - 取x个数据，跳过y个数据
+```sql
+select *from 表名 
+limit count offset count;
 ```
 ### **连接查询**
 ```sql
@@ -420,4 +430,11 @@ where id in (select cls_id from students);
 ```sql
 select * from students 
 where (height,age) = (select max(height),max(age) from students)
+```
+
+### **IFNULL**
+- IFNULL函数，它接受两个参数，如果不是NULL，则返回第一个参数。 否则，IFNULL函数返回第二个参数。
+- 如果expression_1不为NULL，则IFNULL函数返回expression_1; 否则返回expression_2的结果。
+```sql
+IFNULL(expression_1,expression_2);
 ```
