@@ -394,7 +394,7 @@ select * from students limit 5,5
 ```
 
 - limit x offset y
-    - 取x个数据，跳过x个数据，取y个数据
+    - 取x个数据，跳过y个数据
 ```sql
 select *from 表名 
 limit count offset count;
