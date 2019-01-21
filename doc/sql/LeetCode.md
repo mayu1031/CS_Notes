@@ -11,6 +11,7 @@
 | FirstName   | varchar |  
 | LastName    | varchar |  
 +-------------+---------+  
+```  
 PersonId 是上表主键
-```
+
 
