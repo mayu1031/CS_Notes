@@ -224,6 +224,38 @@ where a.Email in (select b.Email from Person b where a.Id <> b.id)
 ```sql
 select distinct a.Email from Person a join Person b on a.Email = b.Email and a.Id <> b.Id
 ```
-
-
-
+## 183. Customers Who Never Order
+Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.  
+Table: Customers.
+```
++----+-------+
+| Id | Name  |
++----+-------+
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
++----+-------+
+```  
+Table: Orders.  
+```
++----+------------+
+| Id | CustomerId |
++----+------------+
+| 1  | 3          |
+| 2  | 1          |
++----+------------+
+```  
+Using the above tables as example, return the following:  
+```
++-----------+
+| Customers |
++-----------+
+| Henry     |
+| Max       |
++-----------+
+```  
+```sql
+select name as Customers from Customers
+where Customers.id  not in (select CustomerId from orders join Customers on Customers.Id = Orders.CustomerId)
+```
