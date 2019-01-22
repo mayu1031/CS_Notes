@@ -293,7 +293,10 @@ Write a SQL query to find employees who have the highest salary in each of the d
 ```
 
 ```sql
-select Department.Name as Departmet, Employee.Name as Employee, Employee.Salary from Department inner join Employee on Employee.DepartmentId = Department.Id and Employee.Salary >=(select max(Employee.Salary) from Employee where Employee.DepartmentId = Department.Id) 
+select Department.Name as Departmet, Employee.Name as Employee, Employee.Salary 
+from Department inner join Employee on 
+Employee.DepartmentId = Department.Id and Employee.Salary >=(select max(Employee.Salary) 
+from Employee where Employee.DepartmentId = Department.Id) 
 ```
 
 
