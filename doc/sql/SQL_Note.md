@@ -760,7 +760,7 @@ where gender = '男';
 ```
 ## **分组**
 - group by
-- **group by + group_concat 函数：
+- **group by + group_concat 函数**
     - 分组之后，根据分组结果，使用group_concat()来放置某一组的某字段的值的集合**
 ```sql
 select gender, group_concat(id) from students
@@ -777,7 +777,7 @@ group by gender;
 select gender, avg(age) from students
 group by gender;
 ```
-- group + having
+- **group + having**
     - 用来分组查询后指定一些条件来输出查询结果
     - having: 跟where一样，但只能和group by组合
 ```sql
@@ -785,7 +785,7 @@ select gender, group_concat(name) from students
 group by gender
 having count(*)>7; ##按性别分组，把组成员个数大于7的那一列名字列出来
 ```
-- group + with rollup
+-** group + with rollup**
     - 在最后新增一行，来记录当前列里所有记录的总和
     
 ```sql
@@ -803,8 +803,26 @@ group by gender
 with rollup;
 
 ```
+
+- Distinct和Group by去除重复字段记录  
+  一是完全重复的记录，也即所有字段均重复的记录  
+  二是部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。
+  
+
+
+
 ## **分页获取内容**
-- 数据量过大时，分批显示内容
+- **数据量过大时，分批显示内容**
+```sql
+select *from 表名 
+limit start,count;
+
+select * from students limit 5,5
+## id从6开始，显示5个
+```
+- limit 和 offset的区别
+- limit x，y
+    - 跳过x个数据，取y个数据
 ```sql
 select *from 表名 
 limit start,count;
@@ -813,6 +831,12 @@ select * from students limit 5,5
 ## id从6开始，显示5个
 ```
 
+- limit x offset y
+    - 取x个数据，跳过y个数据
+```sql
+select *from 表名 
+limit count offset count;
+```
     
 ## **连接查询**
 - 内连接：查询的结果为两个表匹配到的数据
