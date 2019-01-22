@@ -769,7 +769,7 @@ group by gender;
 select gender, group_concat(name) from students
 group by gender;
 ```
-- group by +集合函数：
+- **group by +集合函数**
 ```sql
 select gender, group_concat(age) from students
 group by gender;
@@ -785,7 +785,7 @@ select gender, group_concat(name) from students
 group by gender
 having count(*)>7; ##按性别分组，把组成员个数大于7的那一列名字列出来
 ```
--** group + with rollup**
+- **group + with rollup**
     - 在最后新增一行，来记录当前列里所有记录的总和
     
 ```sql
@@ -804,7 +804,7 @@ with rollup;
 
 ```
 
-- Distinct和Group by去除重复字段记录  
+- **Distinct和Group by去除重复字段记录**   
   一是完全重复的记录，也即所有字段均重复的记录  
   二是部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。
   
@@ -820,7 +820,7 @@ limit start,count;
 select * from students limit 5,5
 ## id从6开始，显示5个
 ```
-- limit 和 offset的区别
+- **limit 和 offset的区别**
 - limit x，y
     - 跳过x个数据，取y个数据
 ```sql
