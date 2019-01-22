@@ -259,3 +259,41 @@ Using the above tables as example, return the following:
 select name as Customers from Customers
 where Customers.id  not in (select CustomerId from orders join Customers on Customers.Id = Orders.CustomerId)
 ```
+
+## 184. Department Highest Salary  
+The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.  
+```
++----+-------+--------+--------------+
+| Id | Name  | Salary | DepartmentId |
++----+-------+--------+--------------+
+| 1  | Joe   | 70000  | 1            |
+| 2  | Henry | 80000  | 2            |
+| 3  | Sam   | 60000  | 2            |
+| 4  | Max   | 90000  | 1            |
++----+-------+--------+--------------+
+```  
+The Department table holds all departments of the company.
+```
++----+----------+
+| Id | Name     |
++----+----------+
+| 1  | IT       |
+| 2  | Sales    |
++----+----------+
+```  
+Write a SQL query to find employees who have the highest salary in each of the departments. For the above tables, Max has the highest salary in the IT department and Henry has the highest salary in the Sales department.  
+编写一个 SQL 查询，找出每个部门工资最高的员工。例如，根据上述给定的表格，Max 在 IT 部门有最高工资，Henry 在 Sales 部门有最高工资。
+```
++------------+----------+--------+
+| Department | Employee | Salary |
++------------+----------+--------+
+| IT         | Max      | 90000  |
+| Sales      | Henry    | 80000  |
++------------+----------+--------+
+```
+
+```sql
+select Department.Name as Departmet, Employee.Name as Employee, Employee.Salary from Department inner join Employee on Employee.DepartmentId = Department.Id and Employee.Salary >=(select max(Employee.Salary) from Employee where Employee.DepartmentId = Department.Id) 
+```
+
+
