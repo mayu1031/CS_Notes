@@ -298,5 +298,51 @@ from Department inner join Employee on
 Employee.DepartmentId = Department.Id and Employee.Salary >=(select max(Employee.Salary) 
 from Employee where Employee.DepartmentId = Department.Id) 
 ```
+```sql
+select d.Name as Department, e.Name as Employee, e.Salary from Department d inner join Employee e on d.Id = e.DepartmentId and e.Salary >= (select max(Salary) from Employee where DepartmentId = d.Id)
+```
 
 
+## 185. Department Top Three Salaries    
+The Employee table holds all employees. Every employee has an Id, and there is also a column for the department Id.  
+
+```
++----+-------+--------+--------------+
+| Id | Name  | Salary | DepartmentId |
++----+-------+--------+--------------+
+| 1  | Joe   | 70000  | 1            |
+| 2  | Henry | 80000  | 2            |
+| 3  | Sam   | 60000  | 2            |
+| 4  | Max   | 90000  | 1            |
+| 5  | Janet | 69000  | 1            |
+| 6  | Randy | 85000  | 1            |
++----+-------+--------+--------------+
+```  
+The Department table holds all departments of the company.  
+```
++----+----------+
+| Id | Name     |
++----+----------+
+| 1  | IT       |
+| 2  | Sales    |
++----+----------+
+```  
+Write a SQL query to find employees who earn the top three salaries in each of the department. For the above tables, your SQL query should return the following rows.  
+编写一个 SQL 查询，找出每个部门工资前三高的员工。例如，根据上述给定的表格，查询结果应返回：  
+```
++------------+----------+--------+
+| Department | Employee | Salary |
++------------+----------+--------+
+| IT         | Max      | 90000  |
+| IT         | Randy    | 85000  |
+| IT         | Joe      | 70000  |
+| Sales      | Henry    | 80000  |
+| Sales      | Sam      | 60000  |
++------------+----------+--------+
+```  
+```sql
+select d.Name as Department, e.Name as Employee, e.Salary from Department as d inner join Employee as e on e.DepartmentId = d.Id
+where (select count(distinct e_2.Salary) from Employee e_2 where e_2.Salary > e.Salary and e_2.DepartmentId = e.DepartmentId) <3
+
+order by e.DepartmentId, e.Salary desc;
+```
