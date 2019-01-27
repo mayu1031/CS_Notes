@@ -27,6 +27,7 @@
 ======
 
 - [python notes](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/python_note)
+- [python 习题练习](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/python_note)
 - [Leetcode-python 题解](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/leecode)
 
 
