@@ -378,13 +378,19 @@ select gender, group_concat(age) from students
 group by gender
 with rollup;
 ```
-### **分页获取内容**
+### **分页获取内容**  
+limit
+limit offset
 ```sql
 select *from 表名 
 limit start,count;
 
 select * from students limit 5,5
 ## id从6开始，显示5个
+```
+```sql
+limit 2 offset 3
+##跳过3个值，显示2个
 ```
 ### **连接查询**
 ```sql
