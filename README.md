@@ -1,4 +1,4 @@
-﻿
+gi﻿
 
 <br>
 
@@ -31,7 +31,7 @@
 - [Leetcode-python 题解](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/leecode)
 
 
-![溜冰鞋][5]  Python数据分析与机器学习
+![溜冰鞋][5]  数据分析与机器学习
 ======
 - [python科学计算库-Numpy]()
 - [python数据分析处理库-Pandas]()
