@@ -35,7 +35,7 @@
 ======
 - [python科学计算库-Numpy]()
 - [python数据分析处理库-Pandas]()
-- [python数据可视化库-Matplotlib]()
+- [python数据可视化库-Matplotlib](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Matplotlib.ipynb)
 - [python数据可视化库-Seaborn]()
 - [回归算法]()
 - [决策树]()
