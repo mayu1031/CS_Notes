@@ -49,6 +49,11 @@
 - [PAC降维与SVD矩阵分解]()
 - [Gensim库]()
 
+![袜子][6]  案例分析
+======
+
+- [用SQL分析黑五数据](https://zhuanlan.zhihu.com/p/54273292)
+
   [1]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E8%80%B3%E7%BD%A9.png
   [2]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E4%B9%A6%E5%8C%85.png
   [3]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E9%9B%A8%E4%BC%9E3.png
@@ -56,3 +61,6 @@
   [4]:
 https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E7%9F%AD%E6%A3%89%E8%A2%84.png
   [5]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E6%BA%9C%E5%86%B0%E9%9E%8B2.png
+  
+  [6]: 
+  https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E8%A2%9C%E5%AD%90.png
