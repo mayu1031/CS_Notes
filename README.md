@@ -53,6 +53,13 @@
 ======
 
 - [用SQL分析黑五数据](https://zhuanlan.zhihu.com/p/54273292)
+- [python分析鸢尾花数据集]()
+- [python分析泰坦尼克号获救预测]()
+- [python分析员工离职预测]()
+- [python分析信用卡欺诈行为检测]()
+- [python分析借贷公司数据]()
+- [主成分分析（PCA）]()
+- [级联结构的机器学习模型]()
 
   [1]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E8%80%B3%E7%BD%A9.png
   [2]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E4%B9%A6%E5%8C%85.png
