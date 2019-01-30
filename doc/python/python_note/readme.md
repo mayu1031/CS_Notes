@@ -1,4 +1,3 @@
-gi﻿
 <br>
 
 <div align="center">
