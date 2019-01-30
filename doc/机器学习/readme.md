@@ -43,11 +43,11 @@
 ![衣服][7]  参考资料：
 ======
 
-[利用python进行数据分析](https://baike.baidu.com/item/%E5%88%A9%E7%94%A8Python%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/17622225?fr=aladdin)  
-[Python数据挖掘](https://www.bilibili.com/video/av38512783/?p=29)  
-[python机器学习](https://www.bilibili.com/video/av39137333)  
-[Python数据分析(机器学习)](https://study.163.com/course/introduction.htm?courseId=1003708001&share=1&shareId=1383480927#/courseDetail?tab=1)  
-[python数据分析与机器学习实战](https://study.163.com/course/introduction.htm?courseId=1003590004&share=1&shareId=1383480927#/courseDetail?tab=1)  
+- [利用python进行数据分析](https://baike.baidu.com/item/%E5%88%A9%E7%94%A8Python%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/17622225?fr=aladdin)  
+- [Python数据挖掘](https://www.bilibili.com/video/av38512783/?p=29)  
+- [python机器学习](https://www.bilibili.com/video/av39137333)  
+- [Python数据分析(机器学习)](https://study.163.com/course/introduction.htm?courseId=1003708001&share=1&shareId=1383480927#/courseDetail?tab=1)  
+- [python数据分析与机器学习实战](https://study.163.com/course/introduction.htm?courseId=1003590004&share=1&shareId=1383480927#/courseDetail?tab=1)  
 
  [5]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E6%BA%9C%E5%86%B0%E9%9E%8B2.png
   
