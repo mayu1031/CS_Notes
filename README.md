@@ -20,8 +20,8 @@
 
 - [SQL](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL_Note.md)
 - [MySQL命令](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E5%91%BD%E4%BB%A4.md)
-- [Leetcode-Database 题解](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/LeetCode.md)
-- [sqlzoo 题解](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.sql)  [sqlzoo小结](https://zhuanlan.zhihu.com/p/54558741)
+- [Leetcode-Database](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/LeetCode.md)
+- [sqlzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.sql)  [sqlzoo小结](https://zhuanlan.zhihu.com/p/54558741)
 - [sql练习题]()
 
 
@@ -30,7 +30,7 @@
 
 - [python notes](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/readme.md)
 - [python 习题练习](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/python_note)
-- [Leetcode-python 题解](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/leecode)
+- [Leetcode-python](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/leecode)
 
 
 ![溜冰鞋][5]  数据分析与机器学习
