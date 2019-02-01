@@ -26,7 +26,7 @@
 ![雨伞][3]  Python
 ======
 
-- [python notes](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/readme.md)
+- [python基础](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/readme.md)
 - [python 练习题](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/python_note)
 - [Leetcode-python](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/leecode/readme.md)
 
