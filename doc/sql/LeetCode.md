@@ -1,4 +1,14 @@
-﻿# LeetCode
+<br>
+
+<div align="center">
+    <br>
+    <a href="https://github.com/mayu1031/CS_Notes"> <img src="https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E8%80%B3%E7%BD%A9.png"></a>
+  
+</div> 
+
+<br/>
+
+# LeetCode
 ## 175. Combine Two Tables
 - Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:  
 - 编写一个 SQL 查询，满足条件：无论 person 是否有地址信息，都需要基于上述两表提供 person 的以下信息：
