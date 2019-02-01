@@ -31,7 +31,7 @@
 - [Leetcode-python](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/leecode/readme.md)
 
 
-![棉袄][4]  R语言
+![棉袄][4]  R
 ========
 
 
