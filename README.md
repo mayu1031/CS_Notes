@@ -31,6 +31,11 @@
 - [Leetcode-python](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/leecode/readme.md)
 
 
+![棉袄][4]  R语言
+========
+
+
+
 ![溜冰鞋][5]  数据分析与机器学习
 ======
 - [python科学计算库-Numpy](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%BA%93-Numpy/Numpy.ipynb)
@@ -49,9 +54,6 @@
 - [PAC降维与SVD矩阵分解]()
 - [Gensim库]()
 
-
-![棉袄][4]  R语言
-========
 
 
 ![袜子][6]  案例分析
