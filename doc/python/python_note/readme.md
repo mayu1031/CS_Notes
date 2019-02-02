@@ -8,7 +8,7 @@
 <br/>
 
 
-![靴子][1]  Python Notes
+Python Notes
 ========
 
 - [python基础](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/01python%E5%9F%BA%E7%A1%80.ipynb)
@@ -25,5 +25,3 @@
 
 
 
-  [1]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E9%9E%8B%E5%AD%905.png
-  
