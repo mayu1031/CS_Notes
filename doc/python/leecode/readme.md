@@ -9,7 +9,7 @@
 <br/>
 
 
-![枕头][1]  leecode
+leecode
 ======
 
 - [001]()
@@ -33,5 +33,3 @@
 - [019]()
 - [020]()
 
- [1]:
-https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E6%9E%95%E5%A4%B42.png
