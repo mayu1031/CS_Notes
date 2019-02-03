@@ -32,17 +32,8 @@ place_id: id of the business. this is the target you are predicting   预测签�
 ```python
 import pandas as pd
 data = pd.read_csv("./FBlocation/train.csv")
-data.head()
 ```
-```
-output:
-row_id	x	y	accuracy	time	place_id	day	weekday	hour
-112	   112	2.2360	1.3655	66	623174	7663031065	8	3	5
-180    180	2.2003	1.2541	65	610195	2358558474	8	3	1
-367	   367	2.4108	1.3213	74	579667	6644108708	7	2	17
-874    874	2.0822	1.1973	320	143566	3229876087	2	4	15
-1022  1022	2.0160	1.1659	65	207993	3244363975	3	5	9
-```
+
 
 ### 数据处理  
 
