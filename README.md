@@ -62,6 +62,7 @@
 ======
 
 - [用SQL分析黑五数据](https://zhuanlan.zhihu.com/p/54273292)
+- [FaceBook签到位置预测]()
 - [python分析鸢尾花数据集]()
 - [python分析泰坦尼克号获救预测]()
 - [python分析员工离职预测]()
