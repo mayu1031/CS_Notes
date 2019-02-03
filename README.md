@@ -44,15 +44,21 @@
 - [python数据可视化库-Matplotlib](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib.ipynb)
 - [python数据可视化库-Seaborn]()
 - [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.md)
-- [回归算法]()
-- [决策树]()
-- [回归算法]()
-- [贝叶斯算法]()
+- 分类算法
+    - [k近邻算法]()
+    - [贝叶斯算法]()
+    - [逻辑回归算法]()
+    - [决策树]()
+    - [随机森林]()
+- 回归算法
+    - [线性回归]()
+    - [岭回归]()
+- 无监督学习算法
+    - [聚类]()
 - [支持向量机]()
 - [神经网络]()
 - [Xgboost集成算法]()
 - [自然语言处理词向量模型]()
-- [k近邻与聚类]()
 - [PAC降维与SVD矩阵分解]()
 - [Gensim库]()
 
@@ -62,12 +68,12 @@
 ======
 
 - [用SQL分析黑五数据](https://zhuanlan.zhihu.com/p/54273292)
-- [Facebook签到位置预测]()
-- [python分析鸢尾花数据集]()
-- [python分析泰坦尼克号获救预测]()
-- [python分析员工离职预测]()
-- [python分析信用卡欺诈行为检测]()
-- [python分析借贷公司数据]()
+- [Facebook签到位置预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/facebook%E7%AD%BE%E5%88%B0%E4%BD%8D%E7%BD%AE%E9%A2%84%E6%B5%8B.md)
+- [分析鸢尾花数据集]()
+- [分析泰坦尼克号获救预测]()
+- [分析员工离职预测]()
+- [分析信用卡欺诈行为检测]()
+- [分析借贷公司数据]()
 - [主成分分析（PCA）]()
 - [级联结构的机器学习模型]()
 
