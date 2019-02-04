@@ -47,7 +47,7 @@
 - [分类算法]()
     - [k近邻算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/k%E8%BF%91%E9%82%BB/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%20KNN%E7%AE%97%E6%B3%95.md)
     - [朴素贝叶斯算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95.md)
-    - [决策树]()
+    - [决策树](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%86%B3%E7%AD%96%E6%A0%91/%E5%86%B3%E7%AD%96%E6%A0%91.md)
     - [随机森林]()
     - [逻辑回归算法]()    
 - [回归算法]()
