@@ -45,7 +45,7 @@
 - [python数据可视化库-Seaborn]()
 - [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.md)
 - [分类算法]()
-    - [k近邻算法]()
+    - [k近邻算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/k%E8%BF%91%E9%82%BB/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%20KNN%E7%AE%97%E6%B3%95.md)
     - [贝叶斯算法]()
     - [逻辑回归算法]()
     - [决策树]()
