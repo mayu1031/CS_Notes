@@ -44,6 +44,10 @@
 - [python数据可视化库-Matplotlib](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib.ipynb)
 - [python数据可视化库-Seaborn]()
 - [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.md)
+- [特征工程]
+    - [特征抽取](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96.md)
+    - [特征预处理](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86.md)
+    - [特征降维PCA](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4PCA/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4.md)
 - [分类算法]()
     - [k近邻算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/k%E8%BF%91%E9%82%BB/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%20KNN%E7%AE%97%E6%B3%95.md)
     - [朴素贝叶斯算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95.md)
@@ -55,11 +59,10 @@
     - [岭回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%B2%AD%E5%9B%9E%E5%BD%92/%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
 - [无监督学习算法]()
     - [聚类]()
+
 - [支持向量机]()
 - [神经网络]()
 - [Xgboost集成算法]()
-- [自然语言处理词向量模型]()
-- [PCA降维与SVD矩阵分解]()
 - [Gensim库]()
 
 
