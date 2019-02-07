@@ -49,7 +49,7 @@
     - [朴素贝叶斯算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95.md)
     - [决策树](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%86%B3%E7%AD%96%E6%A0%91/%E5%86%B3%E7%AD%96%E6%A0%91.md)
     - [随机森林](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97.md)
-    - [逻辑回归算法]()    
+    - [逻辑回归算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%B8%8E%E4%BA%8C%E5%88%86%E7%B1%BB.md)    
 - [回归算法]()
     - [线性回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.md)
     - [岭回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%B2%AD%E5%9B%9E%E5%BD%92/%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
