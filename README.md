@@ -60,10 +60,9 @@
 - [无监督学习算法]()
     - [聚类](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/kmeans.md)
 
-- [支持向量机]()
-- [神经网络]()
-- [Xgboost集成算法]()
-- [Gensim库]()
+- [TensorFlow框架使用]()
+- [数据读取 神经网络]()
+- [卷积神经网络]()
 
 
 
