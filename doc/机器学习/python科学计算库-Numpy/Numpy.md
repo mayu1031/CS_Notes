@@ -2,7 +2,7 @@
 - [1Numpy的优势](#1Numpy的优势)
     - [1Numpy介绍](#1Numpy介绍)
     - [2ndarray介绍](#2ndarray介绍)
-    - [3ndarray与Python原生list运算效率对比](#3ndarray与Python原生list运算效率对比)
+    - [3ndarray与Python原生list运算效率对比](#ndarray与Python原生list运算效率对比)
     - [4ndarray的优势](#4ndarray的优势)
 - [2认识N维数组ndarray属性](#2认识N维数组ndarray属性)
     - [1ndarray的属性](#1ndarray的属性)
@@ -107,7 +107,7 @@ type(score)
 output:
     numpy.ndarray
 ```
-## 3ndarrary与python原生list运算效率对比
+## 3ndarray与Python原生list运算效率对比
 - 从中我们看到ndarray的计算速度要快很多，节约了时间
 - 机器学习最大的特点就是大量的数据运算，那么如果没有一个快速的解决方案，那可能现在python也在机器学习领域达不到好的效果
 - Numpy专门对ndarray的操作和运算进行了设计，所以数组的存储效率和输入输出性能远优与Python的嵌套列表，数组越大，Numpy的优势就越明显
