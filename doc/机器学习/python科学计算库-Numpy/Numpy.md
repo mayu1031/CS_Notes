@@ -2,8 +2,8 @@
 - [1Numpy的优势](#1Numpy的优势)
     - [1Numpy介绍](#1Numpy介绍)
     - [2ndarray介绍](#2ndarray介绍)
-    - 1.3ndarray与Python原生list运算效率对比
-    - 1.4 ndarray的优势
+    - [1.3ndarray与Python原生list运算效率对比](#1.3ndarray与Python原生list运算效率对比)
+    - 1.4ndarray的优势
 - [2认识N维数组ndarray属性](#2认识N维数组ndarray属性)
     - 2.1 ndarray的属性
     - 2.2 ndarray的形状
