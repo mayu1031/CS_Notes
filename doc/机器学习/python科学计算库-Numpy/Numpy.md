@@ -4,7 +4,7 @@
     - 1.2 ndarray介绍
     - 1.3 ndarray与Python原生list运算效率对比
     - 1.4 ndarray的优势
-- [2认识N维数组 ndarray属性](#2认识N维数组 ndarray属性)
+- [2认识N维数组ndarray属性](#2认识N维数组ndarray属性)
     - 2.1 ndarray的属性
     - 2.2 ndarray的形状
     - 2.3 ndarray的类型
