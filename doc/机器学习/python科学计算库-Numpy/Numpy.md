@@ -213,8 +213,7 @@ output:
     4
 ```
 
-## 2ndarrary的形状
-`    
+## 2ndarrary的形状   
 ```python
 # 首先创造一些数组
 a = np.array([[1,2,3],[4,5,6]])
