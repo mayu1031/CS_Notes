@@ -1,6 +1,6 @@
 ﻿# Numpy
 - [1Numpy的优势](#1Numpy的优势)
-    - [1.1Numpy介绍](#1.1Numpy介绍)
+    - [1Numpy介绍](#1Numpy介绍)
     - 1.2 ndarray介绍
     - 1.3 ndarray与Python原生list运算效率对比
     - 1.4 ndarray的优势
@@ -55,7 +55,7 @@
     - 数组间运算
 - 合并 分割 IO操作 数据处理
 
-## 1.1Numpy介绍
+## 1Numpy介绍
 - 数值计算库
 - Numpy(Numerical Python)是一个开源的Python科学计算库，用于快速处理任意维度的数组
     - Numerical 数值化的
