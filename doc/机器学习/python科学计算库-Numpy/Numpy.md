@@ -2,46 +2,46 @@
 - [1Numpy的优势](#1Numpy的优势)
     - [1Numpy介绍](#1Numpy介绍)
     - [2ndarray介绍](#2ndarray介绍)
-    - [1.3ndarray与Python原生list运算效率对比](#1.3ndarray与Python原生list运算效率对比)
-    - 1.4ndarray的优势
+    - [3ndarray与Python原生list运算效率对比](#3ndarray与Python原生list运算效率对比)
+    - [4ndarray的优势](#4ndarray的优势)
 - [2认识N维数组ndarray属性](#2认识N维数组ndarray属性)
-    - 2.1 ndarray的属性
-    - 2.2 ndarray的形状
-    - 2.3 ndarray的类型
+    - [1ndarray的属性](#1ndarray的属性)
+    - [2ndarray的形状](#2ndarray的形状)
+    - [3ndarray的类型](#3ndarray的类型)
 - [3基本操作](#3基本操作)
-    - 3.1 生成数组的方法
-        - 3.1.1 生成0和1的数组
-        - 3.1.2 从现有数组生成
-        - 3.1.3 生成固定范围的数组
-        - 3.1.4 生成随机数组
+    - [1生成数组的方法]()
+        - 3.1.1生成0和1的数组
+        - 3.1.2从现有数组生成
+        - 3.1.3生成固定范围的数组
+        - 3.1.4生成随机数组
             - 3.1.4.1均匀分布
-            - 3.1.4.2 正态分布 
-    - 3.2 数组的索引，切片
-    - 3.3 形状的修改
-    - 3.4 类型的修改
-    - 3.5 数组的去重
+            - 3.1.4.2正态分布 
+    - [2数组的索引切片](#2数组的索引切片)
+    - [3形状的修改](#3形状的修改)
+    - [4类型的修改](#4类型的修改)
+    - [5数组的去重](#5数组的去重)
 - [4ndarray运算](#4ndarray运算)
-    - 4.1 逻辑运算
+    - 4.1逻辑运算
         - 4.1.1布尔索引
-    - 4.2 通用判断函数
-    - 4.3 三元运算符
-        - 4.3.1 复合逻辑
-    - 4.4 统计运算
-        - 4.4.1 统计指标
-        - 4.4.2 返回最大值最小值所在位置
+    - 4.2通用判断函数
+    - 4.3三元运算符
+        - 4.3.1复合逻辑
+    - 4.4统计运算
+        - 4.4.1统计指标
+        - 4.4.2返回最大值最小值所在位置
 - [5数组间运算](#5数组间运算)
-    - 5.1 数组与数的运算
-    - 5.2 数组与数组的运算
-    - 5.3 广播机制
-    - 5.4 矩阵运算
-        - 5.4.1 什么是矩阵
-        - 5.4.2 矩阵的乘法预算
+    - 5.1数组与数的运算
+    - 5.2数组与数组的运算
+    - 5.3广播机制
+    - 5.4矩阵运算
+        - 5.4.1什么是矩阵
+        - 5.4.2矩阵的乘法预算
 - [6合并分割](#6合并分割)
-    - 6.1 合并
-    - 6.2 分割
+    - 6.1合并
+    - 6.2分割
 - [7IO操作与数据处理](#7IO操作与数据处理)
-    - 7.1 Numpy 读取
-    - 7.2 如何处理缺失值
+    - 7.1Numpy 读取
+    - 7.2如何处理缺失值
         - 7.2.1 什么是缺失值
 
 # 1Numpy的优势
@@ -107,7 +107,7 @@ type(score)
 output:
     numpy.ndarray
 ```
-## 1.3ndarrary与python原生list运算效率对比
+## 3ndarrary与python原生list运算效率对比
 - 从中我们看到ndarray的计算速度要快很多，节约了时间
 - 机器学习最大的特点就是大量的数据运算，那么如果没有一个快速的解决方案，那可能现在python也在机器学习领域达不到好的效果
 - Numpy专门对ndarray的操作和运算进行了设计，所以数组的存储效率和输入输出性能远优与Python的嵌套列表，数组越大，Numpy的优势就越明显
@@ -141,7 +141,7 @@ output:
     0.0060045719146728516 0.0010476112365722656
 ```    
 
-## 1.4 ndarray的优势
+## 4ndarray的优势
 - 存储风格
     - ndarry 数据相同类型，通用性不强；ndarray在存储数据的时候，数据与数据的地址都是连接的，这样就使得批量操作数组元素时速度更快
     - list 数据可以不同类型 通用性强；python原生数组只能通过寻址的方式找到下一个元素，在科学计算中，Numpy的ndaary可以省去很多循环语句，代码使用方面比Python原生list要简单的多
@@ -152,7 +152,7 @@ output:
 
 # 2认识N维数组ndarray属性
 
-## 2.1 ndarray的属性
+## 1ndarray的属性
 - 数组属性反映了数组本身固有的信息
     - **ndarray.shape** 数组维度的元组
         - ndarray.ndim  数组维度
@@ -213,7 +213,7 @@ output:
     4
 ```
 
-## 2.2 ndarrary的形状
+## 2ndarrary的形状
 `    
 ```python
 # 首先创造一些数组
@@ -274,7 +274,7 @@ output:
     (2, 2, 3)
 ```
 
-## 2.3 ndarray的类型  
+## 3ndarray的类型  
 - type(score.dtype)      
 - <type 'numpy.dtype'>  
 - dtype是numpy.dtype类型，先看看对于数组来说都有哪些类型 
@@ -350,7 +350,7 @@ output:
     - np.array()
 - 看属性的时候表示方法都是元祖，想指定形状的时候既可以是元祖也可以是列表
 
-## 3.1 生成数组的方法
+## 1生成数组的方法
 ### 3.1.1 生成0和1的数组
 - ones(shape[,dtype,order])
     - ones_like(a[,dtype,order,subok])
@@ -659,7 +659,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%BA%93-Numpy/output_58_0.png)
 
 
-## 3.2 数组的索引，切片
+## 2数组的索引，切片
 #### 案例：随机生成8只股票2周的交易日涨幅数据  
 8只股票，两周（10天）的涨跌幅数据，如何获取？
 - 两周的交易日数量为 2*5 =10
@@ -763,7 +763,7 @@ output:
            [[  12,    3,   34],
             [   5,    6,    7]]])
 ```
-## 3.3 形状修改
+## 3形状修改
 - 让刚刚的股票行，日期列反过来，变成日期行，股票列
 - **ndarray.reshape(shape[,order])** #返回新的ndarry，只是形状变了，数据没有改变，
      - Returns an array containing the same data with a new shape
@@ -933,7 +933,7 @@ stock_change.T.shape
 output:
     (10, 8)
 ```
-## 3.4 类型修改
+## 4类型修改
 - **ndarray.astype(type)**
     - stock_change.astype(np.int32)
 - **ndarray.tostring([order])**或者**ndarray.tobyte([order])** ndarray序列化到本地
@@ -978,7 +978,7 @@ stock_change.tostring()
 output:
     b'no\xa6\xb6\xbc\x87\xf3\xbfp\x07\x8aQ\xe7\xda\x00@\xe7\xcb\x12\xe87\xb7\xf1\xbf\x08\xa3\xd0\xb4\xea/\xde\xbf+\xee%\x85\x92\x16\xff?\x9b\xf0\x8az\xc4P\xe5?\\\xf3\x14!\x83\x97\xea?\x97\xc7\xc3\xe1\xc2\xbd\xb4\xbf\xa0v)5\xfc\x08\xc3?Q\x95\x11H\xb9+\xfa?p(\xb3\x86](\xe4\xbfvoB\xc1K\xf0\xfb?\xb6g\x18\xde\x97P\xf0?\x8b\xf7\x82v\x89$\xb5?\x1fb\xe9F\x80\xdd\xf4?\xa7L1M/\xed\xd9\xbf\x12I\x1c>\xbb\x9c\xed\xbf\x10\xf4\xa5&X\xeb\xe0\xbf\x12\xf3\xe5\xaco\x8c\xb6\xbf>\x87\xa9y\xfc\xa8\xcf?\xee\xf9@n\x9d\xb8\xf9\xbfy\x03g\xb0\x0b\xc3\xf3?\xc1Q\xc4$\x06\xb7\xf0\xbf1I\xfdV\xc15\xba?\xe7\xdfP\xe0\xc7\xdb\xd0?V\xf6\x13\xa3\xd5\xac\xc8\xbf\x9c1\xb9\x19\xa6L\xf3?\xaa\x7f\xda\xe3\xcd\xeb\xda?S\x11\xc9\xd3\x81>\xf0\xbf\x87j\xca\xd4\xaf@\xe4\xbfFw\xa6\xaeB\x96\xcf?\xf5Wg\x9f6\xac\xdd?#\xcd\xd9MU\x00\xeb\xbf\xdfR\x83R/B\xf5\xbfKD\x836\xa6\x97\xdd?V\x1e\xcf:\xfc\xbf\xf3\xbf\xd5\x97\x9b^\xeb\xcb\xff?\x955\xfeH\xa8\x8c\xf6?EZpxP\xdd\x8b?\xb3\xd1\xac~\'\t\xe8\xbf\x8c\xf1\xfeQ\xf2\xc5\xf3?\xff\xd6\x9c\x1d\xf2\xea\xfc?\x9e\xd8@0\xa2z\x00\xc0\xa8\xd2\xb3Wj\x87\xf5?\xbb\xd5\x07\xadp\xb5\xcc\xbf\x1f<~+\xc6\xa9\xe7\xbf\xc5\x0e:\xabtC\xe3\xbf\x8d\xaf\xa3\xd6\xdfD\xe9?\x99m\x11$\x15o\xe6?\xbbA9\x14\nj\xd9\xbf<\'tv\x0b:\xde\xbf[N\xb4\xc3%\xbd\xe5\xbfjL\xe6>\xd2\x14\xf1?\xda1\x19\xc8\xe2\x91\xb4\xbf\xe7\xe6f\x046n\xf8?\xe8k\xa7\xb6$F\xeb\xbf*(\xe3*>\x8d\xf5\xbf;B?\'\xe3\xd6\xbf\xbf\xc1s\x00Y\xb0\xdb\xe3\xbf\xf0/\x9er\xd0%\xc3\xbfx\xe4#\xd8t\x1f\xf1\xbf#\xc3\xc4\xe0\xee\x19\xb3?\xd2\x18G:\xca\x93\xe3\xbf\xfa!nR\xc5\x0b\xb2?V\xf5S\x1927\xf7\xbfd\xe4!\xde\xba\n\xf0?\xe3#\x1a\x87\xc8\x02\xbd\xbf\xfd\xb8-\xa8\xe9i\xe5?\xc1:\xb2\x95\x85\x18\xe0?3\xe1\x9d\xb4\xf1p\xd8\xbf\xb4FrE6r\xe8\xbf\xe4\xb5\x99\x8a\xae\x0e\xe4?6\xb6NK~\xd0\xd0?\xd5\xb1\xc9\xfc\xf3\xb3\xf6?\n\x1c+\x890/\xf7\xbf\x85\xe3"\x9ev\x95\xe3?\x83\xc2\xe2\xce.\xbd\xc8?R@\xbdb\x95&\xdb?\xeb\xac\xd2\x13HF\xea?\x9e\xa87+/A\xf0?'
 ```
-## 3.5 数组的去重
+## 5数组的去重
 - **ndarray.unique(data)**
 - set只适用于一维数据，可以用flatten把数据拍扁之后，再用set
     - **set(data.flatten())**
