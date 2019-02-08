@@ -39,7 +39,7 @@
 
 ![溜冰鞋][5]  机器学习
 ======
-- [python科学计算库-Numpy](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%BA%93-Numpy/Numpy.ipynb)
+- [python科学计算库-Numpy](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%BA%93-Numpy/Numpy.md)
 - [python数据分析处理库-Pandas](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas.ipynb)
 - [python数据可视化库-Matplotlib](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib.ipynb)
 - [python数据可视化库-Seaborn]()
