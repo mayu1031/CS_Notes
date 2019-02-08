@@ -54,10 +54,6 @@
     - 统计运算
     - 数组间运算
 - 合并 分割 IO操作 数据处理
-## 1.1 Numpy介绍
-## 1.2 ndarray介绍
-## 1.3 ndarray与Python原生list运算效率对比
-## 1.4 ndarray的优势
 
 ## 1.1 Numpy介绍
 - 数值计算库
