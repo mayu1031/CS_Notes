@@ -1,5 +1,5 @@
 ﻿# Numpy
-- 1Numpy的优势
+- [1Numpy的优势](#1Numpy的优势)
     - 1.1 Numpy介绍
     - 1.2 ndarray介绍
     - 1.3 ndarray与Python原生list运算效率对比
