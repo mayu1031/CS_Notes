@@ -44,6 +44,10 @@
     - [2如何处理缺失值](#2如何处理缺失值)
         - [1什么是缺失值](#1什么是缺失值)
 
+
+![思维导图](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%BA%93-Numpy/Numpy.png)
+
+
 # 1Numpy的优势
 - 高效的运算工具
 - numpy的基本操作
