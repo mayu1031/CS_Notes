@@ -1,44 +1,44 @@
 ﻿# Matplotlib
 - [1Matplotlib工具](#1Matplotlib工具)
-    - [1什么是matplotlib工具]
-    - [2为什么要学习matplotli工具]
-    - [3常见图形种类及意义]
-    - [4实现一个简单的matplotlib画图]
-    - [5matplotlib三层结构]
-        - [1容器层]
-        - [2辅助显示层]  
-        - [3图像层]
+    - [1什么是matplotlib工具](#1什么是matplotlib工具)
+    - [2为什么要学习matplotli工具](#2为什么要学习matplotli工具)
+    - [3常见图形种类及意义](#3常见图形种类及意义)
+    - [4实现一个简单的matplotlib画图](#4实现一个简单的matplotlib画图)
+    - [5matplotlib三层结构](#5matplotlib三层结构)
+        - [1容器层](#1容器层)
+        - [2辅助显示层](#2辅助显示层)  
+        - [3图像层](#3图像层)
         
-- [2折线图plot与基础绘图功能]  
-    - [2.1plot折线图绘制与保存图片]
-        - [2.1.1matplotlib.pyplot模块]
-        - [2.1.2折线图的绘制与显示]
-        - [2.1.3设置画布的属性与保存图片]
-    - [2.2完善原始折线图1辅助显示层]
-        - [2.2.1准备数据并画出初始折线图]
-        - [2.2.2添加xy刻度即范围] 
-        - [2.2.3添加字符串]
-        - [2.2.4如何解决中文显示问题]
-        - [2.2.5添加网格]
-        - [2.2.6添加x轴y轴描述信息标题]
-    - [2.3完善原始折线图2图像层]
-        - [2.3.1多次plot画两个城市]
-        - [2.3.2颜色修改，线条修改]
-        - [2.3.3显示图例]  
-    - [2.4subplot多个坐标系显示] 
-    - [2.5折线图的应用场景]
-        - [2.5.1绘制数学函数图像]
-- [3scatter散点图]
-    - [3.1散点图应用场景]
-- [4bar柱状图] 
-    - [4.1柱状图应用场景]
-- [5histogramhist直方图] 
-    - [5.2直方图绘制]
-    - [5.3直方图注意点]  
-    - [5.4直方图的应用场景]
-- [6pie饼图]
-    - [6.1饼图api介绍]
-    - [6.2饼图应用场景]
+- [2折线图plot与基础绘图功能](#2折线图plot与基础绘图功能)  
+    - [1plot折线图绘制与保存图片](#1plot折线图绘制与保存图片)
+        - [1matplotlib.pyplot模块](#1matplotlib.pyplot模块)
+        - [2折线图的绘制与显示](#2折线图的绘制与显示)
+        - [3设置画布的属性与保存图片](#3设置画布的属性与保存图片)
+    - [2完善原始折线图1辅助显示层](#2完善原始折线图1辅助显示层)
+        - [1准备数据并画出初始折线图](#1准备数据并画出初始折线图)
+        - [2添加xy刻度即范围](#2添加xy刻度即范围) 
+        - [3添加字符串](#3添加字符串)
+        - [4如何解决中文显示问题](#4如何解决中文显示问题)
+        - [5添加网格](#5添加网格)
+        - [6添加x轴y轴描述信息标题](#6添加x轴y轴描述信息标题)
+    - [3完善原始折线图2图像层](#3完善原始折线图2图像层)
+        - [1多次plot画两个城市](#1多次plot画两个城市)
+        - [2颜色修改线条修改](#2颜色修改线条修改)
+        - [3显示图例](#3显示图例)  
+    - [4subplot多个坐标系显示](#4subplot多个坐标系显示) 
+    - [5折线图的应用场景](#5折线图的应用场景)
+        - [1绘制数学函数图像](#1绘制数学函数图像)
+- [3scatter散点图](#3scatter散点图)
+    - [1散点图应用场景](#1散点图应用场景)
+- [4bar柱状图](#4bar柱状图) 
+    - [1柱状图应用场景](#1柱状图应用场景)
+- [5histogramhist直方图](#5histogramhist直方图) 
+    - [1直方图绘制](#1直方图绘制)
+    - [2直方图注意点](#2直方图注意点)
+    - [3直方图的应用场景](#3直方图的应用场景)
+- [6pie饼图](#6pie饼图)
+    - [1饼图api介绍](#1饼图api介绍)
+    - [2饼图应用场景](#2饼图应用场景)
 
 ![思维导图](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib%E6%80%BB%E7%BB%93.png)
 
@@ -146,8 +146,8 @@ plt.show()
 - 知道折线图的应用场景
 
 
-## 2.1plot折线图绘制与保存图片
-### 2.1.1matplotlib.pyplot模块
+## 1plot折线图绘制与保存图片
+### 1matplotlib.pyplot模块
 
 - mathplotlib.pyplot包含类一系列类似于matlab的画图函数
 - 他的函数作用于当前图形figure的当前坐标系axes
@@ -157,7 +157,7 @@ plt.show()
 import matplotlib.pyplot as plt
 ```
 
-### 2.1.2折线图的绘制与显示
+### 2折线图的绘制与显示
 
 
 ```python
@@ -174,7 +174,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_7_0.png)
 
 
-### 2.1.3设置画布的属性与保存图片
+### 3设置画布的属性与保存图片
 - figsize: 指定图的长度,画布大小
 - dpi: 图像的清晰度 dot per inch
 - plt.savefig(path): 保存图像
@@ -204,14 +204,15 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_9_0.png)
 
 
-## 2.2完善原始折线图1辅助显示层
+## 2完善原始折线图1辅助显示层
 - 需求： 画出某城市11点到12点1小时内每分钟的温度变化折线图，温度范围在15-18之间 x轴60分钟
 - 准备数据并画出初始折线图
 - 准备数据
     - x = range(60)
 - 绘制图像
 - 显示图像
-### 2.2.1准备数据并画出初始折线图
+
+### 1准备数据并画出初始折线图
 
 
 ```python
@@ -229,7 +230,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_11_0.png)
 
 
-### 2.2.2添加xy刻度即范围 
+### 2添加xy刻度即范围 
 - plt.xticks(x,**kwargs)
     - x: 要显示的刻度值  **kwargs: 为需要的说明
 - plt.yticks(y,**kwargs)
@@ -298,7 +299,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_17_0.png)
 
 
-### 2.2.3添加字符串
+### 3添加字符串
 - 构造x轴刻度标签 
 - x_ticks_label  plt.xticks(x[::5],x_ticks_label[::5]) 和plt.xticks() 结合在一起
 - 构造y轴刻度
@@ -328,7 +329,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_19_0.png)
 
 
-### 2.2.4如何解决中文显示问题
+### 4如何解决中文显示问题
  - 加两行代码就能满足x_label里面有中文 
     - plt.rcParams['font.sans-serif'] = [u'SimHei']  
     - plt.rcParams['axes.unicode_minus'] = False 
@@ -361,7 +362,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_21_0.png)
 
 
-### 2.2.5添加网格
+### 5添加网格
 - 默认True，意思是默认添加网格，linestyle网格风格，alpha透明度
 - plt.grid(True, linestyle ='--', alpha=0.5)
 
@@ -386,7 +387,7 @@ plt.show()
 ![png](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_23_0.png)
 
 
-### 2.2.6添加x轴y轴描述信息标题
+### 6添加x轴y轴描述信息标题
 - plt.xlabel("时间")
 - plt.ylabel("温度")
 - plt.title("中午11点到12点之间的温度变化图示：")
@@ -417,7 +418,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_25_0.png)
 
 
-## 2.3完善原始折线图2图像层
+## 3完善原始折线图2图像层
 - 应用legend实现图形标注信息显示
     - 应用plt.subplots实现多坐标系的创建
     - 知道如何设置多个axes的标题，刻度
@@ -537,7 +538,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_28_0.png)
 
 
-### 2.3.2颜色修改，线条修改
+### 2颜色修改线条修改
 - plt.plot(x, y_shanghai, color="r", linestyle="--")
 - plt.plot(x, y_beijing, color = 'b')
 
@@ -578,7 +579,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_31_0.png)
 
 
-## 2.3.3显示图例  
+## 3显示图例  
 - 不仅要在图像层修改，也要在辅助显示层修改显示图例
 - 图例的位置 Location String   Location Code
     - plt.legend(loc="best")
@@ -699,7 +700,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_35_0.png)
 
 
-## 2.4subplot多个坐标系显示 
+## 4subplot多个坐标系显示 
 - plt.subplots 面向对象的画图方法
 - 将上海和北京的天气图显示在同一图的不同坐标系中
 - matplotlib.pyplot.subplots(nrows=1,ncols=1,**fig_kw)
@@ -862,7 +863,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_38_0.png)
 
 
-## 2.5折线图的应用场景
+## 5折线图的应用场景
 - 呈现公司产品（不同区域）每天活跃用户数
 - 呈现app每天下载数量
 - 呈现产品新功能上线后，用户点击次数随时间的变化
@@ -922,7 +923,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_42_0.png)
 
 
-## 3.1散点图应用场景
+## 1散点图应用场景
 - 探究不同变量之间的内在关系
 
 # 4bar柱状图 
@@ -1063,7 +1064,7 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_48_0.png)
 
 
-## 4.1柱状图应用场景
+## 1柱状图应用场景
 - 数量统计
 - 用户数量对比分析
 
@@ -1086,7 +1087,7 @@ plt.show()
 - 直方图柱子无间隔，柱状图柱子有间隔
 - 直方图柱子宽度可不一，柱状图柱子宽度必须一致
 
-## 5.2直方图绘制
+## 1直方图绘制
 - matplotlib.pyplot.hist(x,bins=None,density=None,**kwargs)
 
 - Parameters:  
@@ -1170,13 +1171,14 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_52_0.png)
 
 
-## 5.3直方图注意点  
+## 2直方图注意点  
 - 注意组距
     - 组距会影响直方图呈现出来的数据分布，因此在绘制直方图的时候需要多次尝试改变组距
 - 注意y轴所代表的变量
     - y轴上的变量可以是频次（数据出现多少次），频率（频次/总次数），频率/组距，不同的变量会让直方图描述的数据分布意义不同
     
-## 5.4直方图的应用场景
+
+## 5.3直方图的应用场景
 - 用于表示一组数据的分布情况
 - 通过直方图还可以观察和估计哪些数据比较集中，异常或者孤立的数据分布在何处
     - 比如年龄分布，商品价格分布
@@ -1185,7 +1187,8 @@ plt.show()
 - 饼图 pie：用来表示不同分类的占比情况，通过弧度大小来对比各种分类
     - 特点： 分类数据的占比情况（占比）
 - 饼图广泛的应用在各个领域，用于表示不同分类的占比情况，通过弧度大小来对比各种分类。饼图通过将一个圆饼按照分类的占比划分成多个区域，整个圆饼代表数据的总量，每个区块（圆弧）表示该分类占总体的比例大小，所有区块（圆弧）的加和等于100%
-## 6.1饼图api介绍
+
+## 1饼图api介绍
 - 注意显示的百分比的位数
 - plt.pie(x,label=,autopct=,colors)
     - x：数量，自动算百分比
@@ -1221,6 +1224,6 @@ plt.show()
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_55_0.png)
 
 
-## 6.2饼图应用场景
+## 2饼图应用场景
 - 分类的占比情况（不超过9个分类）
 例如：班级男女分布占比，公司销售额占比
