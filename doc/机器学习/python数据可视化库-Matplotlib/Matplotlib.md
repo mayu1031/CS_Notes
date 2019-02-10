@@ -1,45 +1,46 @@
-
-- 1Matplotlib工具
-    - 1什么是matplotlib工具
-    - 2为什么要学习matplotli工具
-    - 3常见图形种类及意义
-    - 4实现一个简单的matplotlib画图
-    - 5matplotlib三层结构
-        - 1容器层
-        - 2辅助显示层  
-        - 3图像层
+﻿# Matplotlib
+- [1Matplotlib工具](#1Matplotlib工具)
+    - [1什么是matplotlib工具]
+    - [2为什么要学习matplotli工具]
+    - [3常见图形种类及意义]
+    - [4实现一个简单的matplotlib画图]
+    - [5matplotlib三层结构]
+        - [1容器层]
+        - [2辅助显示层]  
+        - [3图像层]
         
-- 2折线图plot与基础绘图功能  
-    - 2.1plot折线图绘制与保存图片
-        - 2.1.1matplotlib.pyplot模块
-        - 2.1.2折线图的绘制与显示
-        - 2.1.3设置画布的属性与保存图片
-    - 2.2完善原始折线图1辅助显示层
-        - 2.2.1准备数据并画出初始折线图
-        - 2.2.2添加xy刻度即范围 
-        - 2.2.3添加字符串
-        - 2.2.4如何解决中文显示问题
-        - 2.2.5添加网格
-        - 2.2.6添加x轴y轴描述信息标题
-    - 2.3完善原始折线图2图像层
-        - 2.3.1多次plot画两个城市
-        - 2.3.2颜色修改，线条修改
-        - 2.3.3显示图例  
-    - 2.4subplot多个坐标系显示 
-    - 2.5折线图的应用场景
-        - 2.5.1绘制数学函数图像
-- 3scatter散点图
-    - 3.1散点图应用场景
-- 4bar柱状图 
-    - 4.1柱状图应用场景
-- 5histogramhist直方图 
-    - 5.2直方图绘制
-    - 5.3直方图注意点  
-    - 5.4直方图的应用场景
-- 6pie饼图
-    - 6.1饼图api介绍
-    - 6.2饼图应用场景
+- [2折线图plot与基础绘图功能]  
+    - [2.1plot折线图绘制与保存图片]
+        - [2.1.1matplotlib.pyplot模块]
+        - [2.1.2折线图的绘制与显示]
+        - [2.1.3设置画布的属性与保存图片]
+    - [2.2完善原始折线图1辅助显示层]
+        - [2.2.1准备数据并画出初始折线图]
+        - [2.2.2添加xy刻度即范围] 
+        - [2.2.3添加字符串]
+        - [2.2.4如何解决中文显示问题]
+        - [2.2.5添加网格]
+        - [2.2.6添加x轴y轴描述信息标题]
+    - [2.3完善原始折线图2图像层]
+        - [2.3.1多次plot画两个城市]
+        - [2.3.2颜色修改，线条修改]
+        - [2.3.3显示图例]  
+    - [2.4subplot多个坐标系显示] 
+    - [2.5折线图的应用场景]
+        - [2.5.1绘制数学函数图像]
+- [3scatter散点图]
+    - [3.1散点图应用场景]
+- [4bar柱状图] 
+    - [4.1柱状图应用场景]
+- [5histogramhist直方图] 
+    - [5.2直方图绘制]
+    - [5.3直方图注意点]  
+    - [5.4直方图的应用场景]
+- [6pie饼图]
+    - [6.1饼图api介绍]
+    - [6.2饼图应用场景]
 
+![思维导图](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib%E6%80%BB%E7%BB%93.png)
 
 # 1Matplotlib工具
 
@@ -92,7 +93,7 @@ plt.show()
 ```
 
 
-![png](output_1_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_1_0.png)
 
 
 ## 5matplotlib三层结构
@@ -170,7 +171,7 @@ plt.show()
 ```
 
 
-![png](output_7_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_7_0.png)
 
 
 ### 2.1.3设置画布的属性与保存图片
@@ -200,7 +201,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_9_0.png)
 
 
 ## 2.2完善原始折线图1辅助显示层
@@ -225,7 +226,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_11_0.png)
 
 
 ### 2.2.2添加xy刻度即范围 
@@ -250,7 +251,7 @@ plt.show()
 ```
 
 
-![png](output_13_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_13_0.png)
 
 
 - 0到39每隔5步
@@ -271,7 +272,7 @@ plt.show()
 ```
 
 
-![png](output_15_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_15_0.png)
 
 
 - x轴改成每隔5步
@@ -294,7 +295,7 @@ plt.show()
 ```
 
 
-![png](output_17_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_17_0.png)
 
 
 ### 2.2.3添加字符串
@@ -324,7 +325,7 @@ plt.show()
 ```
 
 
-![png](output_19_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_19_0.png)
 
 
 ### 2.2.4如何解决中文显示问题
@@ -357,7 +358,7 @@ plt.show()
 ```
 
 
-![png](output_21_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_21_0.png)
 
 
 ### 2.2.5添加网格
@@ -382,7 +383,7 @@ plt.show()
 ```
 
 
-![png](output_23_0.png)
+![png](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_23_0.png)
 
 
 ### 2.2.6添加x轴y轴描述信息标题
@@ -413,7 +414,7 @@ plt.show()
 ```
 
 
-![png](output_25_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_25_0.png)
 
 
 ## 2.3完善原始折线图2图像层
@@ -533,7 +534,7 @@ plt.show()
 ```
 
 
-![png](output_28_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_28_0.png)
 
 
 ### 2.3.2颜色修改，线条修改
@@ -574,7 +575,7 @@ plt.show()
 ```
 
 
-![png](output_31_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_31_0.png)
 
 
 ## 2.3.3显示图例  
@@ -623,7 +624,7 @@ plt.show()
 ```
 
 
-![png](output_33_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_33_0.png)
 
 
 
@@ -659,7 +660,7 @@ plt.show()
 ```
 
 
-![png](output_34_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_34_0.png)
 
 
 
@@ -695,7 +696,7 @@ plt.show()
 ```
 
 
-![png](output_35_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_35_0.png)
 
 
 ## 2.4subplot多个坐标系显示 
@@ -779,7 +780,7 @@ plt.show()
 ```
 
 
-![png](output_37_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_37_0.png)
 
 
 
@@ -858,7 +859,7 @@ plt.show()
 ```
 
 
-![png](output_38_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_38_0.png)
 
 
 ## 2.5折线图的应用场景
@@ -886,7 +887,7 @@ plt.show()
 ```
 
 
-![png](output_40_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_40_0.png)
 
 
 # 3scatter散点图
@@ -918,7 +919,7 @@ plt.show()
 ```
 
 
-![png](output_42_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_42_0.png)
 
 
 ## 3.1散点图应用场景
@@ -967,7 +968,7 @@ plt.show()
 ```
 
 
-![png](output_45_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_45_0.png)
 
 
 
@@ -996,7 +997,7 @@ plt.show()
 ```
 
 
-![png](output_46_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_46_0.png)
 
 
 
@@ -1024,7 +1025,7 @@ plt.show()
 ```
 
 
-![png](output_47_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_47_0.png)
 
 
 
@@ -1059,7 +1060,7 @@ plt.show()
 ```
 
 
-![png](output_48_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_48_0.png)
 
 
 ## 4.1柱状图应用场景
@@ -1132,7 +1133,7 @@ plt.show()
 ```
 
 
-![png](output_51_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_51_0.png)
 
 
 
@@ -1166,7 +1167,7 @@ plt.show()
 ```
 
 
-![png](output_52_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_52_0.png)
 
 
 ## 5.3直方图注意点  
@@ -1217,7 +1218,7 @@ plt.show()
 ```
 
 
-![png](output_55_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/output_55_0.png)
 
 
 ## 6.2饼图应用场景
