@@ -58,10 +58,9 @@
     - [岭回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%B2%AD%E5%9B%9E%E5%BD%92/%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
 - [无监督学习算法]()
     - [聚类](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/kmeans.md)
-
-- [TensorFlow框架使用]()
-- [数据读取 神经网络]()
-- [卷积神经网络]()
+- [TensorFlow框架使用](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/TensorFlow%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8)
+- [数据读取 神经网络](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+- [卷积神经网络](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
 
 
 
