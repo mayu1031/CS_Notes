@@ -1,6 +1,6 @@
 
 
-# 1.Pandas
+# 1.Pandas是什么
 ## 1.1Pandas介绍
 - panel + data + analysis
     - panel 面板 panel data 面板数据，来源计量经济学 三维数据
@@ -20,13 +20,13 @@
     - MultiIndex与Panel是多维数组
     - Panel是DataFrame的容器
 
-## 1.2为什么使用Pandas
+## 1.2使用Pandas的原因
 - 便捷的数据处理能力
     - 填写缺失值数据 替换 插补
 - 读取文件方便
 - 封装类Matplotlib, Numpy的画图和计算
 
-## 1.3DataFrame
+## 1.3DataFrame是什么
 ### 1.3.1DataFrame结构
 - 结构: 既有行索引，又有列索引的二维数组
     - 行索引，表名不同行，横向索引，叫做index
@@ -1835,11 +1835,11 @@ new_def.index
 
 
 
-## 1.4MultiIndex与Panel
+## 1.4MultiIndex与Panel是什么
 - 可以用来表示三维数据了
 - 通过刚才的设置，这样 Data Frame就变成类一个具有MultiIndex的DataFrame
 - 三维数组推荐使用MultiIndex 不推荐使用Panel
-### 1.4.1MultiIndex
+### 1.4.1MultiIndex是什么
 - 多级或分层索引对象
 - indexd的属性
     - **names**：levels的名称
@@ -1883,7 +1883,7 @@ new_def.index.levels  ##
 
 
 
-### 1.4.2Panel
+### 1.4.2Panel是什么
 - 用来存储三维结构的面板
 - class pandas.Panel(data=None,items=None,major_axis=None,minor_axis=None,copy=False,dtype=None)
 - **Panel看出data frame的容器**
@@ -2129,7 +2129,7 @@ p.minor_xs("first")
 
 
 
-## 1.5Series
+## 1.5Series是什么
 
 - 带索引的一维数组
 - series结构只有行索引
@@ -2336,7 +2336,7 @@ data.iloc[1,:].index
 
 
 
-### 1.5.2创建Series
+### 1.5.2Series创建
 - 通过已有数据创建
     - 指定内容，默认索引
         - **pd.Series(np.arange(10))**
@@ -4750,7 +4750,7 @@ data.apply(lambda x: x.max() - x.min())
 
 
 
-# Pandas画图
+# 4Pandas画图
 - **pandas.DataFrame.plot**
     - DataFrame.plot(x=None,y=None,kind='line')
     - x:label or position, default None
@@ -4785,7 +4785,7 @@ plt.show()
 
 
 # 5文件读取与存储
-## 5.1CSV
+## 5.1CSV是什么
 ### 5.1.1读取CSV文件
 - **pandas.read_csv(filepath_or_buffer,sep=',',delimiter=None)**
     - **filepath_or_buffer**: 文件路径
@@ -5612,7 +5612,7 @@ pd.read_csv("opentest.csv") # 去除open header
 
 
 
-## 5.2HDF5
+## 5.2HDF5是什么
 - **read_hdf(path_or_buf,key=None,kwargs)**
 - **to_hdf()**
 - HDF5存储3维数据的文件
@@ -6368,7 +6368,7 @@ pd.read_hdf('test.h5',key='close').head()   ### test里面有两个key，一个c
     - 使用压缩可以提高磁盘利用率，节省空间
     - HDF5还是跨平台的，可以轻松迁移到hadoop上面
 
-## 5.3JSON
+## 5.3JSON是什么
 - Json是我们常见的一种数据交换格式，前面在前后端的交互经常用到，也会在存储的时候选择这种格式。所以我们需要知道pandas如何进行读取和存储Json格式
 - pandas.read_json(path_or_buf=None, orient=None,typ='frame',lines=False)
     - orient = 'records'
@@ -6450,7 +6450,7 @@ article.to_json("test.json", orient="records", lines=True)
 ```
 
 # 6缺失值处理
-## 6.1如何处理NAN
+## 6.1NAN如何处理
 - 判断数据是否为NAN: 
     - **pd.isnull(df)**, **pd.notnull(df)**,**pd.isnull(df).any()**, **pd.notnull(df).all()**
 - 删除含有缺失值的样本
@@ -6464,9 +6464,7 @@ article.to_json("test.json", orient="records", lines=True)
         - **inplace**:
             - True: 就地填补，会修改原数据
             - False: 不替换修改原数据，生成新的对象
-## 6.2缺失值处理实例
 - 电影数据文件获取
-## 6.3不是缺失值nan，是其他标记
 
 
 ```python
@@ -6592,7 +6590,7 @@ movie.head()
 
 
 
-### 6.2.1判断 是否存在缺失值
+### 6.2.1判断是否存在缺失值
 
 
 ```python
@@ -7244,7 +7242,7 @@ pd.notnull(movie).all()
 
 
 
-## 6.3不是缺失值nan，有默认标记的
+## 6.3不是缺失值nan有默认标记的
 - 替换，将问好替换成np.nan
     - **df.replace(to_replace='?',value=np.nan)**
 - 处理np.nan
@@ -10387,7 +10385,7 @@ stock.pivot_table(["pona"], index=["week"])
 # 10分组与聚合
 ## 10.1什么是分组与聚合
 - 分组与聚合通常是分析数据的一种方式，通常与一些统计函数一起使用，查看数据的分组情况
-## 10.2分组api
+## 10.2api分组
 - **df.groupby(key,as_index=False)**
     - key: 分组的
     - **col.groupby(by='color')['price1'].max()**
