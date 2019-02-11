@@ -10460,6 +10460,10 @@ stock.pivot_table(["pona"], index=["week"])
 # 10分组与聚合
 ## 10.1什么是分组与聚合
 - 分组与聚合通常是分析数据的一种方式，通常与一些统计函数一起使用，查看数据的分组情况
+
+![分组与聚合](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/%E5%88%86%E7%BB%84%E4%B8%8E%E8%81%9A%E5%90%88.png)  
+
+
 ## 10.2api分组
 - **df.groupby(key,as_index=False)**
     - key: 分组的
