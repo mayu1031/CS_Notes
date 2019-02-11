@@ -1,19 +1,4 @@
 
-# 1.Pandas
-## 1.1Pandas介绍
-## 1.2为什么使用Pandas
-## 1.3DataFrame
-### 1.3.1DataFrame结构
-### 1.3.2DataFrame属性
-### 1.3.3DataFrame索引的设置
-## 1.4MultiIndex与Panel
-### 1.4.1MultiIndex
-### 1.4.2Panel
-## 1.5Series
-### 1.5.1创建Series
-### 1.5.2Series获取索引和值
-
-
 
 # 1.Pandas
 ## 1.1Pandas介绍
@@ -2719,100 +2704,7 @@ data.head()
 
 
 
-
-```python
-data[2,1] #不能进行直接进行数字索引
-```
-
-
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    D:\anaconda\lib\site-packages\pandas\core\indexes\base.py in get_loc(self, key, method, tolerance)
-       2441             try:
-    -> 2442                 return self._engine.get_loc(key)
-       2443             except KeyError:
-    
-
-    pandas\_libs\index.pyx in pandas._libs.index.IndexEngine.get_loc()
-    
-
-    pandas\_libs\index.pyx in pandas._libs.index.IndexEngine.get_loc()
-    
-
-    pandas\_libs\hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-    
-
-    pandas\_libs\hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-    
-
-    KeyError: (2, 1)
-
-    
-    During handling of the above exception, another exception occurred:
-    
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-79-e6eaec0a19d4> in <module>()
-    ----> 1 data[2,1] #不能进行直接索引
-    
-
-    D:\anaconda\lib\site-packages\pandas\core\frame.py in __getitem__(self, key)
-       1962             return self._getitem_multilevel(key)
-       1963         else:
-    -> 1964             return self._getitem_column(key)
-       1965 
-       1966     def _getitem_column(self, key):
-    
-
-    D:\anaconda\lib\site-packages\pandas\core\frame.py in _getitem_column(self, key)
-       1969         # get column
-       1970         if self.columns.is_unique:
-    -> 1971             return self._get_item_cache(key)
-       1972 
-       1973         # duplicate columns & possible reduce dimensionality
-    
-
-    D:\anaconda\lib\site-packages\pandas\core\generic.py in _get_item_cache(self, item)
-       1643         res = cache.get(item)
-       1644         if res is None:
-    -> 1645             values = self._data.get(item)
-       1646             res = self._box_item_values(item, values)
-       1647             cache[item] = res
-    
-
-    D:\anaconda\lib\site-packages\pandas\core\internals.py in get(self, item, fastpath)
-       3588 
-       3589             if not isnull(item):
-    -> 3590                 loc = self.items.get_loc(item)
-       3591             else:
-       3592                 indexer = np.arange(len(self.items))[isnull(self.items)]
-    
-
-    D:\anaconda\lib\site-packages\pandas\core\indexes\base.py in get_loc(self, key, method, tolerance)
-       2442                 return self._engine.get_loc(key)
-       2443             except KeyError:
-    -> 2444                 return self._engine.get_loc(self._maybe_cast_indexer(key))
-       2445 
-       2446         indexer = self.get_indexer([key], method=method, tolerance=tolerance)
-    
-
-    pandas\_libs\index.pyx in pandas._libs.index.IndexEngine.get_loc()
-    
-
-    pandas\_libs\index.pyx in pandas._libs.index.IndexEngine.get_loc()
-    
-
-    pandas\_libs\hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-    
-
-    pandas\_libs\hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-    
-
-    KeyError: (2, 1)
-
+- data[2,1] #不能进行直接进行数字索引
 
 
 ```python
@@ -3429,6 +3321,7 @@ data.head()
 
 ```python
 # 按照涨幅大小进行排序，使用ascending指定按照大小排序
+import pandas as pd
 data = pd.read_csv("stock_day.csv")
 data = data.drop(["ma5","ma10","ma20","v_ma5","v_ma10","v_ma20"], axis=1)
 data1 = data.sort_values(by = "high",ascending=False).head()
@@ -3892,79 +3785,8 @@ data["close"].sub(data["open"]).head()
     - 布尔索引
     - 多个条件筛选
 
-
-```python
-## 逻辑运算符
+- 逻辑运算符
 data['p_change']>2
-```
-
-
-
-
-    2018-02-27     True
-    2018-02-26     True
-    2018-02-23     True
-    2018-02-22    False
-    2018-02-14     True
-    2018-02-13    False
-    2018-02-12     True
-    2018-02-09    False
-    2018-02-08    False
-    2018-02-07    False
-    2018-02-06    False
-    2018-02-05     True
-    2018-02-02    False
-    2018-02-01    False
-    2018-01-31    False
-    2018-01-30    False
-    2018-01-29    False
-    2018-01-26    False
-    2018-01-25    False
-    2018-01-24    False
-    2018-01-23    False
-    2018-01-22    False
-    2018-01-19     True
-    2018-01-18    False
-    2018-01-17    False
-    2018-01-16     True
-    2018-01-15    False
-    2018-01-12     True
-    2018-01-11    False
-    2018-01-10    False
-                  ...  
-    2015-04-13     True
-    2015-04-10    False
-    2015-04-09     True
-    2015-04-08     True
-    2015-04-07     True
-    2015-04-03    False
-    2015-04-02    False
-    2015-04-01    False
-    2015-03-31    False
-    2015-03-30     True
-    2015-03-27     True
-    2015-03-26    False
-    2015-03-25    False
-    2015-03-24    False
-    2015-03-23    False
-    2015-03-20    False
-    2015-03-19    False
-    2015-03-18    False
-    2015-03-17     True
-    2015-03-16     True
-    2015-03-13     True
-    2015-03-12    False
-    2015-03-11    False
-    2015-03-10     True
-    2015-03-09    False
-    2015-03-06     True
-    2015-03-05     True
-    2015-03-04    False
-    2015-03-03    False
-    2015-03-02     True
-    Name: p_change, Length: 643, dtype: bool
-
-
 
 
 ```python
@@ -4076,78 +3898,7 @@ data[data['p_change']>2].head()
 
 
 
-
-```python
-(data['p_change']>2) & (data["low"]>15)
-```
-
-
-
-
-    2018-02-27     True
-    2018-02-26     True
-    2018-02-23     True
-    2018-02-22    False
-    2018-02-14     True
-    2018-02-13    False
-    2018-02-12     True
-    2018-02-09    False
-    2018-02-08    False
-    2018-02-07    False
-    2018-02-06    False
-    2018-02-05     True
-    2018-02-02    False
-    2018-02-01    False
-    2018-01-31    False
-    2018-01-30    False
-    2018-01-29    False
-    2018-01-26    False
-    2018-01-25    False
-    2018-01-24    False
-    2018-01-23    False
-    2018-01-22    False
-    2018-01-19     True
-    2018-01-18    False
-    2018-01-17    False
-    2018-01-16     True
-    2018-01-15    False
-    2018-01-12     True
-    2018-01-11    False
-    2018-01-10    False
-                  ...  
-    2015-04-13     True
-    2015-04-10    False
-    2015-04-09     True
-    2015-04-08     True
-    2015-04-07     True
-    2015-04-03    False
-    2015-04-02    False
-    2015-04-01    False
-    2015-03-31    False
-    2015-03-30     True
-    2015-03-27    False
-    2015-03-26    False
-    2015-03-25    False
-    2015-03-24    False
-    2015-03-23    False
-    2015-03-20    False
-    2015-03-19    False
-    2015-03-18    False
-    2015-03-17    False
-    2015-03-16    False
-    2015-03-13    False
-    2015-03-12    False
-    2015-03-11    False
-    2015-03-10    False
-    2015-03-09    False
-    2015-03-06    False
-    2015-03-05    False
-    2015-03-04    False
-    2015-03-03    False
-    2015-03-02    False
-    Length: 643, dtype: bool
-
-
+- (data['p_change']>2) & (data["low"]>15)
 
 
 ```python
@@ -4789,7 +4540,7 @@ data.idxmin()
 
 
 ```python
-data["p_change"]
+data["p_change"].head()
 ```
 
 
@@ -4800,136 +4551,24 @@ data["p_change"]
     2018-02-23    2.42
     2018-02-22    1.64
     2018-02-14    2.05
-    2018-02-13    1.32
-    2018-02-12    4.03
-    2018-02-09   -6.86
-    2018-02-08    0.41
-    2018-02-07   -2.24
-    2018-02-06   -4.17
-    2018-02-05    2.87
-    2018-02-02    0.89
-    2018-02-01   -5.48
-    2018-01-31   -0.46
-    2018-01-30    0.21
-    2018-01-29   -2.98
-    2018-01-26    0.45
-    2018-01-25   -3.68
-    2018-01-24   -0.79
-    2018-01-23    1.55
-    2018-01-22   -0.04
-    2018-01-19    2.15
-    2018-01-18    0.04
-    2018-01-17    0.82
-    2018-01-16    4.10
-    2018-01-15   -3.30
-    2018-01-12    2.37
-    2018-01-11   -0.50
-    2018-01-10   -0.58
-                  ... 
-    2015-04-13    8.75
-    2015-04-10   -0.97
-    2015-04-09    6.51
-    2015-04-08    5.02
-    2015-04-07    5.28
-    2015-04-03    1.34
-    2015-04-02    0.92
-    2015-04-01    0.74
-    2015-03-31   -1.52
-    2015-03-30    4.12
-    2015-03-27    5.63
-    2015-03-26   -2.42
-    2015-03-25   -2.42
-    2015-03-24    1.95
-    2015-03-23    0.26
-    2015-03-20   -0.26
-    2015-03-19    0.46
-    2015-03-18    0.86
-    2015-03-17    2.08
-    2015-03-16    2.76
-    2015-03-13    2.55
-    2015-03-12   -1.33
-    2015-03-11   -2.39
-    2015-03-10    2.38
-    2015-03-09    0.21
-    2015-03-06    8.51
-    2015-03-05    2.02
-    2015-03-04    1.57
-    2015-03-03    1.44
-    2015-03-02    2.62
-    Name: p_change, Length: 643, dtype: float64
+    Name: p_change, dtype: float64
 
 
 
 
 ```python
-data["p_change"].cumsum()
+data["p_change"].cumsum().head()
 ```
 
 
 
 
-    2018-02-27      2.68
-    2018-02-26      5.70
-    2018-02-23      8.12
-    2018-02-22      9.76
-    2018-02-14     11.81
-    2018-02-13     13.13
-    2018-02-12     17.16
-    2018-02-09     10.30
-    2018-02-08     10.71
-    2018-02-07      8.47
-    2018-02-06      4.30
-    2018-02-05      7.17
-    2018-02-02      8.06
-    2018-02-01      2.58
-    2018-01-31      2.12
-    2018-01-30      2.33
-    2018-01-29     -0.65
-    2018-01-26     -0.20
-    2018-01-25     -3.88
-    2018-01-24     -4.67
-    2018-01-23     -3.12
-    2018-01-22     -3.16
-    2018-01-19     -1.01
-    2018-01-18     -0.97
-    2018-01-17     -0.15
-    2018-01-16      3.95
-    2018-01-15      0.65
-    2018-01-12      3.02
-    2018-01-11      2.52
-    2018-01-10      1.94
-                   ...  
-    2015-04-13     74.43
-    2015-04-10     73.46
-    2015-04-09     79.97
-    2015-04-08     84.99
-    2015-04-07     90.27
-    2015-04-03     91.61
-    2015-04-02     92.53
-    2015-04-01     93.27
-    2015-03-31     91.75
-    2015-03-30     95.87
-    2015-03-27    101.50
-    2015-03-26     99.08
-    2015-03-25     96.66
-    2015-03-24     98.61
-    2015-03-23     98.87
-    2015-03-20     98.61
-    2015-03-19     99.07
-    2015-03-18     99.93
-    2015-03-17    102.01
-    2015-03-16    104.77
-    2015-03-13    107.32
-    2015-03-12    105.99
-    2015-03-11    103.60
-    2015-03-10    105.98
-    2015-03-09    106.19
-    2015-03-06    114.70
-    2015-03-05    116.72
-    2015-03-04    118.29
-    2015-03-03    119.73
-    2015-03-02    122.35
-    Name: p_change, Length: 643, dtype: float64
+    2018-02-27     2.68
+    2018-02-26     5.70
+    2018-02-23     8.12
+    2018-02-22     9.76
+    2018-02-14    11.81
+    Name: p_change, dtype: float64
 
 
 
@@ -11155,75 +10794,19 @@ Starbucks.groupby("Country").count().head()
 
 
 ```python
-Starbucks.groupby("Country")["Brand"].count()
+Starbucks.groupby("Country")["Brand"].count().head()
 ```
 
 
 
 
     Country
-    AD        1
-    AE      144
-    AR      108
-    AT       18
-    AU       22
-    AW        3
-    AZ        4
-    BE       19
-    BG        5
-    BH       21
-    BN        5
-    BO        4
-    BR      102
-    BS       10
-    CA     1468
-    CH       61
-    CL       96
-    CN     2734
-    CO       11
-    CR       11
-    CW        3
-    CY       10
-    CZ       28
-    DE      160
-    DK       21
-    EG       31
-    ES      101
-    FI        8
-    FR      132
-    GB      901
-          ...  
-    LU        2
-    MA        9
-    MC        2
-    MX      579
-    MY      234
-    NL       59
-    NO       17
-    NZ       24
-    OM       12
-    PA        5
-    PE       89
-    PH      298
-    PL       53
-    PR       24
-    PT       11
-    QA       18
-    RO       27
-    RU      109
-    SA      102
-    SE       18
-    SG      130
-    SK        3
-    SV       11
-    TH      289
-    TR      326
-    TT        3
-    TW      394
-    US    13608
-    VN       25
-    ZA        3
-    Name: Brand, Length: 73, dtype: int64
+    AD      1
+    AE    144
+    AR    108
+    AT     18
+    AU     22
+    Name: Brand, dtype: int64
 
 
 
