@@ -1,4 +1,79 @@
+- 1.Pandas是什么
+    - 1.1Pandas介绍
+        - 1.1.1 三大核心数据结构
+    - 1.2为什么使用Pandas的原因
+    - 1.3DataFrame是什么
+        - 1.3.1DataFrame结构
+        - 1.3.2DataFrame属性
+        - 1.3.3DataFrame索引的设置
+            - 1修改行列索引值
+            - 2重设索引
+            - 3设置新的索引
+    - 1.4MultiIndex与Panel是什么
+        - 1.4.1MultiIndex是什么
+        - 1.4.2Panel是什么
+    - 1.5Series是什么
+        - 1.5.1eries获取索引和值
+        - 1.5.2Series创建
+- 2基础数据操作
+    - 2.1索引操作
+        - 2.1.1直接索引 
+        - 2.1.2按名字索引
+        - 2.1.3按数字索引
+        - 2.1.4组合索引
+        - 2.1.5推荐使用名字索引和数字索引
+    - 2.2赋值操作
+    - 2.3排序
+        - 2.3.1DataFrame排序
+        - 2.3.2Series排序
+- 3DataFrame运算
+    - 3.1算术运算
+    - 3.2逻辑运算
+        - 3.2.1逻辑运算符
+        - 3.2.2逻辑运算函数
+    - 3.3统计运算
+    - 3.4累计统计函数
+    - 3.5自定义运算
+- 4Pandas画图
+- 5文件读取与存储
+    - 5.1CSV是什么
+        - 5.1.1读取CSV文件
+        - 5.1.2存储CSV文件
+    - 5.2HDF5是什么
+        - 5.2.1HDF5优点
+    - 5.3JSON是什么
+- 6缺失值处理
+    - 6.1NAN如何处理
+    - 6.2缺失值处理实例
+        - 6.2.1判断是否存在缺失值
+        - 6.2.2缺失值处理
+            - 6.2.2.1删除含有缺失值的样本
+            - 6.2.2.2替换
+    - 6.3不是缺失值nan有默认标记的
+- 7数据离散化
+    - 7.1什么是数据离散化
+    - 7.2为什么要离散化
+    - 7.3如何实现数据的离散化
+        - 7.3.1自动分组
+        - 7.3.2自定义分组
+        - 7.4股票案例分析
+- 8合并
+    - 8.1应用pd.concat实现数据的合并
+    - 8.2应用pd.merge按索引实现数据的合并
+- 9交叉表与透视表
+    - 9.1交叉表和透视表的作用
+    - 9.2交叉表crosstable实现
+    - 9.3透视表pivot_table实现
+- 10分组与聚合
+    - 10.1什么是分组与聚合
+    - 10.2api分组
+    - 10.3星巴克零售店数据案例
+    
 
+ ![基础](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.png)   
+ 
+ 
+  ![高级](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.png) 
 
 # 1.Pandas是什么
 ## 1.1Pandas介绍
@@ -4581,7 +4656,7 @@ plt.show() ## 但是这里时间不对 时间应该按照顺序累加
 ```
 
 
-![png](output_119_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_119_0.png)
 
 
 
@@ -4593,7 +4668,7 @@ plt.show()
 ```
 
 
-![png](output_120_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_120_0.png)
 
 
 ## 3.5自定义运算
@@ -4771,7 +4846,7 @@ plt.show()
 ```
 
 
-![png](output_126_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_126_0.png)
 
 
 
@@ -4781,7 +4856,7 @@ plt.show()
 ```
 
 
-![png](output_127_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_127_0.png)
 
 
 # 5文件读取与存储
@@ -10235,7 +10310,7 @@ plt.show()
 ```
 
 
-![png](output_226_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_226_0.png)
 
 
 
@@ -10247,7 +10322,7 @@ plt.show()
 ```
 
 
-![png](output_227_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_227_0.png)
 
 
 ## 9.3透视表pivot_table实现
@@ -10816,7 +10891,7 @@ plt.show()
 ```
 
 
-![png](output_240_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_240_0.png)
 
 
 
@@ -10827,7 +10902,7 @@ plt.show()
 ```
 
 
-![png](output_241_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_241_0.png)
 
 
 
@@ -10972,5 +11047,5 @@ plt.show()
 ```
 
 
-![png](output_243_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_243_0.png)
 
