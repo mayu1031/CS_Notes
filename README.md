@@ -71,10 +71,7 @@
 - [波士顿房价预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E6%B3%A2%E5%A3%AB%E9%A1%BF%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B.md)
 - [癌症分类预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E7%99%8C%E7%97%87%E5%88%86%E7%B1%BB%E9%A2%84%E6%B5%8B.ipynb)
 - [instacart市场分析](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/instacart%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90.ipynb)
-- [信用卡欺诈行为检测]()
-- [级联结构的机器学习模型]()
-- [员工离职预测]()
-- [借贷公司数据分析]()
+
 
   [1]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E8%80%B3%E7%BD%A9.png
   [2]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E4%B9%A6%E5%8C%85.png
