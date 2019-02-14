@@ -19,7 +19,6 @@
 - [MySQL命令](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E5%91%BD%E4%BB%A4.md)
 - [Leetcode-Database](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/LeetCode.md)
 - [sqlzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.md)  
-    - [sqlzoo小结](https://zhuanlan.zhihu.com/p/54558741)
 - [sql练习题]()
 
 
@@ -68,7 +67,7 @@
 - [分析泰坦尼克号获救预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E4%B9%98%E5%AE%A2%E7%94%9F%E5%AD%98%E9%A2%84%E6%B5%8B.ipynb)
 - [Facebook签到位置预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/facebook%E7%AD%BE%E5%88%B0%E4%BD%8D%E7%BD%AE%E9%A2%84%E6%B5%8B.md)
 - [分析鸢尾花数据集](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E5%88%86%E6%9E%90%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%95%B0%E6%8D%AE%E9%9B%86.md)
-- [波士顿房价预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E6%B3%A2%E5%A3%AB%E9%A1%BF%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B.md)
+- [房价预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E6%B3%A2%E5%A3%AB%E9%A1%BF%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B.md)
 - [癌症分类预测](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E7%99%8C%E7%97%87%E5%88%86%E7%B1%BB%E9%A2%84%E6%B5%8B.ipynb)
 - [instacart市场分析](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/instacart%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90.ipynb)
 
