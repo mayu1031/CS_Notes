@@ -50,6 +50,7 @@
 - [聚类](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/kmeans.md)
 - [随机种子random_state](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8Epython%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%8D%E5%AD%90random_state.md)
 - [模型选择和调优Grid Search](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E5%92%8C%E8%B0%83%E4%BC%98.md)
+- [集成学习方法 Ensemble learning](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%20Ensemble%20learning.md)
 - [TensorFlow框架使用](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/TensorFlow%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8)
 - [数据读取 神经网络](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
 - [卷积神经网络](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
