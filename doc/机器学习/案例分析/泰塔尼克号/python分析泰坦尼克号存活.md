@@ -263,7 +263,7 @@ plt.show()
 ```
 
 
-![png](output_13_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_13_0.png)
 
 
 
@@ -282,7 +282,7 @@ plt.show()
 ```
 
 
-![png](output_14_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_14_0.png)
 
 
 - 生还者有342人,占总人数的38.38%，遇难者有549人，占总人数的61.61%
@@ -340,7 +340,7 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_20_0.png)
 
 
 - 数据集中一共有人数891人，其中女性314人占35.24%，男性577人占64.76%
@@ -405,7 +405,7 @@ plt.show()
 ```
 
 
-![png](output_26_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_26_0.png)
 
 
 
@@ -415,7 +415,7 @@ plt.show()
 ```
 
 
-![png](output_27_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_27_0.png)
 
 
 - 一共存活了342人，其中女性存活233人，占总存活人数的68.13%，男性存活109人，占总存活人数的31.87%
@@ -477,7 +477,7 @@ plt.show()
 ```
 
 
-![png](output_33_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_33_0.png)
 
 
 - 男性一共有577人，其中存活了109人，占男性总人数的18.89%
@@ -539,7 +539,7 @@ plt.show()
 ```
 
 
-![png](output_39_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_39_0.png)
 
 
 - 女性一共有314人，其中存活了233人，占女性总人数的74.2%
@@ -551,7 +551,7 @@ plt.show()
 ```
 
 
-![png](output_41_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_41_0.png)
 
 
 - 占男性总人数的18.89%男性存活，占女性总人数的74.2%女性存活
@@ -589,7 +589,7 @@ plt.show()
 ```
 
 
-![png](output_46_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_46_0.png)
 
 
 - 一等舱、二等舱、三等舱的乘客分别为216、184、491人，分别占总人数的 24.24%， 20.65%， 55.11%
@@ -630,7 +630,7 @@ plt.show()
 ```
 
 
-![png](output_51_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_51_0.png)
 
 
 - 海难发生后，一等舱、二等舱、三等舱的乘客存活人数变为136、87、119人，分别占总人数的 39.77%, 25.44%, 34.80%
@@ -686,7 +686,7 @@ plt.show()
 ```
 
 
-![png](output_57_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_57_0.png)
 
 
 
@@ -738,7 +738,7 @@ plt.show()
 ```
 
 
-![png](output_61_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_61_0.png)
 
 
 
@@ -791,7 +791,7 @@ plt.show()
 ```
 
 
-![png](output_65_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_65_0.png)
 
 
 
@@ -801,7 +801,7 @@ plt.show()
 ```
 
 
-![png](output_66_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_66_0.png)
 
 
 - 一等舱存活率为 62.96%，二等舱为 47.28%，三等舱为 24.24%；客舱等级越高，生还率越高
@@ -879,7 +879,7 @@ plt.show()
 ```
 
 
-![png](output_76_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_76_0.png)
 
 
 
@@ -889,7 +889,7 @@ plt.show()
 ```
 
 
-![png](output_77_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_77_0.png)
 
 
 
@@ -970,7 +970,7 @@ plt.show()
 ```
 
 
-![png](output_84_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_84_0.png)
 
 
 
@@ -1028,7 +1028,7 @@ plt.show()
 ```
 
 
-![png](output_89_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_89_0.png)
 
 
 
@@ -1086,7 +1086,7 @@ plt.show()
 ```
 
 
-![png](output_94_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_94_0.png)
 
 
 
@@ -1144,7 +1144,7 @@ plt.show()
 ```
 
 
-![png](output_99_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_99_0.png)
 
 
 - 0-19岁之间有199人 幸存91人，幸存率45.73%
@@ -1240,7 +1240,7 @@ plt.show()
 ```
 
 
-![png](output_108_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_108_0.png)
 
 
 - 有兄弟姐妹的乘客，一共有283人，存活了132人，存活率46.64%
@@ -1293,7 +1293,7 @@ plt.show()
 ```
 
 
-![png](output_113_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_113_0.png)
 
 
 - 没有兄弟姐妹的乘客，一共有608人，存活了210人，存活率34.54%
@@ -1305,7 +1305,7 @@ plt.show()
 ```
 
 
-![png](output_115_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_115_0.png)
 
 
 - 有兄弟姐妹在船上的人的生存率要大于没有兄弟姐妹在船上的人
@@ -1373,7 +1373,7 @@ plt.show()
 ```
 
 
-![png](output_122_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_122_0.png)
 
 
 - 父母子女在船上的乘客有213人，其中109人存活，存活率为51.17%
@@ -1427,7 +1427,7 @@ plt.show()
 ```
 
 
-![png](output_127_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_127_0.png)
 
 
 - 船上没有父母子女的乘客一共有678人，其中存活233人，存活率为34.37%
@@ -1514,7 +1514,7 @@ plt.show()
 ```
 
 
-![png](output_132_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_132_0.png)
 
 
 
@@ -1528,7 +1528,7 @@ plt.show()
     
 
 
-![png](output_133_1.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_133_1.png)
 
 
 
@@ -1600,7 +1600,7 @@ plt.show()
     
 
 
-![png](output_140_1.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_140_1.png)
 
 
 - 生存者的平均票价是高于未生存者，票价和生存性有一定关系
@@ -1776,7 +1776,7 @@ plt.show()
 ```
 
 
-![png](output_158_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_158_0.png)
 
 
 - Southampton一共有646人上船，其中存活219人，存活率33.90%
@@ -1831,7 +1831,7 @@ plt.show()
 ```
 
 
-![png](output_163_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_163_0.png)
 
 
 - Cherbourg一共有168人上船，其中存活93人，存活率55.36%
@@ -1886,7 +1886,7 @@ plt.show()
 ```
 
 
-![png](output_168_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_168_0.png)
 
 
 - Queenstown一共有77人上船，其中30人幸存，幸存率38.96%
@@ -1898,7 +1898,7 @@ plt.show()
 ```
 
 
-![png](output_170_0.png)
+![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/output_170_0.png)
 
 
 - 虽然在Southampton上船最后幸存的人数最多，但是Southampton却是三座港口中幸存率最低的；Cherbourg港口的幸存率最高，达到了55.36%
