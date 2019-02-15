@@ -28,7 +28,7 @@
 - [线性回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.md)
 - [岭回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%B2%AD%E5%9B%9E%E5%BD%92/%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
 - [聚类](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/kmeans.md)
-- [随机种子——random_state](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8Epython%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%8D%E5%AD%90random_state.md)
+- [随机种子random_state](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8Epython%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%8D%E5%AD%90random_state.md)
 - [模型选择和调优Grid Search](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E5%92%8C%E8%B0%83%E4%BC%98.md)
 - [TensorFlow框架使用]()
 - [数据读取 神经网络]()
