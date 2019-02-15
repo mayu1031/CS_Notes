@@ -1,4 +1,4 @@
-﻿# 关于python中的随机种子——random_state
+﻿# 关于python中的随机种子random_state
 
 - random_state是一个随机种子，是在任意带有随机性的类或函数里作为参数来控制随机模式。当random_state取某一个值时，也就确定了一种规则。
 
