@@ -1,4 +1,4 @@
-﻿# 1k-近邻算法 KNN算法
+# 1k-近邻算法 KNN算法
 ## 1KNN算法
 - K Nearest Neighbor
 - 如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别，但是k=1时，容易受到异常点的影响，选择一个合适的k值可以避免受到异常值的影响
@@ -6,7 +6,8 @@
 ## 2KNN距离计算
 - 如何确定谁是邻居
 - 欧式距离 两个样本的距离  
-比如, a(a1,a2,a3), b(b1,b2,b3)
+比如, a(a1,a2,a3), b(b1,b2,b3)  
+
 ![欧式距离](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/k%E8%BF%91%E9%82%BB/%E6%AC%A7%E5%BC%8F%E8%B7%9D%E7%A6%BB.png)
 
 - 曼哈顿距离 也叫绝对值距离 |a1-b1|+|a2-b2|+|a3-b3|
