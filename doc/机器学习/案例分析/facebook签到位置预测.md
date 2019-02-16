@@ -379,39 +379,16 @@ date.hour
 data["day"] = date.day
 ```
 
-    D:\anaconda\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      
-    
-
 
 ```python
 data["weekday"] = date.weekday
 ```
 
-    D:\anaconda\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      """Entry point for launching an IPython kernel.
-    
-
-
+  
 ```python
 data["hour"] = date.hour
 ```
 
-    D:\anaconda\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      """Entry point for launching an IPython kernel.
-    
 
 
 ```python
@@ -1399,10 +1376,7 @@ estimator = GridSearchCV(estimator, param_grid=param_dict, cv=3)
 estimator.fit(x_train, y_train)
 ```
 
-    D:\anaconda\lib\site-packages\sklearn\model_selection\_split.py:605: Warning: The least populated class in y has only 1 members, which is too few. The minimum number of members in any class cannot be less than n_splits=3.
-      % (min_groups, self.n_splits)), Warning)
-    
-
+   
 
 
 
