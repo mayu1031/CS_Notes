@@ -809,6 +809,7 @@ from sklearn.cluster import KMeans
 
 ```python
 #因为我们没有目标值，只有特征值，传特征值就可以了
+#n_clusters=3 最终目标是把客户分成三类
 estimator = KMeans(n_clusters=3)
 estimator.fit(data_new)
 ```
