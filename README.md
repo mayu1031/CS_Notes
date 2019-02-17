@@ -37,7 +37,7 @@
 - [python数据可视化库-Matplotlib](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib.md)
 - [python数据分析处理库-Pandas](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas.md)
 - [机器学习目录]()
-- [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0.md)
+- [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/机器学习/机器学习概述/机器学习概述.md)
 - [数据集](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E9%9B%86.md)
 - [特征工程介绍](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E4%BB%8B%E7%BB%8D/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E4%BB%8B%E7%BB%8D.md)
 - [特征抽取:字典提取文本提取](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96.md)
