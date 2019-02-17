@@ -1,4 +1,5 @@
-﻿# 1精确率与召回率
+# 二分类模型评估
+# 1精确率与召回率
 - 混淆矩阵
     - 在分类任务下，预测结果(Predicted Codition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)
     - TP True possitive
@@ -56,6 +57,7 @@ AUC: 1*1/2=0.5
 - TPR = FPR 不负责任的模型
     - TPR = FPR 斜率为1，AUC为0.5
 
+# 样本不平衡情况下
 ## 2.2ROC曲线  
 ![ROC曲线](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/ROC%E6%9B%B2%E7%BA%BF.png)  
 
