@@ -39,6 +39,7 @@
 - [机器学习目录]()
 - [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0.md)
 - [数据集](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E9%9B%86.md)
+- [特征工程介绍](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E4%BB%8B%E7%BB%8D/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E4%BB%8B%E7%BB%8D.md)
 - [特征抽取](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96.md)
 - [特征预处理](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86.md)
 - [特征降维PCA](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4PCA/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4.md)
