@@ -33,6 +33,7 @@ print('精确率和召回率为:', classification.report(y_test,lr.predict(x_tes
 ## 1.2 召回率应用场景
 - 工厂里面质量检测，查次品
 
+# 样本不平衡情况下
 # 2ROC曲线与AUC指标
 
 总共有100个样本，其中99个样本为癌症，一个样本非癌症  
@@ -57,7 +58,6 @@ AUC: 1*1/2=0.5
 - TPR = FPR 不负责任的模型
     - TPR = FPR 斜率为1，AUC为0.5
 
-# 样本不平衡情况下
 ## 2.2ROC曲线  
 ![ROC曲线](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/ROC%E6%9B%B2%E7%BA%BF.png)  
 
