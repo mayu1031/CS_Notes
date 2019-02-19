@@ -435,3 +435,27 @@ where id in (select cls_id from students);
 select * from students 
 where (height,age) = (select max(height),max(age) from students)
 ```
+
+### **union, union all**
+- UNION 操作符用于合并两个或多个 SELECT 语句的结果集。
+- 请注意，UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。
+
+SQL UNION 语法
+
+```
+SELECT column_name(s) FROM table_name1
+UNION
+SELECT column_name(s) FROM table_name2
+```
+
+- 注释：默认地，UNION 操作符选取不同的值。如果允许重复的值，请使用 UNION ALL。
+- UNION ALL 命令和 UNION 命令几乎是等效的，不过 UNION ALL 命令会列出所有的值。 
+
+SQL UNION ALL 语法
+
+```
+SELECT column_name(s) FROM table_name1
+UNION ALL
+SELECT column_name(s) FROM table_name2
+```
+另外，UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句中的列名。
