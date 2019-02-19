@@ -1,4 +1,4 @@
-<br>
+﻿<br>
 
 <div align="center">
     <br>
@@ -355,4 +355,62 @@ select d.Name as Department, e.Name as Employee, e.Salary from Department as d i
 where (select count(distinct e_2.Salary) from Employee e_2 where e_2.Salary > e.Salary and e_2.DepartmentId = e.DepartmentId) <3
 
 order by e.DepartmentId, e.Salary desc;
+```
+
+## 196 Delete Duplicate Emails  
+Write a SQL query to delete all duplicate email entries in a table named Person, keeping only unique emails based on its smallest Id.
+```
++----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
+| 3  | john@example.com |
++----+------------------+
+Id is the primary key column for this table.
+```
+For example, after running your query, the above Person table should have the following rows:
+```
++----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
++----+------------------+
+```
+Note:
+
+Your output is the whole Person table after executing your sql. Use delete statement.  
+
+```sql
+DELETE p1 FROM Person p1, Person p2
+where p1.Email = p2.Email and p1.Id > p2.Id
+```
+
+
+## 197 Rising Temperature  
+Given a Weather table, write a SQL query to find all dates' Ids with higher temperature compared to its previous (yesterday's) dates.
+```
++---------+------------------+------------------+
+| Id(INT) | RecordDate(DATE) | Temperature(INT) |
++---------+------------------+------------------+
+|       1 |       2015-01-01 |               10 |
+|       2 |       2015-01-02 |               25 |
+|       3 |       2015-01-03 |               20 |
+|       4 |       2015-01-04 |               30 |
++---------+------------------+------------------+
+```
+For example, return the following Ids for the above Weather table:  
+```
++----+
+| Id |
++----+
+|  2 |
+|  4 |
++----+
+```
+
+```sql
+select w1.Id as Id from Weather w1 Join Weather w2 on DATEDIFF(w1.RecordDate, w2.RecordDate) = 1
+where w1.Temperature > w2.Temperature 
 ```
