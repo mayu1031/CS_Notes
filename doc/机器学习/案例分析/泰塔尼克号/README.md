@@ -1,9 +1,9 @@
 # 泰坦尼克号分析
-# 用python科学数据包对数据进行分析
+## 用python科学数据包对数据进行分析
 - [python分析](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/python%E5%88%86%E6%9E%90%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E5%AD%98%E6%B4%BB.md)
-# 用机器语言泰坦尼克号获救预测案例
+## 用机器语言泰坦尼克号获救预测案例
 - 本次预测中，对年龄，港口，船票单纯做了分类处理，没有用到one-hot编码
-- [预测案例](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E4%B9%98%E5%AE%A2%E7%94%9F%E5%AD%98%E9%A2%84%E6%B5%8B%E5%90%84%E9%A2%84%E4%BC%B0%E5%99%A8.md)
-# 用机器语言泰坦尼克号获救预测案例2
+- [用机器语言泰坦尼克号获救预测案例1](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E4%B9%98%E5%AE%A2%E7%94%9F%E5%AD%98%E9%A2%84%E6%B5%8B%E5%90%84%E9%A2%84%E4%BC%B0%E5%99%A8.md)
+## 用机器语言泰坦尼克号获救预测案例2
 - 本次预测中，对年龄，港口，船票除了做了分类之外，还做了one-hot编码，但是目前预测效果不是很好，需要进一步优化
-- [预测案例](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E4%B9%98%E5%AE%A2%E7%94%9F%E5%AD%98%E9%A2%84%E6%B5%8B%E5%90%84%E9%A2%84%E4%BC%B0%E5%99%A82.md)
+- [用机器语言泰坦尼克号获救预测案例2](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E4%B9%98%E5%AE%A2%E7%94%9F%E5%AD%98%E9%A2%84%E6%B5%8B%E5%90%84%E9%A2%84%E4%BC%B0%E5%99%A82.md)
