@@ -484,7 +484,13 @@ pd.DataFrame(stock_change, index = stock, columns = date)
         - data.values 直接获取其中array的值
     - **T**
         - 行列转置
+
+- 获取行索引具体有哪些索引
+    - dfname.columns.values.tolist()    # 列名称
     
+- 获取列索引具体有哪些索引
+    - dfname._stat_axis.values.tolist() # 行名称
+
 - 方法：
     - 想看数据构成，有哪些字段，又不想把所有的数据都显示出来
     - **head()**
