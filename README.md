@@ -45,13 +45,24 @@
 - [特征预处理:归一化标准化](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86.md)
 - [特征降维:特征选择 低方差特征过滤 相关系数过滤 主成分分析PCA](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4PCA/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4.md)
 - [k近邻算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/k%E8%BF%91%E9%82%BB/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%20KNN%E7%AE%97%E6%B3%95.md)
+    - GridSearchCV
 - [朴素贝叶斯算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95.md)
+    - 拉普拉斯平滑系数
 - [决策树](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%86%B3%E7%AD%96%E6%A0%91/%E5%86%B3%E7%AD%96%E6%A0%91.md)
-- [随机森林](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97.md)   
+    - GridSearchCV
+- [随机森林](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97.md) 
+    - GridSearchCV
 - [线性回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.md)
+    -梯度下降优化GD,SGD,SAG
+    - 均方误差   
 - [岭回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%B2%AD%E5%9B%9E%E5%BD%92/%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
-- [逻辑回归算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%B8%8E%E4%BA%8C%E5%88%86%E7%B1%BB.md) 
+    - 正则化
+    - 均方误差
+- [逻辑回归算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%B8%8E%E4%BA%8C%E5%88%86%E7%B1%BB.md)
+    - 精确率与召回率
+    - ROC曲线与AUC指标
 - [Kmeans](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/kmeans.md)
+    - 轮廓系数
 - [随机种子random_state](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8Epython%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%8D%E5%AD%90random_state.md)
 - [sklearn转换器和估计器](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/sklearn%E8%BD%AC%E6%8D%A2%E5%99%A8%E5%92%8C%E4%BC%B0%E8%AE%A1%E5%99%A8.md)
 - [集成学习方法 Ensemble learning](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%20Ensemble%20learning.md)
