@@ -21,7 +21,5 @@ Python Notes
 - [内置结构list set dict tuple](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/08%E5%86%85%E7%BD%AE%E7%BB%93%E6%9E%84listsetdictuple02.ipynb)
 - [内置结构list dict set](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/09%E5%86%85%E7%BD%AE%E7%BB%93%E6%9E%84listdictset03.ipynb)
 - [OOP-Python 面向对象](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/10OOPnote.md)
-- [参考资料](https://study.163.com/course/courseMain.htm?courseId=1004987028&_trace_c_p_k2_=1e18ab732c4747afb2f96b36893ba134)
-
 
 
