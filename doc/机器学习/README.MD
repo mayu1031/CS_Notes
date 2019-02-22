@@ -1,0 +1,47 @@
+![溜冰鞋][5]  机器学习
+======
+- [科学计算库-Numpy](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%BA%93-Numpy/Numpy.md)
+- [数据可视化库-Matplotlib](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Matplotlib/Matplotlib.md)
+- [数据分析处理库-Pandas](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas.md)
+- [数据可视化库-Seaborn](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Seaborn/Seaborn/Seaborn.md)
+- [数据离散化one-hot编码](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/%E6%95%B0%E6%8D%AE%E7%A6%BB%E6%95%A3%E5%8C%96one-hot%E7%BC%96%E7%A0%81.md)
+- [机器学习目录](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9B%AE%E5%BD%95/%E7%9B%AE%E5%BD%95.md)
+- [机器学习概述](https://github.com/mayu1031/CS_Notes/blob/master/doc/机器学习/机器学习概述/机器学习概述.md)
+- [数据集](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E9%9B%86.md)
+- [特征工程介绍](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E4%BB%8B%E7%BB%8D/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E4%BB%8B%E7%BB%8D.md)
+- [特征抽取:字典提取文本提取](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96/%E7%89%B9%E5%BE%81%E6%8A%BD%E5%8F%96.md)
+- [特征预处理:归一化标准化](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86.md)
+- [特征降维:特征选择 低方差特征过滤 相关系数过滤 主成分分析PCA](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4PCA/%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4.md)
+- [k近邻算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/k%E8%BF%91%E9%82%BB/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%20KNN%E7%AE%97%E6%B3%95.md)
+    - GridSearchCV
+- [朴素贝叶斯算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95.md)
+    - 拉普拉斯平滑系数
+- [决策树](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%86%B3%E7%AD%96%E6%A0%91/%E5%86%B3%E7%AD%96%E6%A0%91.md)
+    - GridSearchCV
+- [随机森林](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97.md) 
+    - GridSearchCV
+- [线性回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.md)  
+    - 梯度下降优化GD,SGD,SAG
+    - 均方误差   
+- [岭回归](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%B2%AD%E5%9B%9E%E5%BD%92/%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
+    - 正则化
+    - 均方误差
+- [逻辑回归算法](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%B8%8E%E4%BA%8C%E5%88%86%E7%B1%BB.md)
+    - 精确率与召回率
+    - ROC曲线与AUC指标
+- [Kmeans](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/kmeans.md)
+    - 轮廓系数
+- [随机种子random_state](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8Epython%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA%E7%A7%8D%E5%AD%90random_state.md)
+- [sklearn转换器和估计器](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/sklearn%E8%BD%AC%E6%8D%A2%E5%99%A8%E5%92%8C%E4%BC%B0%E8%AE%A1%E5%99%A8.md)
+- [集成学习方法 Ensemble learning](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%20Ensemble%20learning.md)
+- [欠拟合和过拟合](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%AC%A0%E6%8B%9F%E5%90%88%E5%92%8C%E8%BF%87%E6%8B%9F%E5%90%88.md)
+- [模型选择和调优cross validation/Grid Search](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E5%92%8C%E8%B0%83%E4%BC%98.md)
+- [模型评估:均方误差](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E5%9D%87%E6%96%B9%E8%AF%AF%E5%B7%AE.md)
+- [模型评估:精确率 召回率 ROC曲线 AUC指标](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E7%A1%AE%E7%8E%87%20%E5%8F%AC%E5%9B%9E%E7%8E%87%20%20ROC%E6%9B%B2%E7%BA%BF%20AUC%E6%8C%87%E6%A0%87.md)
+- [模型评估:轮廓系数](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E8%BD%AE%E5%BB%93%E7%B3%BB%E6%95%B0.md)
+- [模型保存和加载](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E4%BF%9D%E5%AD%98%E5%92%8C%E5%8A%A0%E8%BD%BD.md)
+- [TensorFlow框架使用](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/TensorFlow%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8)
+- [数据读取 神经网络](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+- [卷积神经网络](https://github.com/mayu1031/CS_Notes/tree/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+
+ [5]: https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/others/icons/%E5%86%AC%E6%97%A5%E8%A3%85%E5%A4%87icon/%E6%BA%9C%E5%86%B0%E9%9E%8B2.png
