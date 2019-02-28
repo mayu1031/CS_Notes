@@ -1,6 +1,6 @@
 ﻿# 用SQL分析黑五数据
  
-- 之前我们用excel已经初步的处理完数据
+- 之前我们已经初步用excel的处理完数据
 - https://github.com/mayu1031/CS_Notes/blob/master/doc/机器学习/案例分析/黑五excel/用excel进一步分析黑五销售数据.md
 
 ## 数据来源
