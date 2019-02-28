@@ -100,8 +100,6 @@ LIMIT 5
 
 ### 一共有多少订单，订单分别来自哪些国家，哪个国家订单最多
 
-
-
 ```sql
 SELECT Country as '国家', COUNT(DISTINCT (InvoiceNo)) as '订单数目', CONCAT(ROUND(COUNT(DISTINCT (InvoiceNo))/(SELECT COUNT(DISTINCT (InvoiceNo)) FROM data)*100,2),'%') AS '占总订单的比例'
 FROM
@@ -132,6 +130,7 @@ LIMIT 10
 ![12](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/12.png)
 
 United Kingdom顾客的消费次数是最多的，占到总订单的88.95%，其次是德国，法国等
+
 ```sql
 SELECT Country AS ‘国家’, ROUND(SUM(UnitPrice*Quantity),2) AS '销售的金额', CONCAT(ROUND(SUM(UnitPrice*Quantity)/(SELECT SUM(UnitPrice*Quantity)FROM data )*100,2),'%') AS '占总消费金额的比例'
 FROM data
@@ -249,6 +248,7 @@ limit 10
 排名前10销售额的产品的单价除了第一位之外都比较低
 
 #### 我们取几个销售金额比较大的国家进行比较
+
 - Germany
 - 销售量
 ```sql
@@ -307,15 +307,19 @@ limit 10
 
 ### 哪个月的销售额最高
 销售额
+
 ```sql
 SELECT DATE_FORMAT(invoicedate,'%Y-%m') AS '日期',ROUND(SUM(quantity*unitprice),2) AS'销售额', count(DISTINCT InvoiceNo) AS '订单数'
 FROM data
 GROUP BY DATE_FORMAT(invoicedate,'%Y-%m')
 ORDER BY SUM(quantity*unitprice) DESC
 ```
+
 ![23](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/23.png)
 
+
 订单量
+
 ```sql
 SELECT DATE_FORMAT(invoicedate,'%Y-%m') AS '日期',ROUND(SUM(quantity*unitprice),2) AS'销售额', count(DISTINCT InvoiceNo) AS '订单数'
 FROM data
@@ -338,6 +342,7 @@ ORDER BY SUM(InvoiceNo) DESC
 出货总量不需要考虑退货的数量，只需要计算quantity大于0的所有总和
 
 实际卖出的货品量=出货总量-退货总量
+
 ```sql
 SELECT C1.country as '国家', CONCAT(ROUND(C1.c1/C2.c2*(100),2),'%') as '退货率'
 	FROM (
