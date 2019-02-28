@@ -14,8 +14,7 @@
 
 ![袜子][6]  案例分析
 ======
-- [Python分析黑五数据](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%BA%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%BA%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.md)
-- [SQL分析黑五数据](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%BB%91%E4%BA%94sql/%E7%94%A8SQL%E5%88%86%E6%9E%90%E9%BB%91%E4%BA%94%E6%95%B0%E6%8D%AE.md)
+- [black friday销售数据分析](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%BB%91%E4%BA%94/%E5%88%86%E6%9E%90%E9%BB%91%E4%BA%94%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE.md)
 - 信用卡欺诈数据分析案例
 - [Python分析泰坦尼克号存活率](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/python%E5%88%86%E6%9E%90%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7%E5%AD%98%E6%B4%BB.md)
 - [泰坦尼克号获救预测案例](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/README.md)
