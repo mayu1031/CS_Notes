@@ -130,6 +130,7 @@ ORDER BY COUNT(StockCode) DESC
 LIMIT 10
 ```
 ![12](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/12.png)
+
 United Kingdom顾客的消费次数是最多的，占到总订单的88.95%，其次是德国，法国等
 ```sql
 SELECT Country AS ‘国家’, ROUND(SUM(UnitPrice*Quantity),2) AS '销售的金额', CONCAT(ROUND(SUM(UnitPrice*Quantity)/(SELECT SUM(UnitPrice*Quantity)FROM data )*100,2),'%') AS '占总消费金额的比例'
@@ -139,6 +140,7 @@ ORDER BY SUM(UnitPrice*Quantity) DESC
 LIMIT 10
 ```
 ![13](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/13.png)
+
 United Kingdom顾客的消费次数是最多的，占到总订单的81.54%，其次是Netherlands，EIRE等
 
 ### 最畅销的商品是哪些，以及销售最高的是那个商品
