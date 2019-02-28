@@ -14,7 +14,8 @@
 
 ![袜子][6]  案例分析
 ======
-- [black friday销售数据分析](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%BB%91%E4%BA%94/%E5%88%86%E6%9E%90%E9%BB%91%E4%BA%94%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE.md)
+- [Black Friday销售数据分析](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%BB%91%E4%BA%94/%E5%88%86%E6%9E%90%E9%BB%91%E4%BA%94%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE.md)
+- 电商平台在线零售业务分析
 - 信用卡欺诈数据分析案例
 - [泰坦尼克号获救预测案例](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%B3%B0%E5%A1%94%E5%B0%BC%E5%85%8B%E5%8F%B7/README.md)
 - [Facebook签到位置预测案例](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/facebook%E7%AD%BE%E5%88%B0%E4%BD%8D%E7%BD%AE%E9%A2%84%E6%B5%8B.md)
