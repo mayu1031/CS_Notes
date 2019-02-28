@@ -151,6 +151,7 @@ ORDER BY SUM(Quantity) DESC
 LIMIT 10
 ```
 ![14](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/14.png)
+
 图片中，显示的是所有产品中，销量最高的前十产品，其中最高的是84077
 
 前十的产品描述分别为： 
