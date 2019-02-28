@@ -383,7 +383,7 @@ FROM
 			GROUP BY CustomerID
 				) AS C2 
 WHERE C1.CustomerID = C2.CustomerID AND C1.c1!= 0
-ORDER BY CONCAT(ROUND(C1.c1/C2.c2*(-100),2),'%') DESC
+ORDER BY ROUND(C1.c1/C2.c2*(100),2) DESC
 LIMIT 10
 ```
 ![26](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/26.png)
@@ -408,7 +408,7 @@ FROM
 			GROUP BY StockCode
 				) AS C2 
 WHERE C1.StockCode = C2.StockCode AND C1.c1!= 0
-ORDER BY CONCAT(ROUND(C1.c1/C2.c2*(-100),2),'%') DESC
+ORDER BY ROUND(C1.c1/C2.c2*(100),2) DESC
 LIMIT 10
 ```
 ![27](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E9%9B%B6%E5%94%AE/SQL/27.png)
