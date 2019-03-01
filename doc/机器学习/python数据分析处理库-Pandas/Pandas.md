@@ -1,4 +1,4 @@
-# Pandas
+﻿# Pandas
 
 - 1.Pandas是什么
     - 1.1Pandas介绍
@@ -62,6 +62,7 @@
 - 8合并
     - 8.1应用pd.concat实现数据的合并
     - 8.2应用pd.merge按索引实现数据的合并
+    - 8.3 join
 - 9交叉表与透视表
     - 9.1交叉表和透视表的作用
     - 9.2交叉表crosstable实现
@@ -70,7 +71,14 @@
     - 10.1什么是分组与聚合
     - 10.2api分组
     - 10.3星巴克零售店数据案例
-    
+- 11dataframe进行去重
+    - pandas里面是没有单独的distinct这个功能的
+    - unique
+    - drop_duplicates
+- 12修改列的别名 
+    - rename
+- 13top
+- 14replace
 
  ![基础](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.png)   
  
@@ -476,20 +484,29 @@ pd.DataFrame(stock_change, index = stock, columns = date)
 - 常用属性：
     - **shape**
         - data.shape
+        - a tuple representing the dimensionality of df
     - **index**
         - data.index
+        - 行索引
     - **columns**
         - data.columns
+        - 列索引
+        - return pandas.Index
     - **values**
         - data.values 直接获取其中array的值
+        - each row, return array[array]
     - **T**
         - 行列转置
+    - **dtypes**
+        - data type of columns
+        - 列数据类型
+
 
 - 获取行索引具体有哪些索引
-    - dfname.columns.values.tolist()    # 列名称
+    - **dfname.columns.values.tolist()**    # 列名称
     
 - 获取列索引具体有哪些索引
-    - dfname._stat_axis.values.tolist() # 行名称
+    - **dfname._stat_axis.values.tolist()** # 行名称
 
 - 方法：
     - 想看数据构成，有哪些字段，又不想把所有的数据都显示出来
@@ -2387,10 +2404,13 @@ data = data.drop(["ma5","ma10","ma20","v_ma5","v_ma10","v_ma20"], axis=1)
 ```
 
 ## 2.1索引操作
+- 类比SQL中的select
 ### 2.1.1直接索引 
 - **必须先列后行**
-
-
+- df[1: 3]
+- df[['total_bill', 'tip']]
+- 但是上面两种不能混用
+- df[1:2, ['total_bill', 'tip']]  # TypeError: unhashable type
 
 ```python
 # numpy当中我们已经讲过使用索引选取序列和切片选择
@@ -2528,7 +2548,7 @@ data["open"]["2018-02-26"]
 
 ### 2.1.2按名字索引
 - **loc** 使用索引
-
+- loc，基于列label，可选取特定行（根据行index）
 
 ```python
 data.loc["2018-02-26"]["open"]
@@ -2555,6 +2575,7 @@ data.loc["2018-02-26","open"]
 
 ### 2.1.3按数字索引
 - **iloc**使用索引
+- iloc，基于行/列的position
 
 
 ```python
@@ -2571,6 +2592,7 @@ data.iloc[1,0]
 ### 2.1.4组合索引
 - 数字和名字混用
 - **ix**
+- 为loc与iloc的混合体，既支持label也支持position
 
 
 ```python
@@ -2774,6 +2796,11 @@ data.iloc[0:4,data.columns.get_indexer(['open','close','high','low'])]
 </div>
 
 
+### 2.1.6 at；iat 快速定位具体的某一元素
+- at，根据指定行index及列label，快速定位DataFrame的元素；
+- iat，与at类似，不同的是根据position来定位的；
+    - df.at[3, 'tip']
+    - df.iat[3, 1]
 
 ## 2.2赋值操作
 - 对DataFrame当中的close列进行重新赋值为1
@@ -3045,6 +3072,7 @@ data.head()
 ### 2.3.1DataFrame排序
 - 内容排序
     - 使用**df.sort_values(key=,ascending=)**对内容进行排序
+    - df.sort_values(['total_bill', 'tip'], ascending=[False, True])
         - 单个键或者多个键进行排序，默认升序
         - ascending = True：升序
         - ascending = False：降序
@@ -4242,6 +4270,15 @@ plt.show()
 - 定义一个对列，最大值-最小值的函数
     - **data[['open','close']].apply(lambda x: x.max()-x.min(),axis=0)**
 
+- Pandas提供对每列/每一元素做自定义操作，为此而设计以下三个函数：
+    - map(func)，为Series的函数，DataFrame不能直接调用，需取列后再调用；
+    - apply(func)，对DataFrame中的某一行/列进行func操作；
+    - applymap(func)，为element-wise函数，对每一个元素做func操作
+```python
+df['tip'].map(lambda x: x - 1)
+df[['total_bill', 'tip']].apply(sum)
+df.applymap(lambda x: x.upper() if type(x) is str else x)
+```    
 
 
 ```python
@@ -7715,6 +7752,7 @@ stock_change.head()
     - **np.concatnate((a,b),axis=)**
     - **np.hstack()** 水平拼接
     - **np.vstack()** 竖直拼接
+
 ## 8.1应用pd.concat实现数据的合并
 - 按方向拼接
     - **pd.concat([data1,data2],axis=0)** 默认为0，竖直拼接
@@ -8270,6 +8308,8 @@ pd.concat((stock,stock_change),axis=0).head()
         - right 
         - outer
         - inner
+    - pd.merge(df1, df2, how='left', left_on='app', right_on='app')
+    - pd.merge(aisles,products,on=['aisle_id','aisle_id'])
 
 
 ```python
@@ -8670,7 +8710,8 @@ pd.merge(left,right,how = "outer",on=["key1","key2"])
 </table>
 </div>
 
-
+## 8.3 join
+df.join(df2, how='left'...)
 
 # 9交叉表与透视表
 ## 9.1交叉表和透视表的作用
@@ -9621,9 +9662,15 @@ col["price1"].groupby(col["color"]).count()
     white    1
     Name: price1, dtype: int64
 
+## 10.3 实现在agg()中指定dict
+
+- df.groupby('sex').agg({'tip': np.max, 'total_bill': np.sum})
+    - count(distinct **)
+- df.groupby('tip').agg({'sex': pd.Series.nunique})
 
 
-## 10.3星巴克零售店数据案例
+
+## 10.4星巴克零售店数据案例
 
 
 ```python
@@ -10041,3 +10088,69 @@ plt.show()
 
 ![png](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/output_243_0.png)
 
+# 11dataframe进行去重
+- pandas里面是没有单独的distinct这个功能的
+- unique
+- drop_duplicates
+
+## unique 去重，留下单个元素
+- countries = data['Country'].unique()
+- print('客户来自的国家的数目: {}'.format(len(countries)))
+
+## drop_duplicates根据某列对dataframe进行去重
+- df.drop_duplicates(subset=['sex'], keep='first', inplace=True)
+- 包含参数：
+    - subset，为选定的列做distinct，默认为所有列；
+    - keep，值选项{'first', 'last', False}，保留重复元素中的第一个、最后一个，或全部删除；
+    - inplace ，默认为False，返回一个新的dataframe；若为True，则返回去重后的原dataframe
+
+# 12修改列的别名
+SQL中使用as修改列的别名，Pandas也支持这种修改：
+- first implementation
+    - df.columns = ['total', 'pit', 'xes']
+- second implementation
+    - df.rename(columns={'total_bill': 'total', 'tip': 'pit', 'sex': 'xes'}, inplace=True)
+其中，第一种方法的修改是有问题的，因为其是按照列position逐一替换的。因此，我推荐第二种方法
+
+# 13top
+- 对于全局的top：
+    - df.nlargest(3, columns=['total_bill'])
+- 对于分组top，MySQL的实现（采用自join的方式）：
+```sql
+select a.sex, a.tip
+from tips_tb a
+where (
+    select count(*)
+    from tips_tb b
+    where b.sex = a.sex and b.tip > a.tip
+) < 2
+order by a.sex, a.tip desc;
+```
+- Pandas的等价实现，思路与上类似：
+```python
+# 1.
+df.assign(rn=df.sort_values(['total_bill'], ascending=False)
+          .groupby('sex')
+          .cumcount()+1)\
+    .query('rn < 3')\
+    .sort_values(['sex', 'rn'])
+    
+# 2.
+df.assign(rn=df.groupby('sex')['total_bill']
+          .rank(method='first', ascending=False)) \
+    .query('rn < 3') \
+    .sort_values(['sex', 'rn'])
+```
+
+# 14replace
+- replace函数提供对dataframe全局修改，亦可通过where条件进行过滤修改（搭配loc）：
+```python
+# overall replace
+df.replace(to_replace='Female', value='Sansa', inplace=True)
+
+# dict replace
+df.replace({'sex': {'Female': 'Sansa', 'Male': 'Leone'}}, inplace=True)
+
+# replace on where condition 
+df.loc[df.sex == 'Male', 'sex'] = 'Leone'
+```
