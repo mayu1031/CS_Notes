@@ -249,6 +249,13 @@ select s.id, s.name, s.gender from studnets as s;
 select distinct name from students；
 select distinct age from students；
 ```
+- **Distinct和Group by去除重复字段记录**   
+  一是完全重复的记录，也即所有字段均重复的记录  
+  二是部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。
+  
+    - select count(distinct col) from A;
+    - select count(1) from (select 1 from A group by col) as C;
+
 # 表格条件查询
 
 ### **基本语法**
