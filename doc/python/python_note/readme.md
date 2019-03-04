@@ -19,15 +19,15 @@ Python Notes
     - 集合 set
 - [变量作用域和列表]()
 - [表达式和运算符](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6.md)
-- None
-- 运算符分类
-    - 算数运算符
-    - 比较或者关系运算符
-    - 赋值运算符
-    - 逻辑运算符
-    - 位运算
-    - 成员运算 
-    - 身份运算符
+    - None
+    - 运算符分类
+        - 算数运算符
+        - 比较或者关系运算符
+        - 赋值运算符
+        - 逻辑运算符
+        - 位运算
+        - 成员运算 
+        - 身份运算符
 - [分支for循环]() 
 - [while-函数]()
 - [函数]()  
