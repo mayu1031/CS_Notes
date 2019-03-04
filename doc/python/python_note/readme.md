@@ -10,7 +10,7 @@
 
 Python Notes
 ========
-- [python基础和变量类型](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/python%E6%A6%82%E8%BF%B0%E5%92%8C%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B.md)
+- [python概述和变量类型](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/python%E6%A6%82%E8%BF%B0%E5%92%8C%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B.md)
     - 数字类型Number
     - 字符串 str
     - 列表 list
