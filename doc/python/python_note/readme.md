@@ -17,13 +17,20 @@ Python Notes
     - 元祖 tuple
     - 字典 dictionary
     - 集合 set
-- [函数]()
-- [python基础](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/01python%E5%9F%BA%E7%A1%80.ipynb)
-- [字符串+变量](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/02%E5%AD%97%E7%AC%A6%E4%B8%B2%2B%E5%8F%98%E9%87%8F.ipynb)
-- [while-函数](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/03while-%E5%87%BD%E6%95%B0.ipynb)
-- [分支for循环](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/04%E5%88%86%E6%94%AFfor%E5%BE%AA%E7%8E%AF.ipynb)   
-- [函数完结](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/05%E5%87%BD%E6%95%B0%E5%AE%8C%E7%BB%93.ipynb)
-- [变量作用域和列表](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/06%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%88%97%E8%A1%A8.ipynb)
+- [变量作用域和列表]()
+- [表达式和运算符](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6.md)
+- None
+- 运算符分类
+    - 算数运算符
+    - 比较或者关系运算符
+    - 赋值运算符
+    - 逻辑运算符
+    - 位运算
+    - 成员运算 
+    - 身份运算符
+- [分支for循环]() 
+- [while-函数]()
+- [函数]()  
 - [OOP-Python 面向对象](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/10OOPnote.md)
 
 
