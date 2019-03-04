@@ -42,8 +42,7 @@
 - [程序结构](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84.md) 
 - [函数](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/%E5%87%BD%E6%95%B0.md)  
 - [OOP-Python 面向对象](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/python_note/10OOPnote.md)
-- [Python 练习题](https://github.com/mayu1031/CS_Notes/tree/master/doc/python/python_note)
-- [Leetcode-Python](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/leecode/readme.md)
+- Python高级语法
 - Scrapy 爬虫框架
 - Flask
 - Django
@@ -52,6 +51,8 @@
 - [数据分析处理库-Pandas](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93-Pandas/Pandas.md)
 - [数据可视化库-Seaborn](https://github.com/mayu1031/CS_Notes/blob/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93-Seaborn/Seaborn/Seaborn.md)
 - [Pandas日期数据处理](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/Pandas%E6%97%A5%E6%9C%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.md)
+- [Leetcode-Python](https://github.com/mayu1031/CS_Notes/blob/master/doc/python/leecode/LeetCode.md)
+- [Python 练习题]()
 
 
 
