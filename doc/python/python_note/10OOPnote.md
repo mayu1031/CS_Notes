@@ -1,5 +1,5 @@
 # 0. OOP - Python 面向对象
--- 画图软件 Fasttone capture
+画图软件 Fasttone capture
  - Python的面向对象
  - 面向对象编程
     - 基础
