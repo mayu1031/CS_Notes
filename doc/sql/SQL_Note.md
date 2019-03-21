@@ -201,6 +201,7 @@
 - 不可以使用关键字，特殊字符
 
 ## **创建数据库**
+- **CREATE DATABASE 表名;**
 ```sql
 CREATE DATABASE 表名；
 create database abc;
@@ -221,7 +222,8 @@ show databases; (确认被删)
 ## **删除指定的库**
 - **DROP DATABASE 数据库名**
 
-
+## **删除指定名称的表**
+- **DROP TABLE 表名**
 
 # 四、数据类型
 
@@ -237,7 +239,7 @@ show databases; (确认被删)
 - TINYINT: 1 byte -128-127，0-255
 - SAMLLINT: 2 byte -32768-32767， 0-65535
 - MEDIUNINT: 3 byte
-- INT: 4 byte -2^31-2^31-1, 0-2^32-1
+- INT: 4 byte -2^31-2^31-1, 0-2^64-1
 - BIGINT: 8 byte
 - FLOAT: FLOAT(M,D) FLOAT(5,2)
     - M: 总宽度
@@ -266,10 +268,10 @@ height float(5,2) unsigned,
 - varchar：可变字符串
     - varchar（n）
     - 按数据实际大小分配存储空间，你用多少，我给你多少
-    - 自动截断超过指定字符数的数据
+    - 自动截断超过指定字符数的数据 最长是n位
     
 - text/blob：大文本类型 （字符串太多太多太多了）
-    - 字符数大于
+    - 字符数大于 65535存储时使用
     - age int(2)
     - detail text(2000)
             
@@ -312,9 +314,26 @@ height float(5,2) unsigned,
 - time（）：获取指定时间中时刻
 ```sql    
 select now();
+
+now()
+2019-03-21 23:28:26
+```
+```sql
 select current_time();
+
+current_time()
+23:29:08
+```
+```sql
 select now(), sleep(5), now(); #now一次性执行
-select sysdate(), sleep(5), sysdate(); 
+
+2019-03-21 23:30:04	0	2019-03-21 23:30:04
+```
+
+```sql
+select sysdate(), sleep(5), sysdate();
+
+2019-03-21 23:30:37	0	2019-03-21 23:30:42
 ```
 ## **枚举类型**
 - 给定值集合中选择单个值, ENUM
@@ -331,8 +350,8 @@ weight float(5,2)
 );
 ```
 ## **约束**
-- null
-- not null
+- null 允许为空，默认设置
+- not null 不允许为空
 - key 索引（是否为主键）
 - default 设置默认值，缺省为null
 ```sql   
@@ -388,24 +407,32 @@ Empty set
 
 ## **基本用法**
 - alter table 表名 执行动作；
+```sql
+alter table stu add score int(3) not null
+```
 ## **添加新字段**
 - add 字段名 类型（宽度）约束条件；
 - 可加 after 字段名 
 - 或者 first
+```sql
+alter table stu add phone varchar(15) not null after age;
+alter table stu add qq varchar(10) not null after age
+```
 ## **修改字段类型**
 - modify 字段名 类型（宽度） 约束条件；
+```sql
+alter table stu modify qq int(15) not null;
+```
 ## **修改字段名**
 - change 源字段名 新字段名 类型（宽度）约束条件；
+```sql
+alter table stu change qq wechat varchar(20) not null;
+```
 ## **删除指定字段**
 - drop 字段名；
 ```sql
-alter table stu add score int(3) not null
-alter table stu add phone varchar(15) not null after age;
-alter table stu add qq varchar(10) not null after age
 describe stu;
 desc stu; (描述表具体什么样)
-alter table stu modify qq int(15);
-alter table stu change qq wechat varchar(20) not null;
 alter table stu drop wechat
 ```    
 
