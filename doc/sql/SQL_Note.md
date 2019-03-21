@@ -1,4 +1,4 @@
-<br>
+﻿<br>
 
 <div align="center">
     <br>
@@ -123,27 +123,27 @@
     
 
 ## **数据库定义**
-- DB database
+- DB database 依照某种数据模型进行组织并存放到存储器的数据集合
 - DBMS DB ManagementSystem: 用来操作和管理数据库的大型服务软件
-- DBS: DB+DBMS
+- DBS: DB+DBMS 带有数据库并整合类数据管理软件的计算机系统
 - Server/Client 服务器/客户端
 - E-R数据模型 entity-relation model 实体关系模型
     - 方形：实体
     - 椭圆形： 属性
     - 菱形： 关系
-    
+- SQL Structured Query Language   
 ## **数据库分类**
-
 - 关系型数据库
-- 基于关系数学
-- 最常见
+    - 基于关系数学
+    - 最常见
+    - MySQL  
 - 非关系型数据 -NoSQL not only sql
+    - 数据量大，数据不规整
     - MongoDB 比如网页 图片
-    - Redis
-    - Neo4j
+    - Redis 内存
+    - Neo4j 图像信息
         
 ## **数据库产品**
-
 - Oracle
     - MySQL 
     - Oracle DataBase
@@ -178,7 +178,9 @@
 - **\c可废弃当前边写错的操作指令**
     
 ## **登录**
+- mysql command line
 - mysql -u root -p （-h 服务器 -u 用户名 -p 密码）
+- quit 或 exit 退出
 ## **查看数据库**
 - 列出当前MySQL服务器上哪有库
 - show databases；
