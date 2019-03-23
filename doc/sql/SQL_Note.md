@@ -415,11 +415,26 @@ address char(20)
       
 Empty set
 ```
+## **删除表格**
+```sql
+drop table 表名；
+```
+
+```sql
+删除数据库类似
+drop database 数据库名；
+```
 
 ## **基本用法**
 - alter table 表名 执行动作；
 ```sql
 alter table stu add score int(3) not null
+```
+
+## 表重命名
+- alter table 原表名 rename 现表名;
+```sql
+alter table t1 rename t2;
 ```
 ## **添加新字段**
 - add 字段名 类型（宽度）约束条件；
@@ -439,7 +454,11 @@ alter table stu modify qq int(15) not null;
 ```sql
 alter table stu change qq wechat varchar(20) not null;
 ```
-
+## **删除字段名**
+- alter table xxx drop column 字段名
+```sql
+alter table `user_movement_log` drop column Gatewayid
+```
 ## **查看表格内的字段结构**
 - desc 表名;
 ```sql
@@ -447,7 +466,7 @@ desc stu;
 ```
 
 ## **删除指定字段**
-- drop 字段名；
+- drop 字段名； 
 ```sql
 describe stu;
 desc stu; (描述表具体什么样)
@@ -476,32 +495,35 @@ alter table stu drop wechat
 ### **什么是普通索引**
 - 一个表中可以有多个index字段
 - 对应的字段值可以重复 (比如名字重复一样)
-- 把经常做查询条件的字段设置为index字段
-- index字段的key标志是**MUL**
+- 把经常做查询条件的字段设置为index字段，用索引可以加快查找的速度
+- index字段的key标志是**MUL** 索引类型
+
+### **创建索引**
+- 在表里添加索引
+
 ```sql
-create table stu（
-name varchar（4） not null，
-age int（3），
-id char（6）not null，
+create table stu(
+name varchar(4) not null,
+age int(3),
+id char(6) not null,
 course char(10) not null,
 hobby char(10) not null,
-index（id），index（name）
+index(id),index(course)
 );
 desc stu;
 ```
 
-### **创建索引**
-- 在表里添加索引
 - create index xxx on 表名（字段名）
     - xxx是给索引起的名称
 - 用**create** 记得区分开
 ```sql
 create index hobby on stu（hobby); #给hobby创建了一条索引
 create index index_hobby on stu（hobby); #可以给hobby再创建一条索引，index_hobby
-show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 ```
 ### **删除索引**
+- 创建的时候要具体到某个字段，删除的时候直接删除索引就可以了，不需要明确到字段
 - drop index xxx on 表名
+
 ```sql
 drop index course on stu; #把course的索引删除了
 ```
@@ -518,10 +540,7 @@ show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 - unique字段的值可以为null，当其修改为not null时，则此字段限制和主键相同，为PRI字样
 
 ### **创建索引**
-- 在表里添加索引**
 - 直接创建，unique（字段1），unique（字段2）
-- 创建索引，在表里添加索引，某一个字段添加索引
-    - create unique index xxx on 表名（字段名）
 ```sql
 create table stu（
 name varchar（4） not null，
@@ -534,6 +553,9 @@ unique（id），unique（name）
 desc stu;
 ```
 
+- 创建索引，在表里添加索引，某一个字段添加索引
+    - create unique index xxx on 表名（字段名）
+
 ```sql
 create unique index myCourse on stu(course); #创建一个unique index
 desc stu;
@@ -542,8 +564,8 @@ desc stu;
 - unique字段的值可以为null，当其修改为not null时，则此字段限制和主键相同，为PRI字样
 ```sql
 create table teacher(
-name char(3) not nulll
-age int(2)
+name char(3) not null，
+age int(2)，
 course varchar(20),
 address varchar(20),
 unique(name)
@@ -551,6 +573,7 @@ unique(name)
 desc teacher;
 - key 为PRI
 ```
+
 ## **主键**
 ### **什么是主键**
 - 一个表中只能有一个primary字段
@@ -572,12 +595,19 @@ primary key(id)
 ```
 - **创建primary key 用alter add**
     - **注意，这里没有create key这种东西，我们用add**
-    - 在已经有都表中设置primary key字段名
+    - 在已经存在的表中设置primary key字段名
     - alter table 表名 add primary key（id）
-    
+```sql
+ alter table stu add primary key (id);
+```
+        
 ### **删除主键**
 - **删除primary key 用alter，drop**
     - alter table 表名 drop primary key；
+
+```sql
+alter table teacher drop primary key
+```
 
 ## **外键**
 ### **什么是外键**
@@ -591,8 +621,8 @@ primary key(id)
 ### **创建外键**
 - 外键基本用法
 ```sql
-foreign key (表A的字段名)
-references （表B的字段名）
+foreign key 表A(字段名)
+references 表B(字段名）
 on update cascade
 on delete cascade
 表A的字段名参照表B的字段名
@@ -619,7 +649,14 @@ desc stu; (course key MUL 但是不能显示是外键)
 
 ### **删除外键**
 - alter table 表名 drop foreign key 约束名；
+- 注意外键名不一定就是创建时候的外建明
 
+```sql
+show create table student;
+```
+```sql
+alter table student drop FOREIGN key student_ibfk_1;
+```
 
 # 七、查询
 
@@ -627,25 +664,30 @@ desc stu; (course key MUL 但是不能显示是外键)
 - 标准格式
     - insert into 表名 （字段名1，字段名2，...）values (值1，值2，...)
     - insert into 表名 values(值1，值2，...）
-    - 如果没有为某个字段赋值，则使用默认值，NULL NONE
+    - 如果没有为某个字段赋值，则使用默认值，NULL
     - 如果添加非空约束NOT NULL，没有default约束，则会报错
 
 ## **准备数据**
 - 创建数据库和表
-    - 创建数据库
+- 创建数据库
+    - 编码集 utf8 可以允许使用中文
 ```sql
-create database world CHARSET = UTF8;
+create DATABASE database1 CHARSET = utf8;
 ```
-  - 使用数据库
+- 使用数据库
 
 ```sql
-use world;
+use database1;
+```
+
+- 创建表格
+```sql
 create table students(
     stu_id int unsigned primary key auto_increment not null,
-    name varchar(10) default "name",
+    name varchar(10) default "no name",
     age tinyint unsigned default 18,
     height decimal(5,2),
-    gender enum("male","female","none") defualt "none",
+    gender enum("male","female","none") default "none",
     cls_id int unsigned default 0,
     is_delete bit default 0
 );
@@ -657,18 +699,32 @@ cs_id int unsigned auto_increment primary key not null,
 name varchar(20) not null
 );
 
-insert into students values (0, 'john',18, 180.00, 1, 1, 0)；
-##插进入一行数据
+insert into students values (0, 'john',18, 180.00, 1, 1, 0);
+```
+- 插进入一行数据
 
+插入学生数据
+
+注意没有最大的包含括号
+
+```sql
 insert into students values (0, 'john',18, 180.00, 1, 1, 0),(),(),(),()；
 
-insert into students(stu_id, name, age, height, gender, cls_id, is_delete) values (0, 'john',18, 180.00, 1, 1, 0)；
+insert into students(stu_id, name, age, height, gender, cls_id, is_delete) values (0, 'john',18, 180.00, 1, 1, 0)； 
+```
 
-insert into classes vaules (0, 'math'),(0, 'english');
+- 插入课程数据
+```sql
+insert into classes values (0, 'math'),(0, 'english');
 select * from classes;
 
 ```
 
+- 删除某一行
+```sql
+delete from students
+where stu_id = 4;
+```
 ## **查询语法**
 
 ```sql
@@ -713,6 +769,7 @@ select * from 表名
 where 条件;
 ```
 - where 后面多种运算符
+
 ### **比较运算符**
 - 等于 =
 - 大于 >
@@ -808,7 +865,7 @@ select max(id) from students;
 ### **最小值**
 - min(列)
 ```sql
-select min(id) from students
+select min(id) from students  
 where is_delete=0;
 ```
 ### **平均值**
@@ -826,7 +883,7 @@ where gender = '男';
 ## **分组**
 - group by
 - **group by + group_concat 函数**
-    - 分组之后，根据分组结果，使用group_concat()来放置某一组的某字段的值的集合**
+    - 分组之后，根据分组结果，使用group_concat()来放置某一组的某字段的值的集合
 ```sql
 select gender, group_concat(id) from students
 group by gender;
@@ -867,7 +924,7 @@ select gender, group_concat(age) from students
 group by gender
 with rollup;
 
-```
+```4
 
 - **Distinct和Group by去除重复字段记录**   
   一是完全重复的记录，也即所有字段均重复的记录  
@@ -934,9 +991,9 @@ create table areas(
 )
 ```
 - 查询一共多少省
-- id  pid name
+- id  pid atitle
 - 100 0   河北
-- 101 199 石家庄
+- 101 100 石家庄
 - 102 101 某某县
 
 ```sql
@@ -966,24 +1023,29 @@ where city.atitle = '广州市'
     - 标量子查询：子查询返回的结果是一个数据
     - 列级子查询: 返回的结果是一列
     - 行级子查询：返回的结果是一行
-     
+      
 ### **标量子查询**
+- 子查询返回的结果是一个数据
 ```sql
 select * from students
 where age > 
 (select avg(age) from students);
 ```
 ### **列级子查询**
+- 返回的结果是一列
 ```sql
 select name from classes
 where id in (select cls_id from students);
 #先查班级id，在查在这个id里面的学生
 ```
 ### **行级子查询**
+- 返回的结果是一行
+- 行元素：多个字合成一个行元素，在行级子查询中会使用到的元素
 ```sql
 select * from students 
 where (height,age) = (select max(height),max(age) from students)
 ```
+
 
 # 八、运维
 - **用户权限管理**
@@ -992,7 +1054,7 @@ where (height,age) = (select max(height),max(age) from students)
 
 - **备份**
     - 物理备份 明确创建一个文件
-        - 冷备份 #系统关机
+        - 冷备份 #系统关机 
             - copy #linux
             - tar #linux
         - 热备份 #系统还是运行，边运行边备份
@@ -1036,8 +1098,6 @@ where (height,age) = (select max(height),max(age) from students)
         - 优化查询语句
 
 # 九参考资料
-- 北京图灵学院 
 - [数据库大全-MySQL-MongoDB-Redis][1]
-
 
   [1]: https://study.163.com/course/courseMain.htm?courseId=1006361022
