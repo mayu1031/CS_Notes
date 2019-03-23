@@ -924,7 +924,7 @@ select gender, group_concat(age) from students
 group by gender
 with rollup;
 
-```4
+```
 
 - **Distinct和Group by去除重复字段记录**   
   一是完全重复的记录，也即所有字段均重复的记录  
@@ -932,7 +932,7 @@ with rollup;
   
     - select count(distinct col) from A;
     - select count(1) from (select 1 from A group by col) as C;
-```
+
 其实上述两中方法分别是在运算和存储上的权衡。
 
 distinct需要将col列中的全部内容都存储在一个内存中，可以理解为一个hash结构，key为col的值，最后计算hash结构中有多少个key即可得到结果。
@@ -940,7 +940,7 @@ distinct需要将col列中的全部内容都存储在一个内存中，可以理
 很明显，需要将所有不同的值都存起来。内存消耗可能较大。
 
 而group by的方式是先将col排序。而数据库中的group一般使用sort的方法，即数据库会先对col进行排序。而排序的基本理论是，时间复杂为nlogn，空间为1.，然后只要单纯的计数就可以了。优点是空间复杂度小，缺点是要进行一次排序，执行时间会较长。
-```
+
 
 ## **分页获取内容**
 - **数据量过大时，分批显示内容**
@@ -951,6 +951,7 @@ limit start,count;
 select * from students limit 5,5
 ## id从6开始，显示5个
 ```
+
 - **limit 和 offset的区别**
 - limit x，y
     - 跳过x个数据，取y个数据
