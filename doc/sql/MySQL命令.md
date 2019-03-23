@@ -1,4 +1,4 @@
-<br>
+﻿<br>
 
 <div align="center">
     <br>
@@ -18,83 +18,143 @@
 - [表格条件查询](#表格条件查询)
 
 
+
+
+- DDL
+- Data Definition Language 数据定义语言，用来创建或者删除存储数据用的数据库以及数据库中表等对象，
+create：创建数据库和表等对象
+drop：删除数据库和表等对象
+alter：修改数据库和表等对象的结构
+
+
+- DML
+- Data Manipulation Language 数据操纵语言 用来查询或者变更表中的几率
+select：查询表中的数据
+insert：在表中插入新数据
+update：更新表中的数据
+delete：删除表中都数据
+
+
+- DCL
+- Data Control Language 用来确认或者取消对数据库中的数据进行的变更
+commit：确认对数据库中数据进行的变更
+rollback：取消对数据库中数据进行的变更
+grant：赋予用户操作权限
+revoke：取消用户操作权限
+
+ 
 # 数据库
-### **创建数据库**
-```sql
-CREATE DATABASE 表名;
-create database abc;
-```
-### **显示所有的数据库**
+
+- 数据库结构
+
+## **显示所有的数据库**
 ```sql
 show databases;
 ```
-### **查看当前所在的库**
+## **创建数据库**
+- create database 表名;
+```sql
+create database database1;
+```
+## **切换到指定的库**
+```sql
+use 数据库名;
+```
+## **查看当前所在的库**
 ```sql
 select database();
 ```
-### **删除数据库**
+## **删除数据库**
+- drop database 数据库名;
 ```sql
-DROP DATABASE 数据库名;
-drop database abc;
+drop database database1;
 ```
 
+
 # 表格结构
-###  **创建指定名称的表**
+
+## **列出当前库中所有的表**
+- show
 ```sql
+show tables;
+```
+## **删除指定名称的表**
+- drop
+```
+drop table 表名;
+```
+
+## **查看表格内的字段结构**
+- desc
+```sql
+desc stu;
+```
+##  **创建指定名称的表**
+
 create table 表名（
 字段名1 字段类型（宽度） 约束条件，
 字段名1 字段类型（宽度） 约束条件，
 字段名1 字段类型（宽度） 约束条件，     
 字段名1 字段类型（宽度） 约束条件，     
 PRIMARY KEY(主键名)   );
-       
+
+
+```sql
 create table student(
 name char(5),
 age int(2),
 address char(20)
 )
 ```
-### **数据库中所有表格名称**
-```sql
-show tables;
-```
-### **某一表格具体字段**
-```sql
-desc table student;
-desc student;
-```
-### **基本用法**
+
+## **表格结构调整**
+- alter
 ```sql
 alter table 表名 执行动作；
 ```
-### **添加新字段**
+
+### **表重命名**
+- rename
 ```sql
-add 字段名 类型（宽度）约束条件；
+alter table t1 rename t2;
+```
+
+### **添加新字段**
+- add
+    - add 字段名 类型（宽度）约束条件
+- after
+- first
+
+```sql
 alter table stu add score int(3) not null
 alter table stu add phone varchar(15) not null after age;
 ```
 
 ### **修改字段类型**
+- modify
+    - modify 字段名 类型（宽度） 约束条件
 ```sql
-modify 字段名 类型（宽度） 约束条件；
 alter table stu modify qq int(15);
 ```
 ### **修改字段名**
+- change
+    - change 源字段名 新字段名 类型（宽度）约束条件
 ```sql
-change 源字段名 新字段名 类型（宽度）约束条件；
 alter table stu change qq wechat varchar(20) not null;
 ```
 ### **删除指定字段**
+- drop
+    - drop 字段名
 ```sql
-drop 字段名；
 alter table stu drop wechat
 ```
 
 # 索引
 
-### **创建索引index**
+## **创建索引index**
+- 创建表格时自带index
+
 ```sql
-#创建表格时自带index或者create索引
 create table stu（
 name varchar（4） not null，
 age int（3），
@@ -103,29 +163,29 @@ course char(10) not null,
 hobby char(10) not null,
 index（id），index（name）
 );
-desc stu;
-
-create index xxx on 表名（字段名）xxx是给索引起的名称
+```
+- create创建索引index
+- create index xxx on 表名（字段名）xxx是给索引起的名称
+```sql
 create index hobby course on stu（hobby); #给hobby创建了一条索引
 create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
 ```
 
 ### **显示表里的索引**
+- show index from 表名
 ```sql
-show index from 表名
 show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 ```
 
 ### **删除索引**
+- drop index xxx on 表名
 ```sql
-drop index xxx on 表名
 drop index course on stu; #把course的索引删除了
 ```
 
-### **创建索引unique**
+## **创建索引unique**
+- 创建表格时自带index
 ```sql
-#创建表格时自带index或者create索引
-
 create table stu（
 name varchar（4） not null，
 age int（3），
@@ -134,30 +194,33 @@ course char(10) not null,
 hobby char(10) not null,
 unique（id），unique（name）
 );
-desc stu;#创建一个unique index
-
+```
+- 创建一个unique index
+```sql
 create unique index myCourse on stu(course); #创建一个unique index
 ```
 ### **显示表里的索引**
+- show unique index from 表名
 ```sql
-show unique index from 表名
 show unique index from stu;
 ```
 
 ### **删除索引**
 ```sql
-drop index index_hobby from stu; #s删除index
+drop index index_hobby from stu; #删除index
 drop index hobby from stu; #删除index
 ```
-### **创建主键 primary key**
+## **创建主键 primary key**
+- 创建表格时自带主键
 ```sql
-#创建表格时自带index或者add添加主键
 create table stu(
 id char(6) auto increment,
 ...
 primary key(id)
 )   
-
+```
+- add添加主键
+```sql
 alter table 表名 add primary key（id）
 ```
 ### **删除主键**
@@ -165,15 +228,16 @@ alter table 表名 add primary key（id）
 alter table 表名 drop primary key；
 ```
 
-### **创建外键 foreign key**
-```sql
+## **创建外键 foreign key**
+
 foreign key (表A的字段名)
 references （表B的字段名）
 on update cascade
 on delete cascade
 表A的字段名参照表B的字段名
 
-#创建AB表
+- 创建AB表
+```sql
 create table mycourse(
 course varchar(20),
 course_id int(20),
@@ -193,19 +257,59 @@ desc stu; (course key MUL 但是不能显示是外键)
 ```
 
 ### **删除外键**
+- alter table 表名 drop foreign key 约束名；
+- 注意外键名不一定就是创建时候的外建明
 ```sql
-alter table 表名 drop foreign key 约束名；
+show create table student;
+```
+- 获得真实foreign key之后可以删除外键
+```sql
+alter table student drop FOREIGN key student_ibfk_1;
 ```
 
 # 表格内部查询
 
+## **准备数据**
 
-### **插入数据**
+- 创建数据库
 ```sql
-nsert into 表名 （字段名1，字段名2，...）values (值1，值2，...)
+create DATABASE database1 CHARSET = utf8;
+```
 
-insert into 表名 values(值1，值2，...）
+- 使用数据库
+```sql
+use database1;
+```
 
+- 创建表格
+```sql
+create table students(
+    stu_id int unsigned primary key auto_increment not null,
+    name varchar(10) default "no name",
+    age tinyint unsigned default 18,
+    height decimal(5,2),
+    gender enum("male","female","none") default "none",
+    cls_id int unsigned default 0,
+    is_delete bit default 0
+);
+
+desc student;
+
+create table classes(
+cs_id int unsigned auto_increment primary key not null,
+name varchar(20) not null
+);
+
+desc classes;
+```
+## **插入数据**
+
+- insert into 表名 （字段名1，字段名2，...）values (值1，值2，...)
+
+- insert into 表名 values(值1，值2，...）
+
+
+```sql
 insert into students values (0, 'john',18, 180.00, 1, 1, 0)；
 
 insert into students(stu_id, name, age, height, gender, cls_id, is_delete) values (0, 'john',18, 180.00, 1, 1, 0)；
@@ -213,7 +317,13 @@ insert into students(stu_id, name, age, height, gender, cls_id, is_delete) value
 insert into students values (0, 'john',18, 180.00, 1, 1, 0),(),(),(),()；
 ```
 
-### **查询语法**
+## **删除数据**
+```
+delete from students
+where stu_id = 4;
+```
+
+## **查询语法**
 ```sql
 select select_exper [,select_exper,...][
     from tb_name
@@ -222,8 +332,8 @@ select select_exper [,select_exper,...][
     [having where 条件判断]
     [order by ｛col_name| postion｝[ASC|DESC],..]
     [limit {}]
-       
 ```
+
 ### **查询所有字段**
 ```sql
 select * from 表名;   *通配符
@@ -249,7 +359,7 @@ select s.id, s.name, s.gender from studnets as s;
 select distinct name from students；
 select distinct age from students；
 ```
-- **Distinct和Group by去除重复字段记录**   
+## **Distinct和Group by去除重复字段记录**   
   一是完全重复的记录，也即所有字段均重复的记录  
   二是部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。
   
@@ -396,9 +506,25 @@ select gender, group_concat(age) from students
 group by gender
 with rollup;
 ```
-### **分页获取内容**  
-limit
-limit offset
+
+### Distinct和Group by去除重复字段记录
+一是完全重复的记录，也即所有字段均重复的记录
+二是部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。
+
+select count(distinct col) from A;
+select count(1) from (select 1 from A group by col) as C;
+其实上述两中方法分别是在运算和存储上的权衡。
+
+distinct需要将col列中的全部内容都存储在一个内存中，可以理解为一个hash结构，key为col的值，最后计算hash结构中有多少个key即可得到结果。
+
+很明显，需要将所有不同的值都存起来。内存消耗可能较大。
+
+而group by的方式是先将col排序。而数据库中的group一般使用sort的方法，即数据库会先对col进行排序。而排序的基本理论是，时间复杂为nlogn，空间为1.，然后只要单纯的计数就可以了。优点是空间复杂度小，缺点是要进行一次排序，执行时间会较长。
+
+
+## **分页获取内容**  
+- limit
+
 ```sql
 select *from 表名 
 limit start,count;
@@ -406,6 +532,7 @@ limit start,count;
 select * from students limit 5,5
 ## id从6开始，显示5个
 ```
+- limit offset
 ```sql
 limit 2 offset 3
 ##跳过3个值，显示2个
@@ -449,7 +576,7 @@ where (height,age) = (select max(height),max(age) from students)
 
 SQL UNION 语法
 
-```
+```sql
 SELECT column_name(s) FROM table_name1
 UNION
 SELECT column_name(s) FROM table_name2
@@ -460,7 +587,7 @@ SELECT column_name(s) FROM table_name2
 
 SQL UNION ALL 语法
 
-```
+```sql
 SELECT column_name(s) FROM table_name1
 UNION ALL
 SELECT column_name(s) FROM table_name2
