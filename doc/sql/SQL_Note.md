@@ -176,34 +176,41 @@
 - 每条sql指令以；结束或分隔
 - 不支持tab自动补齐
 - **\c可废弃当前边写错的操作指令**
-    
+   
+
+ 
 ## **登录**
 - mysql command line
 - mysql -u root -p （-h 服务器 -u 用户名 -p 密码）
 - quit 或 exit 退出
+
 ## **查看数据库**
 - 列出当前MySQL服务器上哪有库
 - show databases；
+
 ## **使用切换到指定的库**
 - use 数据库名；
-## **列出当前的库**
+
+## **列出当前的库里所有的表**
 - （库里所有表的名字列出来）
 - show tables；
+
 ## **查看指定表的字段结构**
 - （某一表的结构，field（ID,NAME...）,type(类型)等等）
 - describe 表名；
 - des world；
 - \G：表示以列形式查看
 - des world\G；
+
 ## **数据库命名规则**
 - 不能纯数字
 - 区分大小写，具有唯一性
 - 不可以使用关键字，特殊字符
 
 ## **创建数据库**
-- **CREATE DATABASE 表名;**
+- **CREATE DATABASE 数据库名;**
 ```sql
-CREATE DATABASE 表名；
+CREATE DATABASE 数据库名；
 create database abc;
 show databases;
 use ab;
@@ -369,16 +376,20 @@ weight float(5,2)
 ## **修改表的结构**
 
 - DDL
+- Data Definition Language 数据定义语言，用来创建或者删除存储数据用的数据库以及数据库中表等对象，
     - create：创建数据库和表等对象
     - drop：删除数据库和表等对象
     - alter：修改数据库和表等对象的结构
     
-- DML
+- DML 
+- Data Manipulation Language 数据操纵语言 用来查询或者变更表中的几率
     - select：查询表中的数据
     - insert：在表中插入新数据
     - update：更新表中的数据
     - delete：删除表中都数据
-- DCL
+
+- DCL 
+- Data Control Language 用来确认或者取消对数据库中的数据进行的变更
     - commit：确认对数据库中数据进行的变更
     - rollback：取消对数据库中数据进行的变更
     - grant：赋予用户操作权限
@@ -428,6 +439,13 @@ alter table stu modify qq int(15) not null;
 ```sql
 alter table stu change qq wechat varchar(20) not null;
 ```
+
+## **查看表格内的字段结构**
+- desc 表名;
+```sql
+desc stu;
+```
+
 ## **删除指定字段**
 - drop 字段名；
 ```sql
@@ -445,6 +463,7 @@ alter table stu drop wechat
 - 索引缺点
     - 对表中数据修改，增加和删除，索引也要动态维护，降低了数据都维护速度
     - 索引需要占物理空间
+
     
 ## **索引类型**
 - index：普通索引
@@ -458,7 +477,7 @@ alter table stu drop wechat
 - 一个表中可以有多个index字段
 - 对应的字段值可以重复 (比如名字重复一样)
 - 把经常做查询条件的字段设置为index字段
-- index字段的key标志是**mul**
+- index字段的key标志是**MUL**
 ```sql
 create table stu（
 name varchar（4） not null，
@@ -473,16 +492,22 @@ desc stu;
 
 ### **创建索引**
 - 在表里添加索引
-- create index xxx on               表名（字段名）xxx是给索引起的名称
+- create index xxx on 表名（字段名）
+    - xxx是给索引起的名称
 - 用**create** 记得区分开
+```sql
+create index hobby on stu（hobby); #给hobby创建了一条索引
+create index index_hobby on stu（hobby); #可以给hobby再创建一条索引，index_hobby
+show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
+```
 ### **删除索引**
 - drop index xxx on 表名
+```sql
+drop index course on stu; #把course的索引删除了
+```
 ### **显示表里的索引**
 - show index from 表名
 ```sql        
-drop index course on stu; #把course的索引删除了
-create index hobby course on stu（hobby); #给hobby创建了一条索引
-create index index_hobby course on stu（hobby); #可以给hobby再创建一条索引，index_hobby
 show index from stu; #hobby就有两条索引，一条hobby，一条index_hobby
 ```
 ## **唯一索引**
@@ -503,18 +528,17 @@ name varchar（4） not null，
 age int（3），
 id char（6）not null，
 course char(10) not null,
-hobby char(10) not null,
+hobby char(10) not null, 
 unique（id），unique（name）
 );
 desc stu;
 ```
-### **删除索引**
+
 ```sql
-drop index index_hobby from stu; #s删除index
-drop index hobby from stu; #删除index
 create unique index myCourse on stu(course); #创建一个unique index
 desc stu;
 ```
+
 - unique字段的值可以为null，当其修改为not null时，则此字段限制和主键相同，为PRI字样
 ```sql
 create table teacher(
@@ -530,10 +554,11 @@ desc teacher;
 ## **主键**
 ### **什么是主键**
 - 一个表中只能有一个primary字段
-- 对应字段值不允许有重复
+- 对应字段值不允许有重复且不能为空
 - **如果多个字段都作为primary key，称为复合键，必须在建表的时候一起建**
 - 主键字段的key标志为**PRI**
 - 通常和auto_increment连用 id不能重复，id自增长，只实用数字类型
+
 ### **创建索引**
 - 在表里添加索引**
 - 创建表的时候一起创建
@@ -545,7 +570,7 @@ id char(6) auto increment,
 primary key(id)
 )    
 ```
-- **创建primary key 用alter，add**
+- **创建primary key 用alter add**
     - **注意，这里没有create key这种东西，我们用add**
     - 在已经有都表中设置primary key字段名
     - alter table 表名 add primary key（id）
@@ -604,6 +629,7 @@ desc stu; (course key MUL 但是不能显示是外键)
     - insert into 表名 values(值1，值2，...）
     - 如果没有为某个字段赋值，则使用默认值，NULL NONE
     - 如果添加非空约束NOT NULL，没有default约束，则会报错
+
 ## **准备数据**
 - 创建数据库和表
     - 创建数据库
