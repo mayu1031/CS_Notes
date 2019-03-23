@@ -284,3 +284,12 @@ from (select s_id, avg(s_score) as score1_avg from score  group by s_id)as score
 
 order by score1.score1_avg desc;
 ```
+
+22. 查询各科成绩前三名的记录（不考虑成绩并列情况）
+
+```sql
+select c_id, s_id, s_score from score as score1
+where (select count(*) from score as score2 where score1.c_id = score2.c_id and score2.s_score > score1.s_score)<=2
+group by c_id, s_id, s_score
+order by c_id asc, s_score desc;
+```
