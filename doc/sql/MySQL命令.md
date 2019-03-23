@@ -581,7 +581,7 @@ select name from classes
 where id in (select cls_id from students);
 #先查班级id，在查在这个id里面的学生
 ```
-行级子查询
+- 行级子查询
 ```sql
 select * from students 
 where (height,age) = (select max(height),max(age) from students)
