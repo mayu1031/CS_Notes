@@ -31,7 +31,7 @@
 - [MySQL命令](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E5%91%BD%E4%BB%A4.md)
 - [MySQL查询优化 explain命令详解](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96%20explain%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3.md)
 - [Leetcode-Database](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/LeetCode.md)
-- [sqlzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.md)  
+- [SQLzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.md)  
 - [SQL笔试题](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/mysql%E7%AC%94%E8%AF%95/MySQL%E7%AC%94%E8%AF%95%E9%A2%98.md)
 
 
