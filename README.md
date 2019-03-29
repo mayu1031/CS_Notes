@@ -28,6 +28,7 @@
 ![书包][2]  Database
 ========
 - [数据库开发注意点](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E7%82%B9.md)
+- [MaxCompute用户指南](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.md)
 - [SQL总结](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL%E6%80%BB%E7%BB%93.md)
 - [SQL基础](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL_Note.md)
 - [MySQL命令](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E5%91%BD%E4%BB%A4.md)
