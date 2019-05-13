@@ -28,15 +28,22 @@
 ![书包][2]  Database
 ========
 - [数据库开发注意点](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E7%82%B9.md)
-- [MaxCompute用户指南](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.md)
 - [SQL总结](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL%E6%80%BB%E7%BB%93.md)
 - [SQL基础](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/SQL_Note.md)
 - [MySQL命令](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E5%91%BD%E4%BB%A4.md)
-- [MaxCompute SQL日期函数](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%20SQL%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0.md)
 - [MySQL查询优化 explain命令详解](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MySQL%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96%20explain%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3.md)
 - [Leetcode-Database](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/LeetCode.md)
 - [SQLzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.md)  
 - [SQL笔试题](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/mysql%E7%AC%94%E8%AF%95/MySQL%E7%AC%94%E8%AF%95%E9%A2%98.md)
+
+
+- [MaxCompute用户指南](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.md)
+- [MaxCompute SQL日期函数](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%20SQL%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0.md)
+
+
+![图标][4]  Power BI DAX
+======
+- [Power BI DAX](https://github.com/mayu1031/CS_Notes/blob/master/doc/Power%20BI%20DAX.md)
 
 
 ![雨伞][3]  Python
