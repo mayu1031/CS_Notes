@@ -1,5 +1,20 @@
 ﻿
 # MaxCompute SQL日期函数
+
+## 参数
+如果 ${bdp.system.cyctime} 为 20190114010000
+
+则$[yyyy-mm-dd]为2019-01-14  $[yyyymmdd] 为20190114
+
+如果$2赋值为$[yyyy-mm-dd-2]  
+
+则$2为2019-01-12 
+
+如果$2赋值为$[yyyymmdd-2]  
+
+$2为20190112
+
+
 ## DATEADD
 ```
 datetime dateadd(datetime date, bigint delta, string datepart)
@@ -160,6 +175,87 @@ string next_day(string startdate, string week)
 next_day('2017-08-01','TU') = '2017-08-08'
 next_day('2017-08-01 23:34:00','TU') = '2017-08-08'
 next_day('20170801','TU') = null
+```
+
+## YEARWEEK
+
+```
+DELETE FROM `table` WHERE YEARWEEK(date_format(day,'%Y%m%d'),1) = YEARWEEK('${bdp.system.bizdate}',1);
+```
+
+```
+DELETE FROM `table` WHERE YEARWEEK(date_format(day,'%Y%m%d'),1) = YEARWEEK('${lastday}',1);
+```
+```
+lastday=$[yyyymmdd-183]
+```
+
+## WEEKOFYEAR
+
+```
+YEARWEEK(date[,mode])
+```
+例如 2010-3-14 ，礼拜天
+
+SELECT YEARWEEK('2010-3-14') 返回 11
+
+SELECT YEARWEEK('2010-3-14',1) 返回 10
+
+```
+Mode	First day of week	Range	Week 1 is the first week …
+0	    Sunday	0-53	with a Sunday in this year
+1	    Monday	0-53	with more than 3 days this year
+2  	    Sunday	1-53	with a Sunday in this year
+3	    Monday	1-53	with more than 3 days this year
+4	    Sunday	0-53	with more than 3 days this year
+5	    Monday	0-53	with a Monday in this year
+6	    Sunday	1-53	with more than 3 days this year
+7	    Monday	1-53	with a Monday in this year
+
+```
+
+weekofyear函数是计算出当前日期所在周数，和YEARWEEK('日期',1)的周数一致，但YEARWEEK('日期',1)在小于10的时候，不带0
+
+select WEEKOFYEAR('2016-2-2'); =5
+
+
+## 月
+
+```
+DELETE FROM `result_monthly_big_merchant_mod` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
+```
+```
+"monthOfYesterday=$[yyyymm-1]"
+```
+
+
+## DATE_FORMATdate_format
+
+```
+VARCHAR DATE_FORMAT(TIMESTAMP time, VARCHAR to_format)
+VARCHAR DATE_FORMAT(VARCHAR date, VARCHAR to_format)
+VARCHAR DATE_FORMAT(VARCHAR date, VARCHAR from_format, VARCHAR to_format)
+
+date 参数是合法的日期
+to_format规定日期/时间的输出格式
+
+```
+
+将字符串类型的日期从源格式转换至目标格式。第一个参数（time 或 date）为源字符串。第二个参数from_format可选，为源字符串的格式，默认为yyyy-MM-dd hh:mm:ss。第三个参数为返回日期的的格式，返回值为转换格式后的字符串类型日期。若有参数为null或解析错误，返回null。
+
+```
+DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${bdp.system.bizdate}';
+
+'%Y%m%d'为目标格式
+'20190405'这种字符串类型日期
+```
+
+```
+DELETE FROM `result_daily_big_merchant` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${last30}';
+```
+
+```
+"last30=$[yyyymmdd-41]"
 ```
 
 ## TO_DATE
