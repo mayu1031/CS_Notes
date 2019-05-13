@@ -1,6 +1,66 @@
 ﻿
 # MaxCompute SQL日期函数
 
+
+## 参数
+## DATEADD
+## ADD_MONTHS
+- 返回开始日期startdate增加nummonths个月后的日期。
+## DATEDIFF
+- 计算两个时间date1、date2在指定时间单位datepart的差值。
+## DATEPART
+- 提取日期date中指定的时间单位datepart的值。
+## DATETRUNC
+- 返回日期date被截取指定时间单位datepart后的日期值。
+## GETDATE
+- 获取当前系统时间。使用东八区时间作为MaxCompute标准时间。
+## ISDATE
+- 判断一个日期字符串能否根据对应的格式串转换为一个日期值，如果转换成功，返回TRUE，否则返回FALSE。
+## LASTDAY
+- 取date当月的最后一天，截取到天，时分秒部分为00:00:00。DATETIME类型。
+## LAST_DAY
+- 返回该日期所在月份的最后一天日期。STRING类型。
+## NEXT_DAY
+- 返回大于指定日期startdate并且与week相匹配的第一个日期，即下周几的具体日期。
+## DATE_FORMAT
+- 将字符串类型的日期从源格式转换至目标格式。
+## TO_DATE
+- 将一个format格式的字符串date转成日期值。
+## TO_CHAR
+- 将日期类型date按照format指定的格式转成字符串。
+## UNIX_TIMESTAMP
+- 将日期date转化为整型的unix格式的日期时间值。
+## FROM_UNIXTIME
+- 将数字型的unix时间日期值unixtime转为日期值。
+## WEEKDAY
+- 返回date日期当前周的第几天。
+## YEARWEEK
+## WEEKOFYEAR
+- 返回日期date位于那一年的第几周。周一作为一周的第一天。
+## YEAR
+- 返回一个日期的年。
+## QUARTER
+- 返回一个日期的季度，范围是1~4。
+## MONTH
+- 返回一个日期的月份。
+## 月
+## DAY
+- 返回一个日期的天。
+## DAYOFMONTH
+- 返回年/月/日中的具体日期。
+## HOUR
+- 返回一个日期的小时。
+## MINUTE
+- 返回一个日期的分钟。
+## SECOND
+- 返回一个日期的秒钟。
+## CURRENT_TIMESTAMP
+- 返回当前TIMESTAMP类型的时间戳，值不固定。
+## MONTHS_BETWEEN
+- 返回日期date1和date2之间的月数。
+
+
+
 ## 参数
 如果 ${bdp.system.cyctime} 为 20190114010000
 
@@ -121,6 +181,9 @@ datetrunc('2011-12-07 16:28:46', 'yyyy') = 2011-01-01 00:00:00
 datetrunc('2011-12-07 16:28:46', 'month') = 2011-12-01 00:00:00
 datetrunc('2011-12-07 16:28:46', 'DD') = 2011-12-07 00:00:00
 ```
+```
+datetrunc(TO_DATE(${today}, 'yyyymmdd'), 'dd') AS day
+```
 ## GETDATE
 ```
 datetime getdate()
@@ -177,59 +240,8 @@ next_day('2017-08-01 23:34:00','TU') = '2017-08-08'
 next_day('20170801','TU') = null
 ```
 
-## YEARWEEK
 
-```
-DELETE FROM `table` WHERE YEARWEEK(date_format(day,'%Y%m%d'),1) = YEARWEEK('${bdp.system.bizdate}',1);
-```
-
-```
-DELETE FROM `table` WHERE YEARWEEK(date_format(day,'%Y%m%d'),1) = YEARWEEK('${lastday}',1);
-```
-```
-lastday=$[yyyymmdd-183]
-```
-
-## WEEKOFYEAR
-
-```
-YEARWEEK(date[,mode])
-```
-例如 2010-3-14 ，礼拜天
-
-SELECT YEARWEEK('2010-3-14') 返回 11
-
-SELECT YEARWEEK('2010-3-14',1) 返回 10
-
-```
-Mode	First day of week	Range	Week 1 is the first week …
-0	    Sunday	0-53	with a Sunday in this year
-1	    Monday	0-53	with more than 3 days this year
-2  	    Sunday	1-53	with a Sunday in this year
-3	    Monday	1-53	with more than 3 days this year
-4	    Sunday	0-53	with more than 3 days this year
-5	    Monday	0-53	with a Monday in this year
-6	    Sunday	1-53	with more than 3 days this year
-7	    Monday	1-53	with a Monday in this year
-
-```
-
-weekofyear函数是计算出当前日期所在周数，和YEARWEEK('日期',1)的周数一致，但YEARWEEK('日期',1)在小于10的时候，不带0
-
-select WEEKOFYEAR('2016-2-2'); =5
-
-
-## 月
-
-```
-DELETE FROM `result_monthly_big_merchant_mod` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
-```
-```
-"monthOfYesterday=$[yyyymm-1]"
-```
-
-
-## DATE_FORMATdate_format
+## DATE_FORMAT
 
 ```
 VARCHAR DATE_FORMAT(TIMESTAMP time, VARCHAR to_format)
@@ -281,6 +293,7 @@ to_date('2010-24-01', 'yyyy') = null
 -- 格式不符合，引发异常。
 to_date('20181030 15-13-12.345','yyyymmdd hh-mi-ss.ff3')=2018-10-30 15:13:12
 ```
+
 ## TO_CHAR
 ```
 string to_char(datetime date, string format)
@@ -328,6 +341,22 @@ bigint weekday (datetime date)
 - date：DATETIME类型，若输入为STRING类型，会隐式转换为DATETIME类型后参与运算，其它类型抛异常。
 - 返回值：返回**BIGINT**类型，若输入参数为NULL，返回NULL值。周一作为一周的第一天，返回值为0。其他日期依次递增，周日返回6。
 
+
+## YEARWEEK
+
+```
+DELETE FROM `table` WHERE YEARWEEK(date_format(day,'%Y%m%d'),1) = YEARWEEK('${bdp.system.bizdate}',1);
+```
+
+```
+DELETE FROM `table` WHERE YEARWEEK(date_format(day,'%Y%m%d'),1) = YEARWEEK('${lastday}',1);
+```
+```
+lastday=$[yyyymmdd-183]
+```
+
+
+
 ## WEEKOFYEAR
 ```
 bigint weekofyear (datetime date)
@@ -349,7 +378,34 @@ select weekofyear(to_date("20141229", "yyyymmdd")) from dual;
  -虽然20141229属于2014年，但是这一周的大多数日期是在2015年，因此返回结果为1，表示是2015年的第一周。    
  select weekofyear(to_date("20141231", "yyyymmdd")) from dual；--返回结果为1。  
  select weekofyear(to_date("20151229", "yyyymmdd")) from dual；--返回结果为53。
+ 
 ```
+
+```
+YEARWEEK(date[,mode])
+```
+例如 2010-3-14 ，礼拜天
+
+SELECT YEARWEEK('2010-3-14') 返回 11
+
+SELECT YEARWEEK('2010-3-14',1) 返回 10
+
+```
+Mode	First day of week	Range	Week 1 is the first week …
+0	    Sunday	0-53	with a Sunday in this year
+1	    Monday	0-53	with more than 3 days this year
+2  	    Sunday	1-53	with a Sunday in this year
+3	    Monday	1-53	with more than 3 days this year
+4	    Sunday	0-53	with more than 3 days this year
+5	    Monday	0-53	with a Monday in this year
+6	    Sunday	1-53	with more than 3 days this year
+7	    Monday	1-53	with a Monday in this year
+
+```
+
+weekofyear函数是计算出当前日期所在周数，和YEARWEEK('日期',1)的周数一致，但YEARWEEK('日期',1)在小于10的时候，不带0
+
+select WEEKOFYEAR('2016-2-2'); =5
 
 ## YEAR
 ```
@@ -392,6 +448,16 @@ INT month(string date)
 month('2014-09-01') = 9
 month('20140901') = null
 ```
+
+## 月
+
+```
+DELETE FROM `result_monthly_big_merchant_mod` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
+```
+```
+"monthOfYesterday=$[yyyymm-1]"
+```
+
 ## DAY
 ```
 INT day(string date)
