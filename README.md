@@ -35,8 +35,6 @@
 - [Leetcode-Database](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/LeetCode.md)
 - [SQLzoo](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/zoosql.md)  
 - [SQL笔试题](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/mysql%E7%AC%94%E8%AF%95/MySQL%E7%AC%94%E8%AF%95%E9%A2%98.md)
-
-
 - [MaxCompute用户指南](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.md)
 - [MaxCompute SQL日期函数](https://github.com/mayu1031/CS_Notes/blob/master/doc/sql/MaxCompute%20SQL%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0.md)
 
