@@ -113,12 +113,226 @@ power_bi merchant_unionpay_monthly'[日期] 设定为每月的一号
 
 度量值  = DateDiff(LASTDATE('power_bi merchant_unionpay_monthly'[日期]),EOMONTH(LASTDATE('power_bi merchant_unionpay_monthly'[日期]),0),DAY)
 ```
+```
+度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
+```
+
+### DAY
+
+```
+DAY(<date>)
+```
+
+参数:
+
+date datetime 格式的日期，或日期的文本表示形式。
+
+返回值:
+
+表示月中第几天的整数。
+
+返回月中的第几天，即一个 1 到 31 之间的数字。
+
 
 ```
 度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
 ```
 
+### MONTH 
+```
+MONTH(<datetime>)
+```
 
+参数:
+
+date datetime 或文本格式的日期。
+
+返回值:
+
+从 1 到 12 的整数。
+
+将月份返回为从 1（1 月）到 12（12 月）的数字。
+
+```
+=MONTH(Orders[TransactionDate])
+```
+
+### EOMONTH
+
+```
+EOMONTH(<start_date>, <months>)
+```
+
+参数:
+
+start_date datetime 格式或一个可接受文本日期表示形式的开始日期。
+
+months 表示 start_date 之前或之后的月份数的数字。
+
+返回值:
+
+一个日期 (datetime)。
+
+返回指定月份数之前或之后的月份的最后一天的日期，该日期采用 datetime 格式。EOMONTH 可用于计算处于月份最后一天的到期日期。
+
+```
+度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
+```
+
+### DATESINPERIOD 
+datesinperiod
+
+```
+DATESINPERIOD(<dates>,<start_date>,<number_of_intervals>,<interval>)
+```
+
+参数
+
+dates 包含日期的列。
+
+start_date 日期表达式。
+
+number_of_intervals 一个整数，指定要从日期中加上或减去的间隔数。
+
+interval 日期按其轮换的间隔。间隔值可以是以下值之一：year、quarter、month、day
+
+返回值 包含由日期值构成的单列的表。
+
+返回一个表，该表包含由日期构成的一列，这些日期从 start_date 开始，并且继续到指定的 number_of_intervals。
+
+```
+DATESINPERIOD(<dates>,<start_date>,<number_of_intervals>,<interval>)
+
+下面的公式为 2007 年 8 月 24 日之前的 21 天返回 Internet 销售额。
+= CALCULATE(SUM(InternetSales_USD[SalesAmount_USD]),DATESINPERIOD(DateTime[DateKey],DATE(2007,08,24),-21,day))
+
+```
+
+
+```
+实际应用中的一个案例 计算截止到统计这天，这周的某一数据的平均情况
+KA_本周日均_新增登记 = 
+VAR lastday =
+    LASTDATE ( KA_daily[day] )
+RETURN
+    DIVIDE (
+        CALCULATE (
+            SUM ( KA_daily[new_register_store_number]),
+            DATESINPERIOD (
+                KA_daily[day],
+                lastday,
+                - WEEKDAY ( lastday, 2 ),
+                DAY
+            )
+        ),
+        WEEKDAY ( lastday, 2 )
+    )
+```
+
+### DATESBETWEEN
+
+```
+DATESBETWEEN(<dates>,<start_date>,<end_date>)
+```
+
+参数:
+
+dates 对日期/时间列的引用。
+
+start_date 日期表达式。
+
+end_date 日期表达式。
+
+返回值:
+
+包含由日期值构成的单列的表。
+
+注释:
+
+如果 start_date 是空白日期值，则 start_date 将是 dates 列中的最早的值。
+
+如果 end_date 是空白日期值，则 end_date 将是 dates 列中的最晚的值。
+
+包括用作 start_date 和 end_date 的日期：也就是说，如果销售在 9 月 1 日发生并且您使用 9 月 1 日作为开始日期，将对 9 月 1 日的销售计数。
+
+```
+=CALCULATE(SUM(InternetSales_USD[SalesAmount_USD]), DATESBETWEEN(DateTime[DateKey],
+    DATE(2003,6,1),
+    DATE(2003,8,31)
+  ))
+```
+
+```
+实际应用中的一个案例 计算截止到统计这天，这周的某一数据的平均情况和上周同一天计算平均情况的对比
+KA_周同比_笔数(万) = 
+VAR lastweekday =
+    DATEADD ( LASTDATE ( KA_daily[day] ), -7, DAY )
+VAR lastweekdata =
+    DIVIDE (
+        CALCULATE (
+            SUM (KA_daily[cnt] ) / 10000,
+            DATESBETWEEN (
+                KA_daily[day],
+                DATEADD ( lastweekday, - WEEKDAY ( lastweekday, 3 ), DAY ),
+                lastweekday
+            )
+        ),
+        WEEKDAY ( lastweekday, 2 )
+    )
+RETURN
+    DIVIDE ( [KA_本周日均_笔数(万)], lastweekdata ) - 1
+```
+
+### WEEKDAY 
+
+```
+WEEKDAY(<date>, <return_type>)
+```
+
+返回用来标识某一日期是星期几的 1 到 7 之间的数字。默认情况下，这个星期几的范围是从 1（星期日）到 7（星期六）。
+
+参数:
+
+date 采用 datetime 格式的日期。应通过使用 DATE 函数、使用导致日期的表达式或作为其他公式的结果，输入日期。
+
+return_type 用于确定返回值的数字：
+
+返回类型周开始于
+
+1周从星期日 (1) 开始，到星期六 (7) 结束。
+
+2周从星期一 (1) 开始，到星期日 (7) 结束。
+
+3周从星期一 (0) 开始，到星期日 (6) 结束。
+
+返回值:
+
+从 1 到 7 的整数。
+
+### DATESMTD 
+datesmtd
+
+```
+DATESMTD(<dates>)
+```
+
+参数:
+
+dates 包含日期的列。
+
+属性值/返回值:
+
+包含由日期值构成的单列的表。返回一个表，该表包含当前上下文中本月截止到现在的日期列。
+
+```
+该度量值为 Internet 销售计算“本月截止到现在的总计”
+=CALCULATE(SUM(InternetSales_USD[SalesAmount_USD]), DATESMTD(DateTime[DateKey]))
+```
+
+```
+本月日均_活跃门店 = CALCULATE(SUM('power_bi result_bd_daily'[活跃门店数])/10000,DATESMTD('power_bi result_bd_daily'[统计日期]))
+/DAY(LASTDATE('power_bi result_bd_daily'[统计日期]))
+```
 
 ## 上下文
 - 上下文是需要了解的重要 DAX 概念之一。 DAX 中有两种上下文类型；行上下文和筛选上下文。 
