@@ -22,34 +22,26 @@
 
 - DDL
 - Data Definition Language 数据定义语言，用来创建或者删除存储数据用的数据库以及数据库中表等对象
-
-create：创建数据库和表等对象
-
-drop：删除数据库和表等对象
-
-alter：修改数据库和表等对象的结构
+    - create：创建数据库和表等对象 create database/create table
+    - drop：删除数据库和表等对象 drop table
+    - alter：修改数据库和表等对象的结构 alter table
+    - truncate table:删除数据表内容
 
 
 - DML
 - Data Manipulation Language 数据操纵语言 用来查询或者变更表中的几率
-select：查询表中的数据
-
-insert：在表中插入新数据
-
-update：更新表中的数据
-
-delete：删除表中都数据
+    - select：查询表中的数据
+    - insert：在表中插入新数据
+    - update：更新表中的数据
+    - delete：删除表中都数据
 
 
 - DCL
 - Data Control Language 用来确认或者取消对数据库中的数据进行的变更
-commit：确认对数据库中数据进行的变更
-
-rollback：取消对数据库中数据进行的变更
-
-grant：赋予用户操作权限
-
-revoke：取消用户操作权限
+    - commit：确认对数据库中数据进行的变更
+    - rollback：取消对数据库中数据进行的变更
+    - grant：赋予用户操作权限
+    - revoke：取消用户操作权限
 
  
 # 数据库
@@ -373,10 +365,10 @@ select s.id, s.name, s.gender from studnets as s;
 select distinct name from students；
 select distinct age from students；
 ```
-## **Distinct和Group by去除重复字段记录**   
-  一是完全重复的记录，也即所有字段均重复的记录  
-  二是部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。
-  
+## **Distinct和Group by去除重复字段记录** 
+- distinct 部分关键字段重复的记录，比如Name字段重复，而其他字段不一定重复或都重复可以忽略。只有所有**指定的列信息**都相同，才会被认定为重复的信息
+- group by 是完全重复的记录，也即所有字段均重复的记录  
+
     - select count(distinct col) from A;
     - select count(1) from (select 1 from A group by col) as C;
 

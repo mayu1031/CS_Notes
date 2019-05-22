@@ -377,9 +377,11 @@ weight float(5,2)
 
 - DDL
 - Data Definition Language 数据定义语言，用来创建或者删除存储数据用的数据库以及数据库中表等对象，
-    - create：创建数据库和表等对象
-    - drop：删除数据库和表等对象
-    - alter：修改数据库和表等对象的结构
+    - create：创建数据库和表等对象 create database/create table
+    - drop：删除数据库和表等对象 drop table
+    - alter：修改数据库和表等对象的结构 alter table
+    - truncate：删除数据表内容 truncate table
+
     
 - DML 
 - Data Manipulation Language 数据操纵语言 用来查询或者变更表中的几率
