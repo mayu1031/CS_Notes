@@ -505,6 +505,83 @@ TRUE(),
 
 ```
 
+## ADDCOLUMNS
+```
+ADDCOLUMNS(<table>, <name>, <expression>[, <name>, <expression>]…)
+```
+将计算列添加到给定的表或表的表达式中。
+
+参数
+
+table 任何返回数据表的 DAX 表达式。
+
+name 给予此列的名称，包含在双引号内。
+
+expression 返回标量表达式且针对 table 的每行进行计算的任何 DAX 表达式。
+
+返回值
+
+具有所有原始列和添加列的表。
+
+```
+ADDCOLUMNS(ProductCategory, 
+               , "Internet Sales", SUMX(RELATEDTABLE(InternetSales_USD),InternetSales_USD[SalesAmount_USD])
+               , "Reseller Sales", SUMX(RELATEDTABLE(ResellerSales_USD),ResellerSales_USD[SalesAmount_USD]))
+```
+```
+VAR SparklineTable = ADDCOLUMNS(
+    SUMMARIZE('merchant','merchant_'[日期]),
+        "X",INT(110 * DIVIDE()),
+        "Y",INT(50 * DIVIDE()))
+```
+
+## SUMMARIZE
+
+```
+SUMMARIZE(<table>, <groupBy_columnName>[, <groupBy_columnName>]…[, <name>, <expression>]…)
+```
+
+参数
+
+table 任何返回数据表的 DAX 表达式。
+
+groupBy_columnName（可选）现有列的限定名称，将使用该列中找到的值创建摘要组。 此参数不能是表达式。
+
+name 给予总计或汇总列的名称，包含在双引号内。
+
+expression 任何返回单个标量值的 DAX 表达式，其中，表达式将计算多次（针对每行/上下文）。
+
+返回值
+其中包含 groupBy_columnName 参数的选定列和由名称参数设计的汇总列的表。
+
+```
+ SUMMARIZE('merchant','merchant'[日期])
+```
+
+```
+返回围绕此日历年和产品类别名称分组的分销商销售额，通过此结果表可以按年度和产品类别分析分销商销售额。
+SUMMARIZE(ResellerSales_USD
+      , DateTime[CalendarYear]
+      , ProductCategory[ProductCategoryName]
+      , "Sales Amount (USD)", SUM(ResellerSales_USD[SalesAmount_USD])
+      , "Discount Amount (USD)", SUM(ResellerSales_USD[DiscountAmount])
+      )
+```
+
+https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2014/gg492171(v=sql.120)
+
+## CONCATENATE
+
+```
+CONCATENATE(<text1>, <text2>)
+```
+
+参数
+
+text1, text2 要联接为单个文本字符串的文本字符串。字符串可以包括文本或数字。还可以使用列引用。
+
+返回值 串联的字符串。
+
 # 上下文
 - 上下文是需要了解的重要 DAX 概念之一。 DAX 中有两种上下文类型；行上下文和筛选上下文。 
 
