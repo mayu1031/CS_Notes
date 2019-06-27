@@ -256,6 +256,18 @@ to_format规定日期/时间的输出格式
 将字符串类型的日期从源格式转换至目标格式。第一个参数（time 或 date）为源字符串。第二个参数from_format可选，为源字符串的格式，默认为yyyy-MM-dd hh:mm:ss。第三个参数为返回日期的的格式，返回值为转换格式后的字符串类型日期。若有参数为null或解析错误，返回null。
 
 ```
+select  `day` from auto_analyze_rollup_update
+2019-04-01 00:00:00
+2019-04-01 00:00:00
+2019-04-01 00:00:00
+
+select DATE_FORMAT(`day`, '%Y%m%d') from auto_analyze_rollup_update
+20190401
+20190401
+20190401
+```
+
+```
 DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${bdp.system.bizdate}';
 
 '%Y%m%d'为目标格式
@@ -269,6 +281,7 @@ DELETE FROM `result_daily_big_merchant` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${la
 ```
 "last30=$[yyyymmdd-41]"
 ```
+
 
 ## TO_DATE
 ```
@@ -294,6 +307,14 @@ to_date('2010-24-01', 'yyyy') = null
 to_date('20181030 15-13-12.345','yyyymmdd hh-mi-ss.ff3')=2018-10-30 15:13:12
 ```
 
+```
+dateadd(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd'), -1 * weekday(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd')), 'dd') AS day
+```
+
+```
+datetrunc(TO_DATE(${bdp.system.bizdate}, 'yyyymmdd'), 'dd') AS day
+```
+
 ## TO_CHAR
 ```
 string to_char(datetime date, string format)
@@ -310,6 +331,11 @@ to_char('阿里巴巴2010-12*3', '阿里巴巴yyyy-mm*dd') -- 会引发异常。
 to_char('2010-24-01', 'yyyy') -- 会引发异常。
 to_char('2008718', 'yyyymmdd') -- 会引发异常。
 关于其他类型向STRING类型转换的详情请参见字符串函数>TO_CHAR。
+```
+
+```
+WHERE pt >= TO_CHAR(dateadd(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd'), -1 * weekday(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd')), 'dd'), 'yyyymmdd') --本周一
+	AND pt < to_char(dateadd(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd'), 7 - weekday(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd')), 'dd'), 'yyyymmdd') --下周一
 ```
 ## UNIX_TIMESTAMP
 ```
