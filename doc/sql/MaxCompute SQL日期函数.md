@@ -256,12 +256,12 @@ to_format规定日期/时间的输出格式
 将字符串类型的日期从源格式转换至**目标格式**。第一个参数（time 或 date）为源字符串。第二个参数from_format可选，为源字符串的格式，默认为yyyy-MM-dd hh:mm:ss。第三个参数为返回日期的的格式，返回值为转换格式后的字符串类型日期。若有参数为null或解析错误，返回null。
 
 ```
-select  `day` from auto_analyze_rollup_update
+select  `day` from table
 2019-04-01 00:00:00
 2019-04-01 00:00:00
 2019-04-01 00:00:00
 
-select DATE_FORMAT(`day`, '%Y%m%d') from auto_analyze_rollup_update
+select DATE_FORMAT(`day`, '%Y%m%d') from table
 20190401
 20190401
 20190401
@@ -275,7 +275,7 @@ DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${bdp.system.bizdate}';
 ```
 
 ```
-DELETE FROM `result_daily_big_merchant` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${last30}';
+DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${last30}';
 ```
 
 ```
@@ -478,7 +478,7 @@ month('20140901') = null
 ## 月
 
 ```
-DELETE FROM `result_monthly_big_merchant_mod` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
+DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
 ```
 ```
 "monthOfYesterday=$[yyyymm-1]"
