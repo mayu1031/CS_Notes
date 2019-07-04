@@ -225,8 +225,51 @@ months 表示 start_date 之前或之后的月份数的数字。
 返回指定月份数之前或之后的月份的最后一天的日期，该日期采用 datetime 格式。EOMONTH 可用于计算处于月份最后一天的到期日期。
 
 ```
-度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
+度量值  = DAY(EOMONTH((LASTDATE('table'[日期])),0))
 ```
+
+本月最后一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),0)
+```
+
+本月第一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),-1)+1
+```
+
+上个月最后一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),-1)
+```
+
+上个月第一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),-2)+1
+```
+
+下个月最后一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),1)
+```
+
+下个月第一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),0)+1
+```
+
+上个月的平均数据
+
+```
+CALCULATE(AVERAGE('table'[data]),DATESBETWEEN('table'[pt],EOMONTH(LASTDATE('table'[pt]),-2)+1,EOMONTH(LASTDATE('table'[pt]),-1)))
+```
+
 
 ## DATESINPERIOD 
 
@@ -569,6 +612,10 @@ SUMMARIZE(ResellerSales_USD
 ```
 
 https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2014/gg492171(v=sql.120)
+
+```
+维度表 = SUMMARIZE('table','table'[groupby_name],"自命名列名",CALCULATE(AVERAGE('table'[目标]),DATEADD(LASTDATE('table'[pt]),-14,DAY)))
+```
 
 ## CONCATENATE
 
