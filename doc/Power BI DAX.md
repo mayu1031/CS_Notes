@@ -70,6 +70,8 @@ CALCULATE(…,FILTER(ALL(…),…))
 ```
 SELECTEDVALUE(<columnName>[, <alternateResult>]) 
 ```
+过滤器选中的值（唯一值）
+
 过滤器当前选中的值，可以通过函数来获取：
 
 参数注释：
@@ -663,6 +665,12 @@ RANKX(<table>, <expression>[, <value>[, <order>[, <ties>]]])
 <expression>：定义排序依据的表达式，该表达式必须能返回单一标量结果并且表达式中的参数列需要来自之前定义的table中；之后RANKX函数会根据这个表达式的计算结果进行排序
 
 Rank = RANKX('table',[排序的列],,DESC)
+
+```
+##灵活使用all
+TotalS_SUM = SUM(SalesInfo[Amount])
+RankQ_A = RANKX ( ALL(SalesInfo[Product]),[TotalQ_SUM],, DESC )
+```
 
 # 上下文
 - 上下文是需要了解的重要 DAX 概念之一。 DAX 中有两种上下文类型；行上下文和筛选上下文。 
