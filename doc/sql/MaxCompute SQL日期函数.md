@@ -253,7 +253,19 @@ to_format规定日期/时间的输出格式
 
 ```
 
-将字符串类型的日期从源格式转换至目标格式。第一个参数（time 或 date）为源字符串。第二个参数from_format可选，为源字符串的格式，默认为yyyy-MM-dd hh:mm:ss。第三个参数为返回日期的的格式，返回值为转换格式后的字符串类型日期。若有参数为null或解析错误，返回null。
+将字符串类型的日期从源格式转换至**目标格式**。第一个参数（time 或 date）为源字符串。第二个参数from_format可选，为源字符串的格式，默认为yyyy-MM-dd hh:mm:ss。第三个参数为返回日期的的格式，返回值为转换格式后的字符串类型日期。若有参数为null或解析错误，返回null。
+
+```
+select  `day` from table
+2019-04-01 00:00:00
+2019-04-01 00:00:00
+2019-04-01 00:00:00
+
+select DATE_FORMAT(`day`, '%Y%m%d') from table
+20190401
+20190401
+20190401
+```
 
 ```
 DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${bdp.system.bizdate}';
@@ -263,18 +275,19 @@ DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${bdp.system.bizdate}';
 ```
 
 ```
-DELETE FROM `result_daily_big_merchant` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${last30}';
+DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${last30}';
 ```
 
 ```
 "last30=$[yyyymmdd-41]"
 ```
 
+
 ## TO_DATE
 ```
 datetime to_date(string date, string format)
 ```
-- 将一个format格式的字符串date转成日期值。
+- 将一个**format格式的字符串date**转成**日期值**。
 - 参数说明：
 - date：STRING类型，要转换的字符串格式的日期值，若输入为BIGINT、DOUBLE、DECIMAL或者DATETIME类型，会隐式转换为STRING类型后参与运算，为其它类型则抛异常，为空串时抛异常。
 - format：STRING类型常量，日期格式。非常量或其他类型会引发异常。format不支持日期扩展格式，其他字符作为无用字符在解析时忽略。
@@ -294,11 +307,19 @@ to_date('2010-24-01', 'yyyy') = null
 to_date('20181030 15-13-12.345','yyyymmdd hh-mi-ss.ff3')=2018-10-30 15:13:12
 ```
 
+```
+dateadd(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd'), -1 * weekday(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd')), 'dd') AS day
+```
+
+```
+datetrunc(TO_DATE(${bdp.system.bizdate}, 'yyyymmdd'), 'dd') AS day
+```
+
 ## TO_CHAR
 ```
 string to_char(datetime date, string format)
 ```
-- 将日期类型date按照format指定的格式转成字符串。
+- 将日期类型date按照format**指定的格式**转成**字符串**。
 - 参数类型：
 - date：DATETIME类型，要转换的日期值，若输入为STRING类型，会隐式转换为DATETIME类型后参与运算，其它类型抛异常。
 - format：STRING类型常量。非常量或其他类型会引发异常。format中的日期格式部分会被替换成相应的数据，其它字符直接输出。
@@ -310,6 +331,11 @@ to_char('阿里巴巴2010-12*3', '阿里巴巴yyyy-mm*dd') -- 会引发异常。
 to_char('2010-24-01', 'yyyy') -- 会引发异常。
 to_char('2008718', 'yyyymmdd') -- 会引发异常。
 关于其他类型向STRING类型转换的详情请参见字符串函数>TO_CHAR。
+```
+
+```
+WHERE pt >= TO_CHAR(dateadd(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd'), -1 * weekday(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd')), 'dd'), 'yyyymmdd') --本周一
+	AND pt < to_char(dateadd(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd'), 7 - weekday(TO_DATE('${bdp.system.bizdate}', 'yyyymmdd')), 'dd'), 'yyyymmdd') --下周一
 ```
 ## UNIX_TIMESTAMP
 ```
@@ -452,7 +478,7 @@ month('20140901') = null
 ## 月
 
 ```
-DELETE FROM `result_monthly_big_merchant_mod` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
+DELETE FROM `table` WHERE DATE_FORMAT(`day`, '%Y%m%d')='${monthOfYesterday}01';
 ```
 ```
 "monthOfYesterday=$[yyyymm-1]"

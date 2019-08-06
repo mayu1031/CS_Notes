@@ -70,6 +70,8 @@ CALCULATE(…,FILTER(ALL(…),…))
 ```
 SELECTEDVALUE(<columnName>[, <alternateResult>]) 
 ```
+过滤器选中的值（唯一值）
+
 过滤器当前选中的值，可以通过函数来获取：
 
 参数注释：
@@ -82,7 +84,9 @@ alternateResult：可选项，默认值是BLANK()；如果columnName的上下文
 SELECTEDVALUE ( '用户'[用户指标] ) = "新增访客数", BLANK(),
 SELECTEDVALUE ( '用户'[用户指标] ) = "新增交易用户数", [昨日_新增交易用户数],
 ```
-
+```
+if(SELECTEDVALUE('table'[name])="","选择为空",单一结果一般用函数聚合(min,max,count))
+```
 ## ALLSELECTED
 
 ```
@@ -156,14 +160,14 @@ The CountRows function counts the number records in a table
 
 ## 知道某月日期计算这个月的天数
 ```
-power_bi merchant_unionpay_monthly'[日期] 设定为每月的一号
+'table'[日期] 设定为每月的一号
 
 4月1号到4月30号
 
-度量值  = DateDiff(LASTDATE('power_bi merchant_unionpay_monthly'[日期]),EOMONTH(LASTDATE('power_bi merchant_unionpay_monthly'[日期]),0),DAY)
+度量值  = DateDiff(LASTDATE('table'[日期]),EOMONTH(LASTDATE('table'[日期]),0),DAY)
 ```
 ```
-度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
+度量值  = DAY(EOMONTH((LASTDATE('table'[日期])),0))
 ```
 
 ## DAY
@@ -184,7 +188,7 @@ date datetime 格式的日期，或日期的文本表示形式。
 
 
 ```
-度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
+度量值  = DAY(EOMONTH((LASTDATE('table'[日期])),0))
 ```
 
 ## MONTH 
@@ -225,8 +229,51 @@ months 表示 start_date 之前或之后的月份数的数字。
 返回指定月份数之前或之后的月份的最后一天的日期，该日期采用 datetime 格式。EOMONTH 可用于计算处于月份最后一天的到期日期。
 
 ```
-度量值  = DAY(EOMONTH((LASTDATE('power_bi merchant_unionpay_monthly'[日期])),0))
+度量值  = DAY(EOMONTH((LASTDATE('table'[日期])),0))
 ```
+
+本月最后一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),0)
+```
+
+本月第一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),-1)+1
+```
+
+上个月最后一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),-1)
+```
+
+上个月第一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),-2)+1
+```
+
+下个月最后一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),1)
+```
+
+下个月第一天
+
+```
+EOMONTH((LASTDATE('table'[日期])),0)+1
+```
+
+上个月的平均数据
+
+```
+CALCULATE(AVERAGE('table'[data]),DATESBETWEEN('table'[pt],EOMONTH(LASTDATE('table'[pt]),-2)+1,EOMONTH(LASTDATE('table'[pt]),-1)))
+```
+
 
 ## DATESINPERIOD 
 
@@ -258,18 +305,17 @@ DATESINPERIOD(<dates>,<start_date>,<number_of_intervals>,<interval>)
 
 ```
 
-
-```
 实际应用中的一个案例 计算截止到统计这天，这周的某一数据的平均情况
-KA_本周日均_新增登记 = 
+```
+本周日均_新增登记 = 
 VAR lastday =
-    LASTDATE ( KA_daily[day] )
+    LASTDATE ( table[day] )
 RETURN
     DIVIDE (
         CALCULATE (
-            SUM ( KA_daily[new_register_store_number]),
+            SUM ( table[new_register_store_number]),
             DATESINPERIOD (
-                KA_daily[day],
+                table[day],
                 lastday,
                 - WEEKDAY ( lastday, 2 ),
                 DAY
@@ -314,15 +360,15 @@ end_date 日期表达式。
 
 ```
 实际应用中的一个案例 计算截止到统计这天，这周的某一数据的平均情况和上周同一天计算平均情况的对比
-KA_周同比_笔数(万) = 
+周同比_笔数(万) = 
 VAR lastweekday =
-    DATEADD ( LASTDATE ( KA_daily[day] ), -7, DAY )
+    DATEADD ( LASTDATE ( table[day] ), -7, DAY )
 VAR lastweekdata =
     DIVIDE (
         CALCULATE (
-            SUM (KA_daily[cnt] ) / 10000,
+            SUM (table[cnt] ) / 10000,
             DATESBETWEEN (
-                KA_daily[day],
+                table[day],
                 DATEADD ( lastweekday, - WEEKDAY ( lastweekday, 3 ), DAY ),
                 lastweekday
             )
@@ -330,7 +376,7 @@ VAR lastweekdata =
         WEEKDAY ( lastweekday, 2 )
     )
 RETURN
-    DIVIDE ( [KA_本周日均_笔数(万)], lastweekdata ) - 1
+    DIVIDE ( [本周日均_笔数(万)], lastweekdata ) - 1
 ```
 
 ## WEEKDAY 
@@ -380,8 +426,8 @@ dates 包含日期的列。
 ```
 
 ```
-本月日均_活跃门店 = CALCULATE(SUM('power_bi result_bd_daily'[活跃门店数])/10000,DATESMTD('power_bi result_bd_daily'[统计日期]))
-/DAY(LASTDATE('power_bi result_bd_daily'[统计日期]))
+本月日均_活跃门店 = CALCULATE(SUM('table'[活跃门店数])/10000,DATESMTD('table'[统计日期]))
+/DAY(LASTDATE('table'[统计日期]))
 ```
 
 ## SWITCH
@@ -404,6 +450,15 @@ else 当 expression 的结果与任何 value 参数不匹配时，要进行计�
 
 根据值列表计算表达式，并返回多个可能的结果表达式之一。
 
+```
+
+```
+标签 = 
+SWITCH (
+    TRUE (),
+    ( 条件 ), "结果",
+    "其他"
+)
 ```
 
 昨日数据_用户 = 
@@ -505,6 +560,7 @@ TRUE(),
 
 ```
 
+
 ## ADDCOLUMNS
 ```
 ADDCOLUMNS(<table>, <name>, <expression>[, <name>, <expression>]…)
@@ -570,6 +626,10 @@ SUMMARIZE(ResellerSales_USD
 
 https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2014/gg492171(v=sql.120)
 
+```
+维度表 = SUMMARIZE('table','table'[groupby_name],"自命名列名",CALCULATE(AVERAGE('table'[目标]),DATEADD(LASTDATE('table'[pt]),-14,DAY)))
+```
+
 ## CONCATENATE
 
 ```
@@ -581,6 +641,36 @@ CONCATENATE(<text1>, <text2>)
 text1, text2 要联接为单个文本字符串的文本字符串。字符串可以包括文本或数字。还可以使用列引用。
 
 返回值 串联的字符串。
+
+## RELATED
+
+```
+RELATED(<column>)
+```
+
+从另一个表返回相关值。
+
+RELATED 函数要求当前表与包含相关信息的表之间存在关系。您需要指定包含所需数据的列，该函数将通过现有的多对一关系从相关表中的指定列中提取值。
+
+如果不存在关系，则必须创建关系。
+
+## RANKX
+
+```
+RANKX(<table>, <expression>[, <value>[, <order>[, <ties>]]])
+```
+
+<table>：定义需要进行排序的表单，可以是导入的原始表单，也可以是由DAX函数计算后生成的表单。
+
+<expression>：定义排序依据的表达式，该表达式必须能返回单一标量结果并且表达式中的参数列需要来自之前定义的table中；之后RANKX函数会根据这个表达式的计算结果进行排序
+
+Rank = RANKX('table',[排序的列],,DESC)
+
+```
+##灵活使用all
+TotalS_SUM = SUM(SalesInfo[Amount])
+RankQ_A = RANKX ( ALL(SalesInfo[Product]),[TotalQ_SUM],, DESC )
+```
 
 # 上下文
 - 上下文是需要了解的重要 DAX 概念之一。 DAX 中有两种上下文类型；行上下文和筛选上下文。 
