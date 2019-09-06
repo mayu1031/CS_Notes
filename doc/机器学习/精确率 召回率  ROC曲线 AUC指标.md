@@ -5,7 +5,9 @@
     - TP True Positive (真正)：将正类预测为正类
     - TN True Negative (真负)：将负类预测为负类
     - FP False Positive(假正)：将负类预测为正类   ---> 误报 Type I error
+        - 原假设是正确的，却拒绝了原假设
     - FN False Negative(假负)：将正类预测为负类   ---> 漏报 Type II error
+        - 原假设是错误的，却没有拒绝原假设
 
 ![混淆矩阵](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5.png)
 
