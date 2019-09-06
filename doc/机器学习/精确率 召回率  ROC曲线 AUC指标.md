@@ -2,21 +2,27 @@
 # 1精确率与召回率
 - 混淆矩阵
     - 在分类任务下，预测结果(Predicted Codition)与正确标记(True Condition)之间存在四种不同的组合，构成混淆矩阵(适用于多分类)
-    - TP True possitive
-    - FN False Negative  
+    - TP True Positive (真正)：将正类预测为正类
+    - TN True Negative (真负)：将负类预测为负类
+    - FP False Positive(假正)：将负类预测为正类   ---> 误报 Type I error
+    - FN False Negative(假负)：将正类预测为负类   ---> 漏报 Type II error
 
 ![混淆矩阵](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5.png)
 
 - **精确率Precision**和**召回率Recall**
     - **精确率**: 预测结果为正例样本中真实为正例的比例
-        - TP/(TP+FP)
+        - P = TP/(TP+FP)
     - **召回率**: 真实为正例的样本中预测结果为正例的比例(查的全，对正样本的区分能力)
-        - TP/(TP+FN)
+        - R = TP/(TP+FN)
         - 真正患癌症的，能够被检测出来的概率；查的全不全
         - 应用场景: 癌症，工厂质量检测
-
+- 准确率 accuracy
+    - ACC = (TP+TN)/(TP+TN+FP+FN)
+    - 在正负样本不平衡的情况下，准确率这个评价标准有很大的缺陷。比如在互联网广告里面，有些广告的点击数量很少，只有千分之几，如果用acc，即使全部预测为负(未点击)，那acc会有99%以上
+    
 - F1-score 反映模型的稳健性
     - F1-score高，代表精确率高，召回率也高
+    - 2/F1 = (1/P) + (1/R)
 
 ![F1-score](https://raw.githubusercontent.com/mayu1031/CS_Notes/master/doc/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/F1-score.png)
 
@@ -52,9 +58,13 @@ AUC: 1*1/2=0.5
 
 ## 2.1知道TPR与FPR
 - TPR = TP/(TP+FN) 召回率 
+    - True Positive Rate
+    - 在所有正例中，能将正例归类正确的占比，即recall (正例预测正确)
     - 所有真实类别为1的样本中，预测类别为1的比例
 - FPR = FP/(FP+TN)
+    - 在所有的负例中，将负例预测为正例(FP)的占比 (负例错分为正例)
     - 所有真实类别为0的样本中，预测类别为1的比例
+- ROC曲线中，我们希望TPR越大，FPR越小
 - TPR = FPR 不负责任的模型
     - TPR = FPR 斜率为1，AUC为0.5
 
@@ -63,6 +73,8 @@ AUC: 1*1/2=0.5
 
 - ROC曲线的横轴就是FPRate,纵轴就是TPRate，当二者相等时，表示的意义则是:对于不论真实类别是1还是0的样本，分类器预测通通都为1的概率是相等的，此时AUC为0.5，不负责任的模型
 - TPR>FPR, 最小值AUC为0.5，最大值极限AUC为1，TPR为1，FPR为0，左上角的点，即所有真实类别为1的样本中，都预测正确为1
+- ROC曲线上的每一个点对应于一个threshold(阀值)，对于一个分类器，每个threshold下会有一个TPR和FPR。
+    - 比如Threshold最大时，TP=FP=0，对应于原点；Threshold最小时，TN=FN=0，对应于右上角的点(1,1)
 
 ## 2.3AUC指标  
 
